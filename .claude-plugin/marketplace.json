@@ -1,0 +1,204 @@
+{
+  "name": "voiddo-apify-skills",
+  "owner": {
+    "name": "vøiddo",
+    "email": "support@voiddo.com"
+  },
+  "metadata": {
+    "description": "Agent skills that route data requests to vøiddo's Actors on the Apify Store",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "voiddo-job-postings",
+      "source": "./skills/voiddo-job-postings",
+      "skills": "./",
+      "description": "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors.",
+      "keywords": [
+        "jobs",
+        "job-postings",
+        "careers-page",
+        "greenhouse",
+        "lever",
+        "ashby",
+        "workday",
+        "workable",
+        "ats",
+        "salary-data",
+        "recruiting"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-ecommerce-products",
+      "source": "./skills/voiddo-ecommerce-products",
+      "skills": "./",
+      "description": "Pull product rows from marketplaces (Amazon search, product pages and Best Sellers, AliExpress, eBay, Vinted, TikTok Shop, Shopify stores): title, price, list price, rating, reviews count, seller, stock and rank where the page shows them. Use when the user asks to track competitor prices, research products, find best sellers, monitor a marketplace category, compare prices across sites, check a Shopify store's catalogue.",
+      "keywords": [
+        "ecommerce",
+        "amazon",
+        "aliexpress",
+        "ebay",
+        "vinted",
+        "tiktok-shop",
+        "shopify",
+        "product-data",
+        "price-monitoring",
+        "best-sellers"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-real-estate-listings",
+      "source": "./skills/voiddo-real-estate-listings",
+      "skills": "./",
+      "description": "Collect property listings for sale, rent and recently sold from Zillow (US), Rightmove (UK) and Fotocasa (Spain): price, address, beds, baths, area, listing date, agency and link. Use when the user asks to find homes for sale in a city, track rents, compare listing prices, research a housing market, export listings to a spreadsheet.",
+      "keywords": [
+        "real-estate",
+        "property-listings",
+        "zillow",
+        "rightmove",
+        "fotocasa",
+        "rentals",
+        "housing-market",
+        "home-prices"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-app-store-data",
+      "source": "./skills/voiddo-app-store-data",
+      "skills": "./",
+      "description": "Read app and extension data from the Apple App Store, Google Play, Chrome Web Store, VS Code marketplace, JetBrains Marketplace and Steam: metadata, ratings, top charts, developer portfolios and reviews. Use when the user asks to research competitor apps, track app rankings, collect app reviews by country, list a developer's apps, find popular extensions or plugins.",
+      "keywords": [
+        "app-store",
+        "google-play",
+        "aso",
+        "app-reviews",
+        "top-charts",
+        "chrome-extensions",
+        "vscode",
+        "jetbrains",
+        "steam"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-public-records",
+      "source": "./skills/voiddo-public-records",
+      "skills": "./",
+      "description": "Query official public records: SEC filings (Form 4 insider trades, 13F holdings, 13D/13G, 8-K events), the OFAC sanctions list, USAspending federal awards, the Federal Register, FCC notices, NIH grants, openFDA recalls and ClinicalTrials.gov. Use when the user asks to screen a name against sanctions, track insider buying, follow institutional holdings, find federal contracts or grants, monitor new regulations, check drug recalls, look up UK companies.",
+      "keywords": [
+        "sec-filings",
+        "insider-trading",
+        "13f",
+        "ofac",
+        "sanctions-screening",
+        "usaspending",
+        "federal-register",
+        "fda",
+        "grants",
+        "companies-house"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-market-data",
+      "source": "./skills/voiddo-market-data",
+      "skills": "./",
+      "description": "Get market data: Yahoo Finance quotes and key statistics, currency exchange rates, CoinGecko tokens by category and DefiLlama protocol snapshots (TVL, chains, category). Use when the user asks to get stock quotes, build a watchlist table, convert currencies at today's rate, list tokens in a crypto category, compare DeFi protocols by TVL.",
+      "keywords": [
+        "stock-quotes",
+        "yahoo-finance",
+        "exchange-rates",
+        "currency",
+        "crypto",
+        "coingecko",
+        "defillama",
+        "tvl"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-developer-data",
+      "source": "./skills/voiddo-developer-data",
+      "skills": "./",
+      "description": "Track the developer ecosystem: npm and PyPI package metadata and releases, GitHub trending repositories, GitHub security advisories, NVD CVE records, Hacker News search and Product Hunt launches. Use when the user asks to find trending repos, watch package releases, check a dependency for vulnerabilities, follow new CVEs, search Hacker News, see today's Product Hunt launches.",
+      "keywords": [
+        "npm",
+        "pypi",
+        "github-trending",
+        "security-advisories",
+        "cve",
+        "nvd",
+        "hacker-news",
+        "product-hunt",
+        "developer-tools"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-research-and-news",
+      "source": "./skills/voiddo-research-and-news",
+      "skills": "./",
+      "description": "Collect research and media: PubMed citations, Crossref publications, news articles as clean text, Substack and Medium posts, and podcast search results. Use when the user asks to monitor new papers on a topic, collect news articles as text, archive a newsletter, find podcasts about a subject.",
+      "keywords": [
+        "pubmed",
+        "crossref",
+        "research-papers",
+        "news-articles",
+        "substack",
+        "medium",
+        "podcasts",
+        "article-extraction"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-events",
+      "source": "./skills/voiddo-events",
+      "skills": "./",
+      "description": "Find public events on Eventbrite by query and location: name, start and end time, venue, city, online flag and link. Use when the user asks to find events in a city, list conferences on a topic, build an events calendar, monitor new events.",
+      "keywords": [
+        "events",
+        "eventbrite",
+        "conferences",
+        "meetups",
+        "event-calendar"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-ads-library",
+      "source": "./skills/voiddo-ads-library",
+      "skills": "./",
+      "description": "Search the Meta Ad Library for ads by keyword, page or country: ad text, start date, platforms, media links and the advertiser page. Use when the user asks to spy on competitor ads, collect ad creatives, see how long an ad has run, research ads in a country.",
+      "keywords": [
+        "facebook-ads",
+        "meta-ad-library",
+        "ad-library",
+        "competitor-ads",
+        "ad-creatives"
+      ],
+      "category": "data-extraction"
+    },
+    {
+      "name": "voiddo-web-and-files",
+      "source": "./skills/voiddo-web-and-files",
+      "skills": "./",
+      "description": "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit.",
+      "keywords": [
+        "web-crawler",
+        "website-to-text",
+        "screenshot",
+        "html-to-pdf",
+        "pdf-text",
+        "transcription",
+        "video-frames",
+        "sitemap",
+        "seo-audit"
+      ],
+      "category": "data-extraction"
+    }
+  ]
+}
