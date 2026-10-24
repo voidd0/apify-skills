@@ -1,6 +1,6 @@
 ---
 name: voiddo-events
-description: "Find public events on Eventbrite by query and location: name, start and end time, venue, city, online flag and link. Routes to 1 pay-per-result Apify Actors by vøiddo. Use when the user asks to find events in a city, list conferences on a topic, build an events calendar, monitor new events."
+description: "Find public events on Eventbrite by query and location: name, start and end time, venue, city, online flag and link. Routes to 2 pay-per-result Apify Actors by vøiddo. Use when the user asks to find events in a city, list conferences on a topic, build an events calendar, monitor new events."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -54,10 +54,11 @@ Out of scope (the boundary): Buying tickets: out of scope.
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Search Eventbrite events by keyword and location. | `v0iddo/eventbrite-events-search` | $0.30 |
+| Collect public Eventbrite events for any city or online: name, start and end, venue and city, online flag,... | `v0iddo/eventbrite-scraper` | $1.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/eventbrite-events-search`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/eventbrite-events-search,v0iddo/eventbrite-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~eventbrite-events-search/run-sync-get-dataset-items" \

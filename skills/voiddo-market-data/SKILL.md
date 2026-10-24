@@ -1,6 +1,6 @@
 ---
 name: voiddo-market-data
-description: "Get market data: Yahoo Finance quotes and key statistics, currency exchange rates, CoinGecko tokens by category and DefiLlama protocol snapshots (TVL, chains, category). Routes to 3 pay-per-result Apify Actors by vøiddo. Use when the user asks to get stock quotes, build a watchlist table, convert currencies at today's rate, list tokens in a crypto category, compare DeFi protocols by TVL."
+description: "Get market data: Yahoo Finance quotes and key statistics, currency exchange rates, CoinGecko tokens by category and DefiLlama protocol snapshots (TVL, chains, category). Routes to 5 pay-per-result Apify Actors by vøiddo. Use when the user asks to get stock quotes, build a watchlist table, convert currencies at today's rate, list tokens in a crypto category, compare DeFi protocols by TVL."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -57,10 +57,12 @@ Out of scope (the boundary): Trading or investment advice: out of scope.
 | For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 p... | `v0iddo/coingecko-category-snapshot` | $0.10 |
 | Pulls the top 100 tokens by market cap in each CoinGecko category (DeFi, meme, L1, ecosystem tags) with cur... | `v0iddo/coingecko-tokens-by-category` | $1.00 |
 | Snapshot every DefiLlama-tracked protocol filtered by chain, category, and TVL range. | `v0iddo/defillama-protocols-snapshot` | $0.10 |
+| Latest and historical euro foreign exchange reference rates from the European Central Bank, with conversion... | `v0iddo/currency-exchange-rates` | $3.40 |
+| Scrape Yahoo Finance quotes and key statistics for stocks, ETFs, indexes, crypto, currencies and futures: p... | `v0iddo/yahoo-finance-scraper` | $1.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/coingecko-category-snapshot,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/coingecko-category-snapshot,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot,v0iddo/currency-exchange-rates,v0iddo/yahoo-finance-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~coingecko-category-snapshot/run-sync-get-dataset-items" \

@@ -4,8 +4,8 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 ## Facebook Ad Library Scraper
 
-- Actor ID: `v0iddo/mint-facebook-ads-library-scraper`
-- Store page: https://apify.com/v0iddo/mint-facebook-ads-library-scraper
+- Actor ID: `v0iddo/facebook-ads-library-scraper`
+- Store page: https://apify.com/v0iddo/facebook-ads-library-scraper
 - Price: $0.50 per 1,000 results, nothing per run
 
 Collect public ads from the Meta Ad Library by keyword, advertiser Page ID or Ad Library link: ad text, headline, landing page, button, images and videos, dates, platforms and version count, plus spend and reach ranges where Meta publishes them.

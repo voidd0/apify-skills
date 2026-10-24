@@ -1,6 +1,6 @@
 ---
 name: voiddo-research-and-news
-description: "Collect research and media: PubMed citations, Crossref publications, news articles as clean text, Substack and Medium posts, and podcast search results. Routes to 4 pay-per-result Apify Actors by vøiddo. Use when the user asks to monitor new papers on a topic, collect news articles as text, archive a newsletter, find podcasts about a subject."
+description: "Collect research and media: PubMed citations, Crossref publications, news articles as clean text, Substack and Medium posts, and podcast search results. Routes to 6 pay-per-result Apify Actors by vøiddo. Use when the user asks to monitor new papers on a topic, collect news articles as text, archive a newsletter, find podcasts about a subject."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -58,10 +58,12 @@ Out of scope (the boundary): Paywalled articles: the Actors read public pages on
 | Substack scraper for newsletter posts. | `v0iddo/substack-newsletter-posts` | $1.06 |
 | Pull daily-new PubMed citations matching any query. | `v0iddo/pubmed-daily-citations-tracker` | $1.00 |
 | For each query, pull recent works from Crossref's public REST API with a server-side date filter. | `v0iddo/crossref-recent-publications` | $0.20 |
+| Extract news articles from any publisher. | `v0iddo/news-scraper` | $1.50 |
+| Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, commen... | `v0iddo/substack-scraper` | $1.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/medium-rss-tracker,v0iddo/substack-newsletter-posts,v0iddo/pubmed-daily-citations-tracker,v0iddo/crossref-recent-publications`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/medium-rss-tracker,v0iddo/substack-newsletter-posts,v0iddo/pubmed-daily-citations-tracker,v0iddo/crossref-recent-publications,v0iddo/news-scraper,v0iddo/substack-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~medium-rss-tracker/run-sync-get-dataset-items" \

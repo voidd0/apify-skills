@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 3 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 5 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -57,10 +57,12 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
+| Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $1.20 |
+| Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/greenhouse-public-jobs,v0iddo/ashby-public-jobs,v0iddo/lever-public-jobs`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/greenhouse-public-jobs,v0iddo/ashby-public-jobs,v0iddo/lever-public-jobs,v0iddo/ats-jobs-scraper,v0iddo/workday-jobs-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~greenhouse-public-jobs/run-sync-get-dataset-items" \
