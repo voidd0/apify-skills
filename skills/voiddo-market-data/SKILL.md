@@ -1,6 +1,6 @@
 ---
 name: voiddo-market-data
-description: "Get market data: Yahoo Finance quotes and key statistics, currency exchange rates, CoinGecko tokens by category and DefiLlama protocol snapshots (TVL, chains, category). Routes to 5 pay-per-result Apify Actors by vøiddo. Use when the user asks to get stock quotes, build a watchlist table, convert currencies at today's rate, list tokens in a crypto category, compare DeFi protocols by TVL."
+description: "Get market data: Yahoo Finance quotes and key statistics, currency exchange rates, CoinGecko tokens by category and DefiLlama protocol snapshots (TVL, chains, category). Routes to 3 pay-per-result Apify Actors by vøiddo. Use when the user asks to get stock quotes, build a watchlist table, convert currencies at today's rate, list tokens in a crypto category, compare DeFi protocols by TVL."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -38,13 +38,13 @@ Out of scope (the boundary): Trading or investment advice: out of scope.
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/mint-yahoo-finance-scraper" --input --json --user-agent voiddo-skills/voiddo-market-data 2>/dev/null
+       apify actors info "v0iddo/coingecko-category-snapshot" --input --json --user-agent voiddo-skills/voiddo-market-data 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/mint-yahoo-finance-scraper" -i '{"tickers": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "SPY", "QQQ", "^GSPC", "BTC-USD", "EURUSD=X"], "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-market-data 2>/dev/null
+       apify actors call "v0iddo/coingecko-category-snapshot" -i '{"categories": ["layer-1", "meme-token"], "maxCoinsPerCategory": 20}' --json --user-agent voiddo-skills/voiddo-market-data 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,19 +54,17 @@ Out of scope (the boundary): Trading or investment advice: out of scope.
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Scrape Yahoo Finance quotes and key statistics for stocks, ETFs, indexes, crypto, currencies and futures: p... | `v0iddo/mint-yahoo-finance-scraper` | $1.00 |
 | For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 p... | `v0iddo/coingecko-category-snapshot` | $0.10 |
-| Latest and historical euro foreign exchange reference rates from the European Central Bank, with conversion... | `v0iddo/mint-currency-exchange-rates` | $3.40 |
 | Pulls the top 100 tokens by market cap in each CoinGecko category (DeFi, meme, L1, ecosystem tags) with cur... | `v0iddo/coingecko-tokens-by-category` | $1.00 |
 | Snapshot every DefiLlama-tracked protocol filtered by chain, category, and TVL range. | `v0iddo/defillama-protocols-snapshot` | $0.10 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/mint-yahoo-finance-scraper,v0iddo/coingecko-category-snapshot,v0iddo/mint-currency-exchange-rates,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/coingecko-category-snapshot,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~mint-yahoo-finance-scraper/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"tickers": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "SPY", "QQQ", "^GSPC", "BTC-USD", "EURUSD=X"], "maxItems": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~coingecko-category-snapshot/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"categories": ["layer-1", "meme-token"], "maxCoinsPerCategory": 20}'
 
 ## Troubleshooting
 

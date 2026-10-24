@@ -2,28 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## News Article Extractor: Full Text from Links and RSS
-
-- Actor ID: `v0iddo/mint-news-scraper`
-- Store page: https://apify.com/v0iddo/mint-news-scraper
-- Price: $1.50 per 1,000 results, nothing per run
-
-Extract news articles from any publisher.
-
-Example input:
-
-```json
-{
-  "feedUrls": [
-    "https://www.nasa.gov/news-release/feed/"
-  ],
-  "maxArticlesPerFeed": 10,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `publishedAt`, `siteName`, `section`, `language`, `wordCount`, `paywalled`, `url`, `topImage`
-
 ## Medium Scraper: Articles by User, Tag or Publication
 
 - Actor ID: `v0iddo/medium-rss-tracker`
@@ -46,27 +24,6 @@ Example input:
 ```
 
 Output fields: `id`, `title`, `link`, `author`, `pubDate`, `summary`, `categories`
-
-## Substack Posts Scraper: Archive, Reactions, Comments
-
-- Actor ID: `v0iddo/mint-substack-scraper`
-- Store page: https://apify.com/v0iddo/mint-substack-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, comments, word count and section.
-
-Example input:
-
-```json
-{
-  "publications": [
-    "on.substack.com"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `subtitle`, `date`, `audience`, `reactions`, `comments`, `wordCount`, `section`, `url`
 
 ## Substack Scraper: Newsletter Posts by Publication
 

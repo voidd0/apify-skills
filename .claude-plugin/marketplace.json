@@ -49,23 +49,6 @@
       "category": "data-extraction"
     },
     {
-      "name": "voiddo-real-estate-listings",
-      "source": "./skills/voiddo-real-estate-listings",
-      "skills": "./",
-      "description": "Collect property listings for sale, rent and recently sold from Zillow (US), Rightmove (UK) and Fotocasa (Spain): price, address, beds, baths, area, listing date, agency and link. Use when the user asks to find homes for sale in a city, track rents, compare listing prices, research a housing market, export listings to a spreadsheet.",
-      "keywords": [
-        "real-estate",
-        "property-listings",
-        "zillow",
-        "rightmove",
-        "fotocasa",
-        "rentals",
-        "housing-market",
-        "home-prices"
-      ],
-      "category": "data-extraction"
-    },
-    {
       "name": "voiddo-app-store-data",
       "source": "./skills/voiddo-app-store-data",
       "skills": "./",
@@ -165,20 +148,6 @@
         "conferences",
         "meetups",
         "event-calendar"
-      ],
-      "category": "data-extraction"
-    },
-    {
-      "name": "voiddo-ads-library",
-      "source": "./skills/voiddo-ads-library",
-      "skills": "./",
-      "description": "Search the Meta Ad Library for ads by keyword, page or country: ad text, start date, platforms, media links and the advertiser page. Use when the user asks to spy on competitor ads, collect ad creatives, see how long an ad has run, research ads in a country.",
-      "keywords": [
-        "facebook-ads",
-        "meta-ad-library",
-        "ad-library",
-        "competitor-ads",
-        "ad-creatives"
       ],
       "category": "data-extraction"
     },

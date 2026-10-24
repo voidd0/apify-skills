@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 5 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 3 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -38,13 +38,13 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/mint-ats-jobs-scraper" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors info "v0iddo/greenhouse-public-jobs" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/mint-ats-jobs-scraper" -i '{"companies": ["https://job-boards.greenhouse.io/discord", "https://jobs.lever.co/spotify", "https://apply.workable.com/huggingface"], "includeDescription": true, "maxItems": 20, "maxJobsPerCompany": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors call "v0iddo/greenhouse-public-jobs" -i '{"companies": ["stripe", "airbnb", "vercel"], "maxJobsPerCompany": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,19 +54,17 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/mint-ats-jobs-scraper` | $1.20 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
-| Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/mint-workday-jobs-scraper` | $0.90 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/mint-ats-jobs-scraper,v0iddo/greenhouse-public-jobs,v0iddo/ashby-public-jobs,v0iddo/lever-public-jobs,v0iddo/mint-workday-jobs-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/greenhouse-public-jobs,v0iddo/ashby-public-jobs,v0iddo/lever-public-jobs`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~mint-ats-jobs-scraper/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"companies": ["https://job-boards.greenhouse.io/discord", "https://jobs.lever.co/spotify", "https://apply.workable.com/huggingface"], "includeDescription": true, "maxItems": 20, "maxJobsPerCompany": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~greenhouse-public-jobs/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"companies": ["stripe", "airbnb", "vercel"], "maxJobsPerCompany": 20}'
 
 ## Troubleshooting
 

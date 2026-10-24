@@ -24,24 +24,3 @@ Example input:
 ```
 
 Output fields: `id`, `title`, `organizer`, `startDate`, `endDate`, `isOnline`, `venueName`, `city`, `priceMin`, `priceMax`, `url`
-
-## Eventbrite Event Data Scraper: City, Dates, Ticket Prices
-
-- Actor ID: `v0iddo/mint-eventbrite-scraper`
-- Store page: https://apify.com/v0iddo/mint-eventbrite-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Collect public Eventbrite events for any city or online: name, start and end, venue and city, online flag, ticket prices, organizer name, link and image.
-
-Example input:
-
-```json
-{
-  "locations": [
-    "ny--new-york"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `name`, `start`, `end`, `venueName`, `city`, `isOnline`, `isFree`, `priceMin`, `organizerName`, `url`, `image`
