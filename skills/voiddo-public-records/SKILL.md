@@ -60,14 +60,14 @@ Out of scope (the boundary): Legal advice or a compliance verdict: the skill ret
 | Pull recent NIH research grants from RePORTER. | `v0iddo/nih-reporter-grants` | $3.00 |
 | Pull recent SEC 8-K filings (Current Reports) by stock ticker. | `v0iddo/sec-8k-material-events-tracker` | $10.00 |
 | Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker. | `v0iddo/sec-form4-insider-trades` | $5.00 |
-| Pull recent FDA drug recall actions. | `v0iddo/openfda-drug-recalls` | $5.00 |
 | Pull SEC Form 13F quarterly holdings for any institutional manager by CIK. | `v0iddo/sec-13f-institutional-holdings` | $10.00 |
+| Pull recent FDA drug recall actions. | `v0iddo/openfda-drug-recalls` | $5.00 |
 | Scrape SEC EDGAR 13D and 13G beneficial ownership filings by company CIK. | `v0iddo/sec-13d-13g-beneficial-ownership` | $4.89 |
 | Scrapes FCC ECFS (Electronic Comment Filing System) filings and public notices by docket/proceeding number. | `v0iddo/fcc-public-notices` | $2.55 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/clinicaltrials-updates-tracker,v0iddo/usaspending-federal-awards,v0iddo/federal-register-tracker,v0iddo/nih-reporter-grants,v0iddo/sec-8k-material-events-tracker,v0iddo/sec-form4-insider-trades,v0iddo/openfda-drug-recalls,v0iddo/sec-13f-institutional-holdings,v0iddo/sec-13d-13g-beneficial-ownership,v0iddo/fcc-public-notices`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/clinicaltrials-updates-tracker,v0iddo/usaspending-federal-awards,v0iddo/federal-register-tracker,v0iddo/nih-reporter-grants,v0iddo/sec-8k-material-events-tracker,v0iddo/sec-form4-insider-trades,v0iddo/sec-13f-institutional-holdings,v0iddo/openfda-drug-recalls,v0iddo/sec-13d-13g-beneficial-ownership,v0iddo/fcc-public-notices`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~clinicaltrials-updates-tracker/run-sync-get-dataset-items" \

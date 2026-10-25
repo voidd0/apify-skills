@@ -2,73 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Shopify Scraper: Products, Prices, Stock
-
-- Actor ID: `v0iddo/shopify-store-intelligence`
-- Store page: https://apify.com/v0iddo/shopify-store-intelligence
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barcode, options, images, tags and the store's currency.
-
-Example input:
-
-```json
-{
-  "stores": [
-    "gymshark.com",
-    "allbirds.com",
-    "kith.com"
-  ],
-  "maxProductsPerStore": 20
-}
-```
-
-Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice`, `maxPrice`, `currency`, `discountPercent`, `available`, `variantsInStock`, `updatedAt`
-
-## AliExpress Scraper: Prices, Sold Counts
-
-- Actor ID: `v0iddo/aliexpress-scraper`
-- Store page: https://apify.com/v0iddo/aliexpress-scraper
-- Price: $1.50 per 1,000 results, nothing per run
-
-Scrape AliExpress search results into product rows: product ID, title, sale price, original price, discount, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "wireless earbuds"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `title`, `price`, `originalPrice`, `rating`, `sold`, `choice`, `url`
-
-## Amazon Bestsellers Scraper: New Releases
-
-- Actor ID: `v0iddo/amazon-bestsellers-scraper`
-- Store page: https://apify.com/v0iddo/amazon-bestsellers-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rating, ratings count, image and product link.
-
-Example input:
-
-```json
-{
-  "categoryUrls": [
-    "https://www.amazon.com/gp/bestsellers/electronics"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `category`, `listType`, `image`, `url`
-
 ## Amazon Product Scraper: ASIN Details, Price, Sales Rank
 
 - Actor ID: `v0iddo/amazon-product-scraper`
@@ -116,6 +49,50 @@ Example input:
 ```
 
 Output fields: `asin`, `title`, `price`, `rating`, `ratingsCount`, `badge`, `sponsored`, `url`
+
+## AliExpress Scraper: Prices, Sold Counts
+
+- Actor ID: `v0iddo/aliexpress-scraper`
+- Store page: https://apify.com/v0iddo/aliexpress-scraper
+- Price: $1.50 per 1,000 results, nothing per run
+
+Scrape AliExpress search results into product rows: product ID, title, sale price, original price, discount, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "wireless earbuds"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `title`, `price`, `originalPrice`, `rating`, `sold`, `choice`, `url`
+
+## Amazon Bestsellers Scraper: New Releases
+
+- Actor ID: `v0iddo/amazon-bestsellers-scraper`
+- Store page: https://apify.com/v0iddo/amazon-bestsellers-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rating, ratings count, image and product link.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.amazon.com/gp/bestsellers/electronics"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `category`, `listType`, `image`, `url`
 
 ## eBay Scraper: Category Listings, Prices, Sold and Watchers
 
@@ -188,3 +165,26 @@ Example input:
 ```
 
 Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`
+
+## Shopify Scraper: Products, Prices, Stock
+
+- Actor ID: `v0iddo/shopify-store-intelligence`
+- Store page: https://apify.com/v0iddo/shopify-store-intelligence
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barcode, options, images, tags and the store's currency.
+
+Example input:
+
+```json
+{
+  "stores": [
+    "gymshark.com",
+    "allbirds.com",
+    "kith.com"
+  ],
+  "maxProductsPerStore": 20
+}
+```
+
+Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice`, `maxPrice`, `currency`, `discountPercent`, `available`, `variantsInStock`, `updatedAt`

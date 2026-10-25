@@ -2,6 +2,28 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
+## Zillow Search Scraper: Homes for Sale, Rent and Sold
+
+- Actor ID: `v0iddo/zillow-scraper`
+- Store page: https://apify.com/v0iddo/zillow-scraper
+- Price: $1.50 per 1,000 results, nothing per run
+
+Scrape Zillow search results for homes for sale, rentals and recently sold properties: price, address, beds, baths, living area, lot size, home type, days on Zillow, coordinates and listing brokerage.
+
+Example input:
+
+```json
+{
+  "locations": [
+    "Austin, TX"
+  ],
+  "listingType": "for_sale",
+  "maxItems": 20
+}
+```
+
+Output fields: `address`, `priceText`, `beds`, `baths`, `livingArea`, `homeType`, `status`, `daysOnZillow`, `brokerName`, `url`
+
 ## Fotocasa Scraper: Spain Homes for Sale and Rent
 
 - Actor ID: `v0iddo/fotocasa-scraper`
@@ -45,25 +67,3 @@ Example input:
 ```
 
 Output fields: `propertyId`, `displayAddress`, `priceText`, `bedrooms`, `bathrooms`, `propertyType`, `propertySubType`, `agent`, `addedOrReduced`, `image`, `url`
-
-## Zillow Search Scraper: Homes for Sale, Rent and Sold
-
-- Actor ID: `v0iddo/zillow-scraper`
-- Store page: https://apify.com/v0iddo/zillow-scraper
-- Price: $1.50 per 1,000 results, nothing per run
-
-Scrape Zillow search results for homes for sale, rentals and recently sold properties: price, address, beds, baths, living area, lot size, home type, days on Zillow, coordinates and listing brokerage.
-
-Example input:
-
-```json
-{
-  "locations": [
-    "Austin, TX"
-  ],
-  "listingType": "for_sale",
-  "maxItems": 20
-}
-```
-
-Output fields: `address`, `priceText`, `beds`, `baths`, `livingArea`, `homeType`, `status`, `daysOnZillow`, `brokerName`, `url`
