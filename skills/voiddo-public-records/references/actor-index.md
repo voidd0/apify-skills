@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/clinicaltrials-updates-tracker`
 - Store page: https://apify.com/v0iddo/clinicaltrials-updates-tracker
-- Price: $5.00 per 1,000 results, nothing per run
+- Price: $2.98 per 1,000 results, nothing per run
 
 Pull recently-updated ClinicalTrials.gov studies matching a query.
 
@@ -27,7 +27,7 @@ Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`
 
 - Actor ID: `v0iddo/usaspending-federal-awards`
 - Store page: https://apify.com/v0iddo/usaspending-federal-awards
-- Price: $10.00 per 1,000 results, nothing per run
+- Price: $1.70 per 1,000 results, nothing per run
 
 Pull recent federal contract and grant awards from USAspending.gov.
 
@@ -102,7 +102,7 @@ Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`
 
 - Actor ID: `v0iddo/sec-form4-insider-trades`
 - Store page: https://apify.com/v0iddo/sec-form4-insider-trades
-- Price: $5.00 per 1,000 results, nothing per run
+- Price: $2.32 per 1,000 results, nothing per run
 
 Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker.
 
@@ -123,7 +123,7 @@ Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik
 
 - Actor ID: `v0iddo/sec-13f-institutional-holdings`
 - Store page: https://apify.com/v0iddo/sec-13f-institutional-holdings
-- Price: $10.00 per 1,000 results, nothing per run
+- Price: $1.53 per 1,000 results, nothing per run
 
 Pull SEC Form 13F quarterly holdings for any institutional manager by CIK.
 

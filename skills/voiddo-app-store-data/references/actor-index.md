@@ -27,7 +27,7 @@ Output fields: `snapshotAt`, `appId`, `country`, `bundleId`, `trackName`, `artis
 
 - Actor ID: `v0iddo/app-store-reviews-tracker`
 - Store page: https://apify.com/v0iddo/app-store-reviews-tracker
-- Price: $0.30 per 1,000 results, nothing per run
+- Price: $0.16 per 1,000 results, nothing per run
 
 Scrape Apple App Store reviews and ratings for any iOS app, storefront by storefront.
 

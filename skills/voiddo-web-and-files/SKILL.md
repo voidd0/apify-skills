@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 12 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 14 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -54,7 +54,9 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $5.05 |
+| Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $2.55 |
+| Scrape Similarweb top websites rankings by category: global rank, domain, category, rank change, average vi... | `v0iddo/similarweb-scraper` | $1.70 |
+| Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price... | `v0iddo/coles-scraper` | $0.50 |
 | Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and par... | `v0iddo/pdf-text-extractor` | $1.00 |
 | Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT... | `v0iddo/audio-transcription` | $10.00 |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
@@ -62,14 +64,14 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Download files in bulk from direct links, or every image, video, audio file, PDF, document or archive on a... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $1.00 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $4.25 |
-| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $6.88 |
-| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $4.25 |
+| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $5.95 |
+| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |
 | Turn text or a URL into a crisp QR code as PNG or SVG, with size and error-correction control. | `v0iddo/qr-code-generator` | $1.70 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/website-content-crawler,v0iddo/pdf-text-extractor,v0iddo/audio-transcription,v0iddo/video-frame-extractor,v0iddo/seo-audit,v0iddo/bulk-file-downloader,v0iddo/image-converter,v0iddo/url-screenshot,v0iddo/html-to-pdf,v0iddo/html-to-image`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/website-content-crawler,v0iddo/similarweb-scraper,v0iddo/coles-scraper,v0iddo/pdf-text-extractor,v0iddo/audio-transcription,v0iddo/video-frame-extractor,v0iddo/seo-audit,v0iddo/bulk-file-downloader,v0iddo/image-converter,v0iddo/url-screenshot`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~website-content-crawler/run-sync-get-dataset-items" \

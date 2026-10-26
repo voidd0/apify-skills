@@ -55,7 +55,7 @@ Out of scope (the boundary): Downloading app binaries: out of scope.
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Snapshot Apple App Store app metadata via the public iTunes Lookup API. | `v0iddo/app-store-app-metadata` | $0.50 |
-| Scrape Apple App Store reviews and ratings for any iOS app, storefront by storefront. | `v0iddo/app-store-reviews-tracker` | $0.30 |
+| Scrape Apple App Store reviews and ratings for any iOS app, storefront by storefront. | `v0iddo/app-store-reviews-tracker` | $0.16 |
 | Snapshot Chrome Web Store extension metadata via the public listing page. | `v0iddo/chrome-webstore-extensions` | $0.50 |
 | Search the Apple Podcasts catalog via the public iTunes Search API. | `v0iddo/itunes-podcast-search` | $0.20 |
 | Search the Apple App Store by keyword and country. | `v0iddo/app-store-search` | $0.20 |

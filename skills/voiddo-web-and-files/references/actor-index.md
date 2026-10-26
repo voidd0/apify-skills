@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/website-content-crawler`
 - Store page: https://apify.com/v0iddo/website-content-crawler
-- Price: $5.05 per 1,000 results, nothing per run
+- Price: $2.55 per 1,000 results, nothing per run
 
 Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, breadcrumbs, clean text body, and word count.
 
@@ -24,6 +24,50 @@ Example input:
 ```
 
 Output fields: `url`, `title`, `h1`, `breadcrumbs`, `description`, `textContent`, `wordCount`, `depth`
+
+## Similarweb Scraper: Top Websites by Category
+
+- Actor ID: `v0iddo/similarweb-scraper`
+- Store page: https://apify.com/v0iddo/similarweb-scraper
+- Price: $1.70 per 1,000 results, nothing per run
+
+Scrape Similarweb top websites rankings by category: global rank, domain, category, rank change, average visit duration, pages per visit, and bounce rate.
+
+Example input:
+
+```json
+{
+  "categorySlugs": [
+    "",
+    "computers-electronics-and-technology",
+    "arts-and-entertainment"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `domain`, `category`, `categorySlug`, `rankChange`, `avgVisitDuration`, `avgVisitDurationSeconds`, `pagesPerVisit`, `bounceRate`, `url`
+
+## Coles Scraper: Prices, Specials, Unit Prices
+
+- Actor ID: `v0iddo/coles-scraper`
+- Store page: https://apify.com/v0iddo/coles-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price, half price and multibuy offers, stock, purchase limits and aisle.
+
+Example input:
+
+```json
+{
+  "categories": [
+    "dairy-eggs-fridge/yoghurt"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
 
 ## PDF Text Extractor: Markdown & Metadata
 
@@ -183,7 +227,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/html-to-pdf`
 - Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $6.88 per 1,000 results, nothing per run
+- Price: $5.95 per 1,000 results, nothing per run
 
 Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
 
@@ -201,7 +245,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/html-to-image`
 - Store page: https://apify.com/v0iddo/html-to-image
-- Price: $4.25 per 1,000 results, nothing per run
+- Price: $3.40 per 1,000 results, nothing per run
 
 Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
 

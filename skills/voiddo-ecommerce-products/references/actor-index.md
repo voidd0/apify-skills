@@ -2,7 +2,7 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Amazon Product Scraper: ASIN Details, Price, Sales Rank
+## Amazon Product Details Scraper: ASIN, Price, Sales Rank
 
 - Actor ID: `v0iddo/amazon-product-scraper`
 - Store page: https://apify.com/v0iddo/amazon-product-scraper
@@ -32,7 +32,7 @@ Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `rating
 
 - Actor ID: `v0iddo/amazon-search-scraper`
 - Store page: https://apify.com/v0iddo/amazon-search-scraper
-- Price: $1.20 per 1,000 results, nothing per run
+- Price: $1.00 per 1,000 results, nothing per run
 
 Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
 
@@ -115,6 +115,28 @@ Example input:
 
 Output fields: `title`, `price`, `currency`, `priceText`, `previousPrice`, `condition`, `brand`, `shippingText`, `soldText`, `watchersText`, `image`, `url`
 
+## Alibaba Scraper: Prices, MOQ, Suppliers
+
+- Actor ID: `v0iddo/alibaba-scraper`
+- Store page: https://apify.com/v0iddo/alibaba-scraper
+- Price: $0.75 per 1,000 results, nothing per run
+
+Scrape Alibaba.com product offers by keyword: title, price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, Gold and verified badges, Trade Assurance and response rate.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "led strip lights"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `title`, `priceMin`, `priceMax`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `url`
+
 ## TikTok Shop Scraper: Products, Units Sold
 
 - Actor ID: `v0iddo/tiktok-shop-product-scraper`
@@ -145,27 +167,6 @@ Example input:
 
 Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `status`, `mainImage`, `url`
 
-## Vinted Search Scraper: Listings, Prices, Brands, Sizes
-
-- Actor ID: `v0iddo/vinted-scraper`
-- Store page: https://apify.com/v0iddo/vinted-scraper
-- Price: $1.50 per 1,000 results, nothing per run
-
-Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "nike"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`
-
 ## Shopify Scraper: Products, Prices, Stock
 
 - Actor ID: `v0iddo/shopify-store-intelligence`
@@ -188,3 +189,24 @@ Example input:
 ```
 
 Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice`, `maxPrice`, `currency`, `discountPercent`, `available`, `variantsInStock`, `updatedAt`
+
+## Vinted Search Scraper: Listings, Prices, Brands, Sizes
+
+- Actor ID: `v0iddo/vinted-scraper`
+- Store page: https://apify.com/v0iddo/vinted-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "nike"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`
