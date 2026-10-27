@@ -2,7 +2,7 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Indeed Jobs Scraper: Salary, Company Rating, Remote, Dates
+## Indeed Jobs Scraper: Listings, Salary, Company Rating, Remote
 
 - Actor ID: `v0iddo/indeed-scraper`
 - Store page: https://apify.com/v0iddo/indeed-scraper
@@ -72,6 +72,54 @@ Example input:
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
+## Reed Jobs Scraper: UK Jobs and Salaries
+
+- Actor ID: `v0iddo/reed-jobs-scraper`
+- Store page: https://apify.com/v0iddo/reed-jobs-scraper
+- Price: $0.45 per 1,000 results, nothing per run
+
+Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode, salary range with the period, job type, full or part time, remote or hybrid, posting and expiry dates, sector, skills and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "data analyst"
+  ],
+  "location": "London",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
+
+## IIMJobs Scraper: India Finance and MBA Jobs
+
+- Actor ID: `v0iddo/iimjobs-scraper`
+- Store page: https://apify.com/v0iddo/iimjobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, experience in years, salary in lakhs when shown, skills, category, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "finance manager"
+  ],
+  "locations": [
+    "Mumbai"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+
 ## Greenhouse, Lever, Workday & Ashby Jobs Scraper: Careers API
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
@@ -96,6 +144,52 @@ Example input:
 ```
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+
+## Gupy Jobs Scraper: Brazil Job Vacancies
+
+- Actor ID: `v0iddo/gupy-scraper`
+- Store page: https://apify.com/v0iddo/gupy-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, company, city, state, job type, remote or hybrid, posted and deadline dates, requirements, hiring steps and the reason for the opening.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "analista de dados"
+  ],
+  "state": "São Paulo",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
+
+## Pracuj.pl Scraper: Poland Jobs and Salaries
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Lever Jobs API and Scraper: Job Postings by Company
 

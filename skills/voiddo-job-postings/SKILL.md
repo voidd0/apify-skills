@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 7 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 11 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -57,14 +57,18 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary ran... | `v0iddo/indeed-scraper` | $0.50 |
 | Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: titl... | `v0iddo/remote-jobs-scraper` | $0.50 |
 | Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
+| Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
+| Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $1.20 |
+| Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
+| Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/remote-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/ats-jobs-scraper,v0iddo/lever-public-jobs,v0iddo/greenhouse-public-jobs,v0iddo/ashby-public-jobs`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/remote-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/ats-jobs-scraper,v0iddo/gupy-scraper,v0iddo/pracuj-pl-scraper,v0iddo/lever-public-jobs,v0iddo/greenhouse-public-jobs`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~indeed-scraper/run-sync-get-dataset-items" \

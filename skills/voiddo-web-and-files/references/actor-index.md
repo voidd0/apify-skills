@@ -2,6 +2,29 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
+## Google Maps Scraper: Places, Phones, Hours
+
+- Actor ID: `v0iddo/google-maps-scraper`
+- Store page: https://apify.com/v0iddo/google-maps-scraper
+- Price: $1.50 per 1,000 results, nothing per run
+
+Scrape Google Maps business listings by search and place: name, category, address, coordinates, rating, review count, phone, website, opening hours, place ID and Maps link.
+
+Example input:
+
+```json
+{
+  "searchQueries": [
+    "coffee shop"
+  ],
+  "location": "Berlin",
+  "language": "en",
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `category`, `address`, `city`, `rating`, `reviewsCount`, `phone`, `website`, `latitude`, `longitude`, `placeId`, `url`
+
 ## Website Content Crawler: Pages to Clean Text
 
 - Actor ID: `v0iddo/website-content-crawler`
@@ -46,9 +69,9 @@ Example input:
 }
 ```
 
-Output fields: `rank`, `domain`, `category`, `categorySlug`, `rankChange`, `avgVisitDuration`, `avgVisitDurationSeconds`, `pagesPerVisit`, `bounceRate`, `url`
+Output fields: `rank`, `domain`, `category`, `categorySlug`, `rankingList`, `rankChange`, `avgVisitDuration`, `avgVisitDurationSeconds`, `pagesPerVisit`, `bounceRate`, `url`
 
-## Coles Scraper: Prices, Specials, Unit Prices
+## Coles Price Scraper: Specials, Unit Prices
 
 - Actor ID: `v0iddo/coles-scraper`
 - Store page: https://apify.com/v0iddo/coles-scraper
@@ -69,7 +92,7 @@ Example input:
 
 Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
 
-## PDF Text Extractor: Markdown & Metadata
+## Extract Text from PDF: Markdown & Metadata
 
 - Actor ID: `v0iddo/pdf-text-extractor`
 - Store page: https://apify.com/v0iddo/pdf-text-extractor
@@ -90,7 +113,7 @@ Example input:
 
 Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 
-## Audio Transcription: Speech to Text, Video, Podcast
+## Audio Transcription: Audio to Text Converter, Podcast, Video
 
 - Actor ID: `v0iddo/audio-transcription`
 - Store page: https://apify.com/v0iddo/audio-transcription
@@ -112,7 +135,7 @@ Example input:
 
 Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
 
-## Video Frame Extractor: Scenes, Thumbnails
+## Extract Frames from Video: Video Frame Extractor, Thumbnails
 
 - Actor ID: `v0iddo/video-frame-extractor`
 - Store page: https://apify.com/v0iddo/video-frame-extractor
@@ -159,7 +182,7 @@ Example input:
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
 
-## Bulk File and Image Downloader: Pages, Links
+## Bulk File and Image Downloader: Download Images from Website
 
 - Actor ID: `v0iddo/bulk-file-downloader`
 - Store page: https://apify.com/v0iddo/bulk-file-downloader
@@ -184,7 +207,7 @@ Example input:
 
 Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
-## Image Converter (PNG, JPEG, WEBP, GIF and more)
+## Image Converter: WEBP to PNG, PNG to JPG, JPG to WEBP, GIF
 
 - Actor ID: `v0iddo/image-converter`
 - Store page: https://apify.com/v0iddo/image-converter
@@ -223,7 +246,7 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## HTML to PDF (A4, Letter, Legal, A3 and more)
+## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
 
 - Actor ID: `v0iddo/html-to-pdf`
 - Store page: https://apify.com/v0iddo/html-to-pdf
@@ -241,7 +264,7 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## HTML to Image (PNG, JPEG and WEBP)
+## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
 
 - Actor ID: `v0iddo/html-to-image`
 - Store page: https://apify.com/v0iddo/html-to-image

@@ -94,27 +94,6 @@ Example input:
 
 Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `category`, `listType`, `image`, `url`
 
-## eBay Scraper: Category Listings, Prices, Sold and Watchers
-
-- Actor ID: `v0iddo/ebay-scraper`
-- Store page: https://apify.com/v0iddo/ebay-scraper
-- Price: $2.00 per 1,000 results, nothing per run
-
-Collect listings from eBay category pages: title, price with currency, condition, shipping, sold and watcher counts, bids when shown, photo and link.
-
-Example input:
-
-```json
-{
-  "categoryUrls": [
-    "https://www.ebay.com/b/Cell-Phones-Smartphones/9355/bn_320094"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `price`, `currency`, `priceText`, `previousPrice`, `condition`, `brand`, `shippingText`, `soldText`, `watchersText`, `image`, `url`
-
 ## Alibaba Scraper: Prices, MOQ, Suppliers
 
 - Actor ID: `v0iddo/alibaba-scraper`
@@ -190,7 +169,7 @@ Example input:
 
 Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice`, `maxPrice`, `currency`, `discountPercent`, `available`, `variantsInStock`, `updatedAt`
 
-## Vinted Search Scraper: Listings, Prices, Brands, Sizes
+## Vinted Product Scraper: Search Listings, Prices, Brands, Sizes
 
 - Actor ID: `v0iddo/vinted-scraper`
 - Store page: https://apify.com/v0iddo/vinted-scraper

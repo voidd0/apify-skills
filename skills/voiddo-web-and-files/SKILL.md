@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 14 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 15 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -38,13 +38,13 @@ Out of scope (the boundary): Pages behind a login: out of scope.
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/website-content-crawler" --input --json --user-agent voiddo-skills/voiddo-web-and-files 2>/dev/null
+       apify actors info "v0iddo/google-maps-scraper" --input --json --user-agent voiddo-skills/voiddo-web-and-files 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/website-content-crawler" -i '{"startUrls": ["https://docs.python.org/3/library/"], "maxDepth": 1, "maxPagesPerUrl": 15, "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-web-and-files 2>/dev/null
+       apify actors call "v0iddo/google-maps-scraper" -i '{"searchQueries": ["coffee shop"], "location": "Berlin", "language": "en", "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-web-and-files 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,6 +54,7 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
+| Scrape Google Maps business listings by search and place: name, category, address, coordinates, rating, rev... | `v0iddo/google-maps-scraper` | $1.50 |
 | Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $2.55 |
 | Scrape Similarweb top websites rankings by category: global rank, domain, category, rank change, average vi... | `v0iddo/similarweb-scraper` | $1.70 |
 | Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price... | `v0iddo/coles-scraper` | $0.50 |
@@ -71,11 +72,11 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/website-content-crawler,v0iddo/similarweb-scraper,v0iddo/coles-scraper,v0iddo/pdf-text-extractor,v0iddo/audio-transcription,v0iddo/video-frame-extractor,v0iddo/seo-audit,v0iddo/bulk-file-downloader,v0iddo/image-converter,v0iddo/url-screenshot`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/google-maps-scraper,v0iddo/website-content-crawler,v0iddo/similarweb-scraper,v0iddo/coles-scraper,v0iddo/pdf-text-extractor,v0iddo/audio-transcription,v0iddo/video-frame-extractor,v0iddo/seo-audit,v0iddo/bulk-file-downloader,v0iddo/image-converter`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~website-content-crawler/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"startUrls": ["https://docs.python.org/3/library/"], "maxDepth": 1, "maxPagesPerUrl": 15, "maxItems": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~google-maps-scraper/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"searchQueries": ["coffee shop"], "location": "Berlin", "language": "en", "maxItems": 20}'
 
 ## Troubleshooting
 
