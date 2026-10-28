@@ -56,13 +56,13 @@ Out of scope (the boundary): Scanning private code: out of scope.
 | --- | --- | --- |
 | Search Hacker News via the public Algolia API. | `v0iddo/hn-algolia-search` | $0.10 |
 | Snapshot PyPI package metadata using the public pypi.org/pypi/<pkg>/json endpoint. | `v0iddo/pypi-package-tracker` | $0.20 |
-| For each ecosystem (NPM, PIP, MAVEN, NUGET, RUBYGEMS, RUST, GO, ACTIONS, SWIFT and more), pull recent GitHu... | `v0iddo/github-security-advisories` | $0.50 |
 | Snapshot npm package stats from the public registry and downloads APIs. | `v0iddo/npm-package-tracker` | $0.20 |
 | Pull new/modified CVEs from NIST NVD. | `v0iddo/nvd-cve-tracker` | $2.00 |
+| For each ecosystem (NPM, PIP, MAVEN, NUGET, RUBYGEMS, RUST, GO, ACTIONS, SWIFT and more), pull recent GitHu... | `v0iddo/github-security-advisories` | $0.50 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/hn-algolia-search,v0iddo/pypi-package-tracker,v0iddo/github-security-advisories,v0iddo/npm-package-tracker,v0iddo/nvd-cve-tracker`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/hn-algolia-search,v0iddo/pypi-package-tracker,v0iddo/npm-package-tracker,v0iddo/nvd-cve-tracker,v0iddo/github-security-advisories`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~hn-algolia-search/run-sync-get-dataset-items" \

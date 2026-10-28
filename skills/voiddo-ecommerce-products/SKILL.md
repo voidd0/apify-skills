@@ -60,12 +60,12 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rati... | `v0iddo/amazon-bestsellers-scraper` | $1.00 |
 | Scrape Alibaba.com product offers by keyword: title, price range and quantity price tiers, minimum order, u... | `v0iddo/alibaba-scraper` | $0.75 |
 | Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original pri... | `v0iddo/tiktok-shop-product-scraper` | $4.25 |
-| Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
 | Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with cu... | `v0iddo/vinted-scraper` | $1.00 |
+| Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/amazon-search-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/alibaba-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/shopify-store-intelligence,v0iddo/vinted-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/amazon-search-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/alibaba-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/vinted-scraper,v0iddo/shopify-store-intelligence`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~amazon-product-scraper/run-sync-get-dataset-items" \

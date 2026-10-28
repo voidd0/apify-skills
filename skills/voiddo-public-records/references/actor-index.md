@@ -98,6 +98,24 @@ Example input:
 
 Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
 
+## openFDA Drug Recalls Scraper: Enforcement Reports
+
+- Actor ID: `v0iddo/openfda-drug-recalls`
+- Store page: https://apify.com/v0iddo/openfda-drug-recalls
+- Price: $5.00 per 1,000 results, nothing per run
+
+Pull recent FDA drug recall actions.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `recallNumber`, `eventId`, `status`, `classification`, `productType`, `recallingFirm`, `firmAddress`, `productDescription`, `productQuantity`, `reasonForRecall`, `voluntaryMandated`, `initialFirmNotification`
+
 ## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
 
 - Actor ID: `v0iddo/sec-form4-insider-trades`
@@ -118,24 +136,6 @@ Example input:
 ```
 
 Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
-
-## openFDA Drug Recalls Scraper: Enforcement Reports
-
-- Actor ID: `v0iddo/openfda-drug-recalls`
-- Store page: https://apify.com/v0iddo/openfda-drug-recalls
-- Price: $5.00 per 1,000 results, nothing per run
-
-Pull recent FDA drug recall actions.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `recallNumber`, `eventId`, `status`, `classification`, `productType`, `recallingFirm`, `firmAddress`, `productDescription`, `productQuantity`, `reasonForRecall`, `voluntaryMandated`, `initialFirmNotification`
 
 ## SEC 13F Scraper: Institutional Holdings by Filer
 

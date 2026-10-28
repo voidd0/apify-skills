@@ -207,6 +207,26 @@ Example input:
 
 Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
+## Moz Top 500 Scraper: Domain Rankings
+
+- Actor ID: `v0iddo/moz-scraper`
+- Store page: https://apify.com/v0iddo/moz-scraper
+- Price: $7.65 per 1,000 results, nothing per run
+
+Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
+
+Example input:
+
+```json
+{
+  "minDaScore": 0,
+  "maxRank": 500,
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
+
 ## Image Converter: WEBP to PNG, PNG to JPG, JPG to WEBP, GIF
 
 - Actor ID: `v0iddo/image-converter`
@@ -232,7 +252,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/url-screenshot`
 - Store page: https://apify.com/v0iddo/url-screenshot
-- Price: $4.25 per 1,000 results, nothing per run
+- Price: $3.40 per 1,000 results, nothing per run
 
 Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
 
@@ -326,3 +346,24 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## Time Zone Converter: IANA Zones, DST, Offsets, Batch
+
+- Actor ID: `v0iddo/time-zone-converter`
+- Store page: https://apify.com/v0iddo/time-zone-converter
+- Price: $1.00 per 1,000 results, nothing per run
+
+Convert a date and time between IANA time zones with exact daylight-saving handling, inspect a zone's offset and transitions, or list a country's zones.
+
+Example input:
+
+```json
+{
+  "op": "convert",
+  "datetime": "2026-03-29T01:30:00",
+  "from_tz": "Europe/Berlin",
+  "to_tz": "America/New_York"
+}
+```
+
+Output fields: `index`, `input`, `from_tz`, `output`, `offset_from`, `offset_to`, `dst_to`, `day_offset`

@@ -55,14 +55,14 @@ Out of scope (the boundary): Trading or investment advice: out of scope.
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Scrape Yahoo Finance quotes and key statistics for stocks, ETFs, indexes, crypto, currencies and futures: p... | `v0iddo/yahoo-finance-scraper` | $1.00 |
-| For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 p... | `v0iddo/coingecko-category-snapshot` | $0.10 |
 | Latest and historical euro foreign exchange reference rates from the European Central Bank, with conversion... | `v0iddo/currency-exchange-rates` | $3.40 |
+| For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 p... | `v0iddo/coingecko-category-snapshot` | $0.10 |
 | Pulls the top 100 tokens by market cap in each CoinGecko category (DeFi, meme, L1, ecosystem tags) with cur... | `v0iddo/coingecko-tokens-by-category` | $1.00 |
 | Snapshot every DefiLlama-tracked protocol filtered by chain, category, and TVL range. | `v0iddo/defillama-protocols-snapshot` | $0.10 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/yahoo-finance-scraper,v0iddo/coingecko-category-snapshot,v0iddo/currency-exchange-rates,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/yahoo-finance-scraper,v0iddo/currency-exchange-rates,v0iddo/coingecko-category-snapshot,v0iddo/coingecko-tokens-by-category,v0iddo/defillama-protocols-snapshot`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~yahoo-finance-scraper/run-sync-get-dataset-items" \
