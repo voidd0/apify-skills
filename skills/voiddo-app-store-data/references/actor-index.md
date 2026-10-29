@@ -27,7 +27,7 @@ Output fields: `snapshotAt`, `appId`, `country`, `bundleId`, `trackName`, `artis
 
 - Actor ID: `v0iddo/app-store-reviews-tracker`
 - Store page: https://apify.com/v0iddo/app-store-reviews-tracker
-- Price: $0.16 per 1,000 results, nothing per run
+- Price: $0.15 per 1,000 results, nothing per run
 
 Scrape Apple App Store reviews and ratings for any iOS app, storefront by storefront.
 
@@ -43,26 +43,6 @@ Example input:
 ```
 
 Output fields: `appName`, `country`, `rating`, `title`, `body`, `date`, `storefrontRating`, `storefrontRatingCount`, `stars5`, `stars1`, `url`
-
-## Chrome Web Store Scraper: Extension Details and Ratings
-
-- Actor ID: `v0iddo/chrome-webstore-extensions`
-- Store page: https://apify.com/v0iddo/chrome-webstore-extensions
-- Price: $0.50 per 1,000 results, nothing per run
-
-Snapshot Chrome Web Store extension metadata via the public listing page.
-
-Example input:
-
-```json
-{
-  "extensionIds": [
-    "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
-  ]
-}
-```
-
-Output fields: `extensionId`, `snapshotAt`, `name`, `description`, `ratingValue`, `ratingCount`, `developerName`, `imageUrl`, `userCount`, `version`, `updatedAt`, `storeUrl`
 
 ## Apple Podcasts Scraper: Podcasts by Keyword and Country
 
@@ -85,6 +65,26 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `query`, `country`, `collectionId`, `trackId`, `artistName`, `collectionName`, `trackName`, `showUrl`, `feedUrl`, `artworkUrl`, `genre`
+
+## Chrome Web Store Scraper: Extension Details and Ratings
+
+- Actor ID: `v0iddo/chrome-webstore-extensions`
+- Store page: https://apify.com/v0iddo/chrome-webstore-extensions
+- Price: $0.50 per 1,000 results, nothing per run
+
+Snapshot Chrome Web Store extension metadata via the public listing page.
+
+Example input:
+
+```json
+{
+  "extensionIds": [
+    "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
+  ]
+}
+```
+
+Output fields: `extensionId`, `snapshotAt`, `name`, `description`, `ratingValue`, `ratingCount`, `developerName`, `imageUrl`, `userCount`, `version`, `updatedAt`, `storeUrl`
 
 ## App Store Search Scraper: Apps by Keyword
 

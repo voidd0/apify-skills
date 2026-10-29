@@ -227,11 +227,42 @@ Example input:
 
 Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
 
+## Domain Availability Checker: Bulk RDAP
+
+- Actor ID: `v0iddo/domain-availability-checker`
+- Store page: https://apify.com/v0iddo/domain-availability-checker
+- Price: $1.00 per 1,000 results, nothing per run
+
+Check if domains are available, in bulk: one row per domain with available or registered, registrar, creation and expiry dates and days to expiry, straight from the registry that runs the TLD (RDAP).
+
+Example input:
+
+```json
+{
+  "domains": [
+    "google.com",
+    "github.com",
+    "wikipedia.org",
+    "python.org",
+    "mozilla.org",
+    "voiddo.com",
+    "bbc.co.uk",
+    "example.net",
+    "voiddo-availability-sample-7q3.com",
+    "voiddo-availability-sample-7q3.org",
+    "shop.github.com"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `domain`, `available`, `status`, `registrar`, `expirationDate`, `daysToExpiry`, `registrationDate`, `note`
+
 ## Image Converter: WEBP to PNG, PNG to JPG, JPG to WEBP, GIF
 
 - Actor ID: `v0iddo/image-converter`
 - Store page: https://apify.com/v0iddo/image-converter
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.70 per 1,000 results, nothing per run
 
 Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transparency handling and optional metadata stripping.
 
@@ -266,23 +297,23 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
+## WHOIS Domain Lookup: Registrar, Age, Expiry, Name Servers
 
-- Actor ID: `v0iddo/html-to-pdf`
-- Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $5.95 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/whois-domain-lookup`
+- Store page: https://apify.com/v0iddo/whois-domain-lookup
+- Price: $1.50 per 1,000 results, nothing per run
 
-Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
+WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers, status and DNSSEC, read live from the registry's RDAP service.
 
 Example input:
 
 ```json
 {
-  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
+  "query": "github.com"
 }
 ```
 
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
 
 ## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
 
@@ -299,6 +330,24 @@ Example input:
   "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
   "width": 600,
   "height": 200
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
+
+- Actor ID: `v0iddo/html-to-pdf`
+- Store page: https://apify.com/v0iddo/html-to-pdf
+- Price: $5.95 per 1,000 results, nothing per run
+
+Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
+
+Example input:
+
+```json
+{
+  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
 }
 ```
 
@@ -326,6 +375,40 @@ Example input:
 ```
 
 Output fields: `domain`, `url`, `lastmod`, `changefreq`, `priority`, `source`
+
+## JSON Schema Validator: Bulk, Draft 7, 2019-09, 2020-12
+
+- Actor ID: `v0iddo/validate-json-schema`
+- Store page: https://apify.com/v0iddo/validate-json-schema
+- Price: $1.91 per 1,000 results, nothing per run
+
+Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and list every error with its path.
+
+Example input:
+
+```json
+{
+  "schema": {
+    "type": "object",
+    "required": [
+      "name",
+      "age"
+    ],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "age": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  },
+  "instance": "{\"name\": \"Ada\", \"age\": -3}"
+}
+```
+
+Output fields: `index`, `valid`, `count`, `errors`
 
 ## QR Code Generator (PNG and SVG)
 

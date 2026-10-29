@@ -28,28 +28,6 @@ Example input:
 
 Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `ratingsCount`, `inStock`, `mainImage`, `url`
 
-## Amazon Search Scraper: Monthly Sales, Badges, Prices
-
-- Actor ID: `v0iddo/amazon-search-scraper`
-- Store page: https://apify.com/v0iddo/amazon-search-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "wireless earbuds"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `asin`, `title`, `price`, `rating`, `ratingsCount`, `badge`, `sponsored`, `url`
-
 ## AliExpress Scraper: Prices, Sold Counts
 
 - Actor ID: `v0iddo/aliexpress-scraper`
@@ -146,27 +124,6 @@ Example input:
 
 Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `status`, `mainImage`, `url`
 
-## Vinted Product Scraper: Search Listings, Prices, Brands, Sizes
-
-- Actor ID: `v0iddo/vinted-scraper`
-- Store page: https://apify.com/v0iddo/vinted-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "nike"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`
-
 ## Shopify Scraper: Products, Prices, Stock
 
 - Actor ID: `v0iddo/shopify-store-intelligence`
@@ -189,3 +146,24 @@ Example input:
 ```
 
 Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice`, `maxPrice`, `currency`, `discountPercent`, `available`, `variantsInStock`, `updatedAt`
+
+## Vinted Product Scraper: Search Listings, Prices, Brands, Sizes
+
+- Actor ID: `v0iddo/vinted-scraper`
+- Store page: https://apify.com/v0iddo/vinted-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "nike"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`

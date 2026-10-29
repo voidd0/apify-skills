@@ -195,6 +195,56 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
+## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
+
+- Actor ID: `v0iddo/jobs-ch-scraper`
+- Store page: https://apify.com/v0iddo/jobs-ch-scraper
+- Price: $0.90 per 1,000 results, nothing per run
+
+Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, employment type, position, posting dates, weekly hours, industry, category, skills, benefits, the employer's website and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "data analyst"
+  ],
+  "location": "Zürich",
+  "site": "jobs.ch",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
+
+## Computrabajo Scraper: LATAM Jobs and Salaries
+
+- Actor ID: `v0iddo/computrabajo-scraper`
+- Store page: https://apify.com/v0iddo/computrabajo-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, region, salary with currency and period, contract, schedule, remote or hybrid, education, experience, skills, industry and dates.
+
+Example input:
+
+```json
+{
+  "countries": [
+    "mx"
+  ],
+  "keywords": [
+    "contador"
+  ],
+  "location": "Monterrey",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractType`, `schedule`, `workMode`, `postedDate`, `url`
+
 ## Greenhouse, Lever, Workday & Ashby Jobs Scraper: Careers API
 
 - Actor ID: `v0iddo/ats-jobs-scraper`

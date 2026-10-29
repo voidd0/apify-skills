@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 17 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 20 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -64,11 +64,14 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.00 |
 | Download files in bulk from direct links, or every image, video, audio file, PDF, document or archive on a... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $7.65 |
-| Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $1.00 |
+| Check if domains are available, in bulk: one row per domain with available or registered, registrar, creati... | `v0iddo/domain-availability-checker` | $1.00 |
+| Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $0.70 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
-| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $5.95 |
+| WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.50 |
 | Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
+| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $5.95 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |
+| Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and li... | `v0iddo/validate-json-schema` | $1.91 |
 | Turn text or a URL into a crisp QR code as PNG or SVG, with size and error-correction control. | `v0iddo/qr-code-generator` | $1.70 |
 | Convert a date and time between IANA time zones with exact daylight-saving handling, inspect a zone's offse... | `v0iddo/time-zone-converter` | $1.00 |
 
