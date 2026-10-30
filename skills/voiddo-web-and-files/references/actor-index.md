@@ -135,6 +135,60 @@ Example input:
 
 Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
 
+## Snapchat Profile and Spotlight Scraper
+
+- Actor ID: `v0iddo/snapchat-scraper`
+- Store page: https://apify.com/v0iddo/snapchat-scraper
+- Price: $1.49 per 1,000 results, nothing per run
+
+Scrape Snapchat public creator profiles: display name, subscriber count, bio, and per-video Spotlight stats including view count, like count, upload date, duration, and thumbnail.
+
+Example input:
+
+```json
+{
+  "handles": [
+    "kyliejenner",
+    "daviddobrik"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `handle`, `displayName`, `subscriberCount`, `videoTitle`, `viewCount`, `likeCount`, `uploadDate`, `durationSecs`, `thumbnailUrl`, `url`
+
+## Y Combinator Company Directory Scraper
+
+- Actor ID: `v0iddo/y-combinator-scraper`
+- Store page: https://apify.com/v0iddo/y-combinator-scraper
+- Price: $2.92 per 1,000 results, nothing per run
+
+Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
+
+Example input:
+
+```json
+{
+  "companyUrls": [
+    "https://www.ycombinator.com/companies/stripe",
+    "https://www.ycombinator.com/companies/airbnb",
+    "https://www.ycombinator.com/companies/dropbox",
+    "https://www.ycombinator.com/companies/reddit",
+    "https://www.ycombinator.com/companies/doordash",
+    "https://www.ycombinator.com/companies/coinbase",
+    "https://www.ycombinator.com/companies/instacart",
+    "https://www.ycombinator.com/companies/gitlab",
+    "https://www.ycombinator.com/companies/gusto",
+    "https://www.ycombinator.com/companies/brex",
+    "https://www.ycombinator.com/companies/openai",
+    "https://www.ycombinator.com/companies/figma"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `batch`, `status`, `industries`, `location`, `website`, `oneLiner`, `teamSize`, `jobCount`, `url`
+
 ## Extract Frames from Video: Video Frame Extractor, Thumbnails
 
 - Actor ID: `v0iddo/video-frame-extractor`
@@ -181,6 +235,28 @@ Example input:
 ```
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
+
+## Luma Event Scraper
+
+- Actor ID: `v0iddo/luma-event-scraper`
+- Store page: https://apify.com/v0iddo/luma-event-scraper
+- Price: $2.98 per 1,000 results, nothing per run
+
+Scrape public event listings from luma.com city and calendar pages.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://luma.com/nyc",
+    "https://luma.com/sf"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
 
 ## Bulk File and Image Downloader: Download Images from Website
 
@@ -315,6 +391,24 @@ Example input:
 
 Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
 
+## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
+
+- Actor ID: `v0iddo/html-to-pdf`
+- Store page: https://apify.com/v0iddo/html-to-pdf
+- Price: $5.95 per 1,000 results, nothing per run
+
+Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
+
+Example input:
+
+```json
+{
+  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
 ## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
 
 - Actor ID: `v0iddo/html-to-image`
@@ -330,24 +424,6 @@ Example input:
   "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
   "width": 600,
   "height": 200
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
-## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
-
-- Actor ID: `v0iddo/html-to-pdf`
-- Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $5.95 per 1,000 results, nothing per run
-
-Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
-
-Example input:
-
-```json
-{
-  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
 }
 ```
 
