@@ -3,7 +3,7 @@
 Agent skills for Claude Code, Codex, Copilot, Cursor and any agent that reads `SKILL.md`. Each skill turns a data
 request ("export these careers pages to CSV", "top iPhone apps in Germany", "screen these names against OFAC") into a
 run of the right Actor on the Apify Store, with the input schema fetched, the cost sized before the run and the rows
-checked before delivery. 88 Actors in 11 skills, all pay per result.
+checked before delivery. 89 Actors in 11 skills, all pay per result.
 
 ## Install
 
@@ -34,7 +34,7 @@ Or copy a folder from `skills/` into your agent's skills directory. You need an 
 | [`voiddo-research-and-news`](skills/voiddo-research-and-news/SKILL.md) | Papers, articles, newsletters and podcasts | 6 |
 | [`voiddo-events`](skills/voiddo-events/SKILL.md) | Events by place and topic | 2 |
 | [`voiddo-ads-library`](skills/voiddo-ads-library/SKILL.md) | Ads from the Meta Ad Library | 1 |
-| [`voiddo-web-and-files`](skills/voiddo-web-and-files/SKILL.md) | Web pages, documents and media files | 23 |
+| [`voiddo-web-and-files`](skills/voiddo-web-and-files/SKILL.md) | Web pages, documents and media files | 24 |
 
 The list of every Actor with prices and example code: [voidd0/apify-actors](https://github.com/voidd0/apify-actors).
 

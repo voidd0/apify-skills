@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 23 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 24 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -64,13 +64,14 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $2.92 |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
 | Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.00 |
-| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.98 |
 | Download files in bulk from direct links, or every image, video, audio file, PDF, document or archive on a... | `v0iddo/bulk-file-downloader` | $2.00 |
+| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.98 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $7.65 |
 | Check if domains are available, in bulk: one row per domain with available or registered, registrar, creati... | `v0iddo/domain-availability-checker` | $1.00 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $0.70 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.50 |
+| Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $2.55 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $5.95 |
 | Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |

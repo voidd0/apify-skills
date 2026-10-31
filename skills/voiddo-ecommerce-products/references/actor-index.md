@@ -72,33 +72,11 @@ Example input:
 
 Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `category`, `listType`, `image`, `url`
 
-## Alibaba Scraper: Prices, MOQ, Suppliers
-
-- Actor ID: `v0iddo/alibaba-scraper`
-- Store page: https://apify.com/v0iddo/alibaba-scraper
-- Price: $0.75 per 1,000 results, nothing per run
-
-Scrape Alibaba.com product offers by keyword: title, price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, Gold and verified badges, Trade Assurance and response rate.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "led strip lights"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `title`, `priceMin`, `priceMax`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `url`
-
 ## TikTok Shop Scraper: Products, Units Sold
 
 - Actor ID: `v0iddo/tiktok-shop-product-scraper`
 - Store page: https://apify.com/v0iddo/tiktok-shop-product-scraper
-- Price: $4.25 per 1,000 results, nothing per run
+- Price: $2.70 per 1,000 results, nothing per run
 
 Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original price, discount, units sold, rating, review count, stock, variants, images, category, shipping and shop details.
 
@@ -123,6 +101,28 @@ Example input:
 ```
 
 Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `status`, `mainImage`, `url`
+
+## Alibaba Scraper: Prices, MOQ, Suppliers
+
+- Actor ID: `v0iddo/alibaba-scraper`
+- Store page: https://apify.com/v0iddo/alibaba-scraper
+- Price: $0.75 per 1,000 results, nothing per run
+
+Scrape Alibaba.com product offers by keyword: title, price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, Gold and verified badges, Trade Assurance and response rate.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "led strip lights"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `title`, `priceMin`, `priceMax`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `url`
 
 ## Shopify Scraper: Products, Prices, Stock
 

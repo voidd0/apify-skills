@@ -60,8 +60,8 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, emp... | `v0iddo/instahyre-jobs-scraper` | $0.50 |
 | Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
 | Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
-| Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
+| Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $0.50 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $1.20 |
@@ -73,7 +73,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/hirist-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/hirist-jobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~indeed-scraper/run-sync-get-dataset-items" \

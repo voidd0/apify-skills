@@ -145,31 +145,6 @@ Example input:
 
 Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
 
-## Hirist Jobs Scraper: India Tech Jobs, Salary
-
-- Actor ID: `v0iddo/hirist-jobs-scraper`
-- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "python"
-  ],
-  "locations": [
-    "Bangalore"
-  ],
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
-
 ## IIMJobs Scraper: India Finance and MBA Jobs
 
 - Actor ID: `v0iddo/iimjobs-scraper`
@@ -187,6 +162,31 @@ Example input:
   ],
   "locations": [
     "Mumbai"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+
+## Hirist Jobs Scraper: India Tech Jobs, Salary
+
+- Actor ID: `v0iddo/hirist-jobs-scraper`
+- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "locations": [
+    "Bangalore"
   ],
   "includeDetails": true,
   "maxItems": 20

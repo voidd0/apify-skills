@@ -236,29 +236,7 @@ Example input:
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
 
-## Luma Event Scraper
-
-- Actor ID: `v0iddo/luma-event-scraper`
-- Store page: https://apify.com/v0iddo/luma-event-scraper
-- Price: $2.98 per 1,000 results, nothing per run
-
-Scrape public event listings from luma.com city and calendar pages.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://luma.com/nyc",
-    "https://luma.com/sf"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
-
-## Bulk File and Image Downloader: Download Images from Website
+## Bulk File Downloader and Image Downloader: Web Pages, PDFs
 
 - Actor ID: `v0iddo/bulk-file-downloader`
 - Store page: https://apify.com/v0iddo/bulk-file-downloader
@@ -282,6 +260,28 @@ Example input:
 ```
 
 Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
+
+## Luma Event Scraper
+
+- Actor ID: `v0iddo/luma-event-scraper`
+- Store page: https://apify.com/v0iddo/luma-event-scraper
+- Price: $2.98 per 1,000 results, nothing per run
+
+Scrape public event listings from luma.com city and calendar pages.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://luma.com/nyc",
+    "https://luma.com/sf"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
 
 ## Moz Top 500 Scraper: Domain Rankings
 
@@ -390,6 +390,36 @@ Example input:
 ```
 
 Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
+
+## Substack Newsletter Scraper
+
+- Actor ID: `v0iddo/creator-leads-scraper`
+- Store page: https://apify.com/v0iddo/creator-leads-scraper
+- Price: $2.55 per 1,000 results, nothing per run
+
+Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status, community flag, homepage type, logo, and creation date.
+
+Example input:
+
+```json
+{
+  "handles": [
+    "stratechery",
+    "noahpinion",
+    "astralcodexten",
+    "mattstoller",
+    "platformer",
+    "byrnehobart",
+    "worksinprogress",
+    "slowboring",
+    "persuasion",
+    "thedispatch"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `publicationName`, `publicationUrl`, `subdomain`, `description`, `hasPaidTier`, `paymentsState`, `homepageType`, `communityEnabled`, `createdAt`, `logoUrl`
 
 ## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
 
