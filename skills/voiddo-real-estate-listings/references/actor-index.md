@@ -28,7 +28,7 @@ Output fields: `address`, `priceText`, `beds`, `baths`, `livingArea`, `homeType`
 
 - Actor ID: `v0iddo/fotocasa-scraper`
 - Store page: https://apify.com/v0iddo/fotocasa-scraper
-- Price: $1.50 per 1,000 results, nothing per run
+- Price: $0.77 per 1,000 results, nothing per run
 
 Scrape Fotocasa property listings for sale or to rent across Spain: price, price drop, rooms, bathrooms, surface, floor, features, neighbourhood and city, coordinates, photos, agency and publication date.
 
@@ -50,7 +50,7 @@ Output fields: `propertyId`, `address`, `price`, `rentPeriod`, `propertyType`, `
 
 - Actor ID: `v0iddo/rightmove-scraper`
 - Store page: https://apify.com/v0iddo/rightmove-scraper
-- Price: $1.50 per 1,000 results, nothing per run
+- Price: $0.75 per 1,000 results, nothing per run
 
 Scrape Rightmove property listings for sale or to rent across the UK: price, address, bedrooms, bathrooms, property type, estate agent branch, added or reduced date, coordinates, photo and link.
 

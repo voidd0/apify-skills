@@ -249,7 +249,7 @@ Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractTyp
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
 - Store page: https://apify.com/v0iddo/ats-jobs-scraper
-- Price: $1.20 per 1,000 results, nothing per run
+- Price: $0.60 per 1,000 results, nothing per run
 
 Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and BambooHR with one consistent schema.
 
@@ -269,6 +269,28 @@ Example input:
 ```
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+
+## Kariyer Scraper: Kariyer.net Turkey Job Listings
+
+- Actor ID: `v0iddo/kariyer-scraper`
+- Store page: https://apify.com/v0iddo/kariyer-scraper
+- Price: $1.27 per 1,000 results, nothing per run
+
+Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link.
+
+Example input:
+
+```json
+{
+  "locations": [
+    "istanbul"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
 
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 

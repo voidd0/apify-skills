@@ -57,7 +57,7 @@ Out of scope (the boundary): Paywalled articles: the Actors read public pages on
 | Extract news articles from any publisher. | `v0iddo/news-scraper` | $1.50 |
 | Pull Medium articles via the public RSS feed endpoints: /feed/@user, /feed/tag/{tag}, /feed/{publication-sl... | `v0iddo/medium-rss-tracker` | $0.20 |
 | Substack scraper for newsletter posts. | `v0iddo/substack-newsletter-posts` | $1.06 |
-| Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, commen... | `v0iddo/substack-scraper` | $1.00 |
+| Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, commen... | `v0iddo/substack-scraper` | $0.85 |
 | Pull daily-new PubMed citations matching any query. | `v0iddo/pubmed-daily-citations-tracker` | $1.00 |
 | For each query, pull recent works from Crossref's public REST API with a server-side date filter. | `v0iddo/crossref-recent-publications` | $0.20 |
 

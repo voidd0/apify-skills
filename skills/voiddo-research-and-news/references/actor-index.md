@@ -73,7 +73,7 @@ Output fields: `newsletter`, `newsletterTitle`, `title`, `link`, `author`, `pubD
 
 - Actor ID: `v0iddo/substack-scraper`
 - Store page: https://apify.com/v0iddo/substack-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, comments, word count and section.
 

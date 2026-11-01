@@ -265,7 +265,7 @@ Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `im
 
 - Actor ID: `v0iddo/luma-event-scraper`
 - Store page: https://apify.com/v0iddo/luma-event-scraper
-- Price: $2.98 per 1,000 results, nothing per run
+- Price: $2.38 per 1,000 results, nothing per run
 
 Scrape public event listings from luma.com city and calendar pages.
 
@@ -287,7 +287,7 @@ Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddr
 
 - Actor ID: `v0iddo/moz-scraper`
 - Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $7.65 per 1,000 results, nothing per run
+- Price: $6.80 per 1,000 results, nothing per run
 
 Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
 
@@ -355,6 +355,29 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
+## Made-in-China.com Product Scraper
+
+- Actor ID: `v0iddo/made-in-china-scraper`
+- Store page: https://apify.com/v0iddo/made-in-china-scraper
+- Price: $1.44 per 1,000 results, nothing per run
+
+Scrape Made-in-China.com product search pages by keyword.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "LED Light",
+    "Solar Panel"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `keyword`, `page`, `position`, `name`, `category`, `lowPriceUsd`, `highPriceUsd`, `supplierName`, `inStock`, `image`, `url`
+
 ## Website Screenshot Generator: URL to PNG, JPEG or WEBP
 
 - Actor ID: `v0iddo/url-screenshot`
@@ -373,29 +396,11 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## WHOIS Domain Lookup: Registrar, Age, Expiry, Name Servers
-
-- Actor ID: `v0iddo/whois-domain-lookup`
-- Store page: https://apify.com/v0iddo/whois-domain-lookup
-- Price: $1.50 per 1,000 results, nothing per run
-
-WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers, status and DNSSEC, read live from the registry's RDAP service.
-
-Example input:
-
-```json
-{
-  "query": "github.com"
-}
-```
-
-Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
-
 ## Substack Newsletter Scraper
 
 - Actor ID: `v0iddo/creator-leads-scraper`
 - Store page: https://apify.com/v0iddo/creator-leads-scraper
-- Price: $2.55 per 1,000 results, nothing per run
+- Price: $1.53 per 1,000 results, nothing per run
 
 Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status, community flag, homepage type, logo, and creation date.
 
@@ -421,6 +426,24 @@ Example input:
 
 Output fields: `publicationName`, `publicationUrl`, `subdomain`, `description`, `hasPaidTier`, `paymentsState`, `homepageType`, `communityEnabled`, `createdAt`, `logoUrl`
 
+## WHOIS Domain Lookup: Registrar, Age, Expiry, Name Servers
+
+- Actor ID: `v0iddo/whois-domain-lookup`
+- Store page: https://apify.com/v0iddo/whois-domain-lookup
+- Price: $1.50 per 1,000 results, nothing per run
+
+WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers, status and DNSSEC, read live from the registry's RDAP service.
+
+Example input:
+
+```json
+{
+  "query": "github.com"
+}
+```
+
+Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
+
 ## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
 
 - Actor ID: `v0iddo/html-to-pdf`
@@ -434,26 +457,6 @@ Example input:
 ```json
 {
   "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
-## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
-
-- Actor ID: `v0iddo/html-to-image`
-- Store page: https://apify.com/v0iddo/html-to-image
-- Price: $3.40 per 1,000 results, nothing per run
-
-Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
-
-Example input:
-
-```json
-{
-  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
-  "width": 600,
-  "height": 200
 }
 ```
 
@@ -481,6 +484,26 @@ Example input:
 ```
 
 Output fields: `domain`, `url`, `lastmod`, `changefreq`, `priority`, `source`
+
+## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
+
+- Actor ID: `v0iddo/html-to-image`
+- Store page: https://apify.com/v0iddo/html-to-image
+- Price: $3.40 per 1,000 results, nothing per run
+
+Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
+
+Example input:
+
+```json
+{
+  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
+  "width": 600,
+  "height": 200
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 ## JSON Schema Validator: Bulk, Draft 7, 2019-09, 2020-12
 

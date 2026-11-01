@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/yahoo-finance-scraper`
 - Store page: https://apify.com/v0iddo/yahoo-finance-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.50 per 1,000 results, nothing per run
 
 Scrape Yahoo Finance quotes and key statistics for stocks, ETFs, indexes, crypto, currencies and futures: price, change, volume, market cap, P/E, EPS, dividend, 52 week range, analyst target, sector and next earnings date.
 

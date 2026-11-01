@@ -2,24 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## USAspending Awards Scraper: Federal Contracts and Grants
-
-- Actor ID: `v0iddo/usaspending-federal-awards`
-- Store page: https://apify.com/v0iddo/usaspending-federal-awards
-- Price: $1.70 per 1,000 results, nothing per run
-
-Pull recent federal contract and grant awards from USAspending.gov.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
-
 ## ClinicalTrials.gov Scraper: Trial Updates by Query
 
 - Actor ID: `v0iddo/clinicaltrials-updates-tracker`
@@ -40,6 +22,24 @@ Example input:
 ```
 
 Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
+
+## USAspending Awards Scraper: Federal Contracts and Grants
+
+- Actor ID: `v0iddo/usaspending-federal-awards`
+- Store page: https://apify.com/v0iddo/usaspending-federal-awards
+- Price: $1.70 per 1,000 results, nothing per run
+
+Pull recent federal contract and grant awards from USAspending.gov.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
 
 ## Federal Register Scraper: Rules, Proposed Rules, Notices
 
@@ -92,6 +92,7 @@ Example input:
 
 ```json
 {
+  "sinceProjectStartDays": 90,
   "maxResults": 20
 }
 ```
@@ -199,4 +200,4 @@ Example input:
 }
 ```
 
-Output fields: `snapshotAt`, `filing_id`, `date_received`, `submission_type`, `filer_name`, `proceeding`, `document_filename`, `document_url`, `city`, `state`, `text_snippet`
+Output fields: `snapshotAt`, `filing_id`, `date_received`, `submission_type`, `filer_name`, `proceeding`, `allProceedings`, `document_filename`, `document_url`, `city`, `state`, `text_snippet`
