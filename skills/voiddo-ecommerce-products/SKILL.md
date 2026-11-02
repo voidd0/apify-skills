@@ -55,7 +55,7 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Scrape Amazon.com product pages from ASINs or links: title, brand, price, list price, rating, ratings count... | `v0iddo/amazon-product-scraper` | $1.50 |
-| Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, rati... | `v0iddo/amazon-search-scraper` | $0.85 |
+| Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, rati... | `v0iddo/amazon-search-scraper` | $0.51 |
 | Scrape AliExpress search results into product rows: product ID, title, sale price, original price, discount... | `v0iddo/aliexpress-scraper` | $1.50 |
 | Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rati... | `v0iddo/amazon-bestsellers-scraper` | $1.00 |
 | Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original pri... | `v0iddo/tiktok-shop-product-scraper` | $2.70 |

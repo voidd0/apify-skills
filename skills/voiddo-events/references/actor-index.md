@@ -23,7 +23,7 @@ Example input:
 }
 ```
 
-Output fields: `id`, `title`, `organizer`, `startDate`, `endDate`, `isOnline`, `venueName`, `city`, `priceMin`, `priceMax`, `url`
+Output fields: `query`, `title`, `startDate`, `endDate`, `isOnline`, `venueName`, `city`, `url`, `id`
 
 ## Eventbrite Event Data Scraper: City, Dates, Ticket Prices
 

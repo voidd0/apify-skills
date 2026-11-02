@@ -32,7 +32,7 @@ Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `rating
 
 - Actor ID: `v0iddo/amazon-search-scraper`
 - Store page: https://apify.com/v0iddo/amazon-search-scraper
-- Price: $0.85 per 1,000 results, nothing per run
+- Price: $0.51 per 1,000 results, nothing per run
 
 Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
 

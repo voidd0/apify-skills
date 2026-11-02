@@ -80,6 +80,27 @@ Example input:
 
 Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
 
+## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
+
+- Actor ID: `v0iddo/sec-form4-insider-trades`
+- Store page: https://apify.com/v0iddo/sec-form4-insider-trades
+- Price: $1.70 per 1,000 results, nothing per run
+
+Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker.
+
+Example input:
+
+```json
+{
+  "tickers": [
+    "AAPL",
+    "META"
+  ]
+}
+```
+
+Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
+
 ## NIH RePORTER Scraper: Research Grants by Query
 
 - Actor ID: `v0iddo/nih-reporter-grants`
@@ -139,32 +160,11 @@ Example input:
 
 Output fields: `cik`, `company_name`, `accession_number`, `form`, `filing_date`, `report_date`, `primary_document`, `primary_doc_description`
 
-## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
-
-- Actor ID: `v0iddo/sec-form4-insider-trades`
-- Store page: https://apify.com/v0iddo/sec-form4-insider-trades
-- Price: $1.70 per 1,000 results, nothing per run
-
-Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker.
-
-Example input:
-
-```json
-{
-  "tickers": [
-    "AAPL",
-    "META"
-  ]
-}
-```
-
-Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
-
 ## SEC 13F Scraper: Institutional Holdings by Filer
 
 - Actor ID: `v0iddo/sec-13f-institutional-holdings`
 - Store page: https://apify.com/v0iddo/sec-13f-institutional-holdings
-- Price: $1.53 per 1,000 results, nothing per run
+- Price: $0.34 per 1,000 results, nothing per run
 
 Pull SEC Form 13F quarterly holdings for any institutional manager by CIK.
 

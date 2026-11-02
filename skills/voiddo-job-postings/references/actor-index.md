@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/indeed-scraper`
 - Store page: https://apify.com/v0iddo/indeed-scraper
-- Price: $0.50 per 1,000 results, nothing per run
+- Price: $0.25 per 1,000 results, nothing per run
 
 Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary range and period where the employer shows it, job types, posting date, urgent and easy apply flags, snippet and job URL.
 
@@ -249,7 +249,7 @@ Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractTyp
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
 - Store page: https://apify.com/v0iddo/ats-jobs-scraper
-- Price: $0.60 per 1,000 results, nothing per run
+- Price: $0.42 per 1,000 results, nothing per run
 
 Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and BambooHR with one consistent schema.
 
@@ -270,11 +270,34 @@ Example input:
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
+## Rozee.pk Jobs Scraper
+
+- Actor ID: `v0iddo/rozeepk-jobs-scraper`
+- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape job listings from Rozee.pk by keyword and optional city.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "developer"
+  ],
+  "city": "",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
+
 ## Kariyer Scraper: Kariyer.net Turkey Job Listings
 
 - Actor ID: `v0iddo/kariyer-scraper`
 - Store page: https://apify.com/v0iddo/kariyer-scraper
-- Price: $1.27 per 1,000 results, nothing per run
+- Price: $0.84 per 1,000 results, nothing per run
 
 Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link.
 

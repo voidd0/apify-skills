@@ -92,27 +92,6 @@ Example input:
 
 Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
 
-## Extract Text from PDF: Markdown & Metadata
-
-- Actor ID: `v0iddo/pdf-text-extractor`
-- Store page: https://apify.com/v0iddo/pdf-text-extractor
-- Price: $1.00 per 1,000 results, nothing per run
-
-Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and paragraphs, ready for LLM and search pipelines.
-
-Example input:
-
-```json
-{
-  "file_urls": [
-    "https://www.irs.gov/pub/irs-pdf/fw9.pdf"
-  ],
-  "format": "markdown"
-}
-```
-
-Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
-
 ## Audio Transcription: Audio to Text Converter, Podcast, Video
 
 - Actor ID: `v0iddo/audio-transcription`
@@ -134,6 +113,49 @@ Example input:
 ```
 
 Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
+
+## Internshala Scraper
+
+- Actor ID: `v0iddo/internshala-scraper`
+- Store page: https://apify.com/v0iddo/internshala-scraper
+- Price: $1.55 per 1,000 results, nothing per run
+
+Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-from-home flag, and direct URL.
+
+Example input:
+
+```json
+{
+  "startUrls": [
+    "https://internshala.com/internships/computer-science-internship/"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `workFromHome`, `stipend`, `duration`, `listingType`, `postedOn`, `url`
+
+## Extract Text from PDF: Markdown & Metadata
+
+- Actor ID: `v0iddo/pdf-text-extractor`
+- Store page: https://apify.com/v0iddo/pdf-text-extractor
+- Price: $1.00 per 1,000 results, nothing per run
+
+Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and paragraphs, ready for LLM and search pipelines.
+
+Example input:
+
+```json
+{
+  "file_urls": [
+    "https://www.irs.gov/pub/irs-pdf/fw9.pdf"
+  ],
+  "format": "markdown"
+}
+```
+
+Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 
 ## Snapchat Profile and Spotlight Scraper
 
@@ -161,7 +183,7 @@ Output fields: `handle`, `displayName`, `subscriberCount`, `videoTitle`, `viewCo
 
 - Actor ID: `v0iddo/y-combinator-scraper`
 - Store page: https://apify.com/v0iddo/y-combinator-scraper
-- Price: $2.92 per 1,000 results, nothing per run
+- Price: $1.46 per 1,000 results, nothing per run
 
 Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
 
@@ -287,7 +309,7 @@ Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddr
 
 - Actor ID: `v0iddo/moz-scraper`
 - Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $6.80 per 1,000 results, nothing per run
+- Price: $3.40 per 1,000 results, nothing per run
 
 Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
 
@@ -302,6 +324,36 @@ Example input:
 ```
 
 Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
+
+## North Data Scraper
+
+- Actor ID: `v0iddo/north-data-scraper`
+- Store page: https://apify.com/v0iddo/north-data-scraper
+- Price: $2.98 per 1,000 results, nothing per run
+
+Extract European company profiles from northdata.com: company name, register number, court, LEI code, address, founding date, corporate purpose, and officer count.
+
+Example input:
+
+```json
+{
+  "companyUrls": [
+    "https://www.northdata.com/BMW-AG,+M%C3%BCnchen/HRB+42243",
+    "https://www.northdata.com/Volkswagen+AG,+Wolfsburg/HRB+100484",
+    "https://www.northdata.com/Siemens+AG,+M%C3%BCnchen/HRB+6684",
+    "https://www.northdata.com/Deutsche+Telekom+AG,+Bonn/HRB+6794",
+    "https://www.northdata.com/BASF+SE,+Ludwigshafen+am+Rhein/HRB+6729",
+    "https://www.northdata.com/Bayer+AG,+Leverkusen/HRB+48248",
+    "https://www.northdata.com/Allianz+SE,+M%C3%BCnchen/HRB+164232",
+    "https://www.northdata.com/SAP+SE,+Walldorf/HRB+755676",
+    "https://www.northdata.com/Mercedes-Benz+Group+AG,+Stuttgart/HRB+19360",
+    "https://www.northdata.com/Deutsche+Bank+AG,+Frankfurt+am+Main/HRB+30000"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `city`, `postalCode`, `country`, `foundingDate`, `corporatePurpose`, `officerCount`, `url`
 
 ## Domain Availability Checker: Bulk RDAP
 
@@ -355,11 +407,35 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
+## CarGurus Zipcode Search Scraper
+
+- Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
+- Store page: https://apify.com/v0iddo/cargurus-zipcode-search-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel economy, dealer name and location, and direct listing link.
+
+Example input:
+
+```json
+{
+  "searchUrls": [
+    "https://www.cargurus.com/Cars/new/nl-New-Ford-Mustang-d2"
+  ],
+  "zipCode": "10001",
+  "radiusMiles": 100,
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
+
 ## Made-in-China.com Product Scraper
 
 - Actor ID: `v0iddo/made-in-china-scraper`
 - Store page: https://apify.com/v0iddo/made-in-china-scraper
-- Price: $1.44 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 Scrape Made-in-China.com product search pages by keyword.
 
@@ -448,7 +524,7 @@ Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `
 
 - Actor ID: `v0iddo/html-to-pdf`
 - Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $5.95 per 1,000 results, nothing per run
+- Price: $4.42 per 1,000 results, nothing per run
 
 Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
 
@@ -461,6 +537,28 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## PeoplePerHour Job Scraper
+
+- Actor ID: `v0iddo/peopleperhour-job-scraper`
+- Store page: https://apify.com/v0iddo/peopleperhour-job-scraper
+- Price: $2.98 per 1,000 results, nothing per run
+
+Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, project type, category, proposal count, posted date, expiry date and job URL.
+
+Example input:
+
+```json
+{
+  "categorySlugs": [
+    "technology"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
 
 ## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
 
@@ -509,7 +607,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/validate-json-schema`
 - Store page: https://apify.com/v0iddo/validate-json-schema
-- Price: $1.91 per 1,000 results, nothing per run
+- Price: $1.70 per 1,000 results, nothing per run
 
 Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and list every error with its path.
 
