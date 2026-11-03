@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/indeed-scraper`
 - Store page: https://apify.com/v0iddo/indeed-scraper
-- Price: $0.25 per 1,000 results, nothing per run
+- Price: $0.13 per 1,000 results, nothing per run
 
 Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary range and period where the employer shows it, job types, posting date, urgent and easy apply flags, snippet and job URL.
 
@@ -274,7 +274,7 @@ Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `w
 
 - Actor ID: `v0iddo/rozeepk-jobs-scraper`
 - Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.79 per 1,000 results, nothing per run
 
 Scrape job listings from Rozee.pk by keyword and optional city.
 

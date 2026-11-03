@@ -54,7 +54,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary ran... | `v0iddo/indeed-scraper` | $0.25 |
+| Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary ran... | `v0iddo/indeed-scraper` | $0.13 |
 | Scrape startup jobs from Wellfound (AngelList Talent) by role and location, remote jobs or any search page:... | `v0iddo/wellfound-jobs-scraper` | $0.50 |
 | Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: titl... | `v0iddo/remote-jobs-scraper` | $0.50 |
 | Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, emp... | `v0iddo/instahyre-jobs-scraper` | $0.50 |
@@ -65,7 +65,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $0.50 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
-| Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $1.00 |
+| Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
 | Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
 | Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |

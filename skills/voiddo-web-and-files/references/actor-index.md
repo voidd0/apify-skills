@@ -92,33 +92,11 @@ Example input:
 
 Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
 
-## Audio Transcription: Audio to Text Converter, Podcast, Video
-
-- Actor ID: `v0iddo/audio-transcription`
-- Store page: https://apify.com/v0iddo/audio-transcription
-- Price: $10.00 per 1,000 results, nothing per run
-
-Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
-
-Example input:
-
-```json
-{
-  "mediaUrls": [
-    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
-  ],
-  "maxMinutesPerFile": 8,
-  "maxItems": 1
-}
-```
-
-Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
-
 ## Internshala Scraper
 
 - Actor ID: `v0iddo/internshala-scraper`
 - Store page: https://apify.com/v0iddo/internshala-scraper
-- Price: $1.55 per 1,000 results, nothing per run
+- Price: $0.78 per 1,000 results, nothing per run
 
 Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-from-home flag, and direct URL.
 
@@ -157,6 +135,28 @@ Example input:
 
 Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 
+## Audio Transcription: Audio to Text Converter, Podcast, Video
+
+- Actor ID: `v0iddo/audio-transcription`
+- Store page: https://apify.com/v0iddo/audio-transcription
+- Price: $10.00 per 1,000 results, nothing per run
+
+Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
+
+Example input:
+
+```json
+{
+  "mediaUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
+  ],
+  "maxMinutesPerFile": 8,
+  "maxItems": 1
+}
+```
+
+Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
+
 ## Snapchat Profile and Spotlight Scraper
 
 - Actor ID: `v0iddo/snapchat-scraper`
@@ -183,7 +183,7 @@ Output fields: `handle`, `displayName`, `subscriberCount`, `videoTitle`, `viewCo
 
 - Actor ID: `v0iddo/y-combinator-scraper`
 - Store page: https://apify.com/v0iddo/y-combinator-scraper
-- Price: $1.46 per 1,000 results, nothing per run
+- Price: $1.27 per 1,000 results, nothing per run
 
 Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
 
@@ -258,6 +258,25 @@ Example input:
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
 
+## Hiring.Cafe Jobs Scraper
+
+- Actor ID: `v0iddo/hiring-cafe-scraper`
+- Store page: https://apify.com/v0iddo/hiring-cafe-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, technical tools, requirements summary, visa sponsorship, and apply link.
+
+Example input:
+
+```json
+{
+  "keyword": "software engineer",
+  "maxItems": 20
+}
+```
+
+Output fields: `jobTitle`, `companyName`, `location`, `workplaceType`, `seniorityLevel`, `employmentType`, `jobCategory`, `technicalTools`, `applyUrl`, `url`
+
 ## Bulk File Downloader and Image Downloader: Web Pages, PDFs
 
 - Actor ID: `v0iddo/bulk-file-downloader`
@@ -305,26 +324,6 @@ Example input:
 
 Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
 
-## Moz Top 500 Scraper: Domain Rankings
-
-- Actor ID: `v0iddo/moz-scraper`
-- Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $3.40 per 1,000 results, nothing per run
-
-Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
-
-Example input:
-
-```json
-{
-  "minDaScore": 0,
-  "maxRank": 500,
-  "maxItems": 20
-}
-```
-
-Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
-
 ## North Data Scraper
 
 - Actor ID: `v0iddo/north-data-scraper`
@@ -354,6 +353,26 @@ Example input:
 ```
 
 Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `city`, `postalCode`, `country`, `foundingDate`, `corporatePurpose`, `officerCount`, `url`
+
+## Moz Top 500 Scraper: Domain Rankings
+
+- Actor ID: `v0iddo/moz-scraper`
+- Store page: https://apify.com/v0iddo/moz-scraper
+- Price: $1.70 per 1,000 results, nothing per run
+
+Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
+
+Example input:
+
+```json
+{
+  "minDaScore": 0,
+  "maxRank": 500,
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
 
 ## Domain Availability Checker: Bulk RDAP
 
@@ -407,30 +426,6 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## CarGurus Zipcode Search Scraper
-
-- Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
-- Store page: https://apify.com/v0iddo/cargurus-zipcode-search-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel economy, dealer name and location, and direct listing link.
-
-Example input:
-
-```json
-{
-  "searchUrls": [
-    "https://www.cargurus.com/Cars/new/nl-New-Ford-Mustang-d2"
-  ],
-  "zipCode": "10001",
-  "radiusMiles": 100,
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
-
 ## Made-in-China.com Product Scraper
 
 - Actor ID: `v0iddo/made-in-china-scraper`
@@ -454,6 +449,51 @@ Example input:
 
 Output fields: `keyword`, `page`, `position`, `name`, `category`, `lowPriceUsd`, `highPriceUsd`, `supplierName`, `inStock`, `image`, `url`
 
+## CarGurus Zipcode Search Scraper
+
+- Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
+- Store page: https://apify.com/v0iddo/cargurus-zipcode-search-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel economy, dealer name and location, and direct listing link.
+
+Example input:
+
+```json
+{
+  "searchUrls": [
+    "https://www.cargurus.com/Cars/new/nl-New-Ford-Mustang-d2"
+  ],
+  "zipCode": "10001",
+  "radiusMiles": 100,
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
+
+## TheFork Restaurant Reviews Scraper
+
+- Actor ID: `v0iddo/thefork-restaurant-reviews-scraper`
+- Store page: https://apify.com/v0iddo/thefork-restaurant-reviews-scraper
+- Price: $1.70 per 1,000 results, nothing per run
+
+Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review count, average price, price range level, Michelin distinctions, booking status, and a direct link.
+
+Example input:
+
+```json
+{
+  "cityUrls": [
+    "https://www.thefork.com/restaurants/paris-c415144"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
+
 ## Website Screenshot Generator: URL to PNG, JPEG or WEBP
 
 - Actor ID: `v0iddo/url-screenshot`
@@ -471,6 +511,31 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## DuckDuckGo Search Scraper
+
+- Actor ID: `v0iddo/duckduckgo-scraper`
+- Store page: https://apify.com/v0iddo/duckduckgo-scraper
+- Price: $0.51 per 1,000 results, nothing per run
+
+Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "web scraping tools",
+    "python tutorial"
+  ],
+  "region": "us-en",
+  "maxPages": 1,
+  "safeSearch": "moderate",
+  "maxItems": 20
+}
+```
+
+Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
 
 ## Substack Newsletter Scraper
 
@@ -524,7 +589,7 @@ Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `
 
 - Actor ID: `v0iddo/html-to-pdf`
 - Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $4.42 per 1,000 results, nothing per run
+- Price: $3.72 per 1,000 results, nothing per run
 
 Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
 
@@ -538,11 +603,30 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
+## JobTeaser Job Scraper
+
+- Actor ID: `v0iddo/jobteaser-job-scraper`
+- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
+
+Example input:
+
+```json
+{
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
+
 ## PeoplePerHour Job Scraper
 
 - Actor ID: `v0iddo/peopleperhour-job-scraper`
 - Store page: https://apify.com/v0iddo/peopleperhour-job-scraper
-- Price: $2.98 per 1,000 results, nothing per run
+- Price: $1.49 per 1,000 results, nothing per run
 
 Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, project type, category, proposal count, posted date, expiry date and job URL.
 
@@ -559,6 +643,28 @@ Example input:
 ```
 
 Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
+
+## Rakuten Ichiba Listings Scraper
+
+- Actor ID: `v0iddo/rakuten-japan-listings-scraper`
+- Store page: https://apify.com/v0iddo/rakuten-japan-listings-scraper
+- Price: $2.55 per 1,000 results, nothing per run
+
+Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review count, Rakuten points, shipping included flag, sold-out flag, item URL, and thumbnail image.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "カメラ"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `price`, `shopName`, `reviewScore`, `reviewCount`, `points`, `freeShipping`, `isSoldOut`, `image`, `url`
 
 ## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
 

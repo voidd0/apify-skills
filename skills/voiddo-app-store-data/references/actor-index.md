@@ -86,27 +86,6 @@ Example input:
 
 Output fields: `snapshotAt`, `query`, `country`, `collectionId`, `trackId`, `artistName`, `collectionName`, `trackName`, `showUrl`, `feedUrl`, `artworkUrl`, `genre`
 
-## App Store Search Scraper: Apps by Keyword
-
-- Actor ID: `v0iddo/app-store-search`
-- Store page: https://apify.com/v0iddo/app-store-search
-- Price: $0.20 per 1,000 results, nothing per run
-
-Search the Apple App Store by keyword and country.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "meditation",
-    "habit tracker"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
-
 ## Steam Game Reviews Scraper
 
 - Actor ID: `v0iddo/steam-game-reviews`
@@ -129,6 +108,27 @@ Example input:
 ```
 
 Output fields: `appid`, `app_name`, `recommendationid`, `voted_up`, `review_text`, `date_posted`, `hours_on_record`, `votes_up`, `votes_funny`, `awards`, `comment_count`, `author_num_games_owned`
+
+## App Store Search Scraper: Apps by Keyword
+
+- Actor ID: `v0iddo/app-store-search`
+- Store page: https://apify.com/v0iddo/app-store-search
+- Price: $0.20 per 1,000 results, nothing per run
+
+Search the Apple App Store by keyword and country.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "meditation",
+    "habit tracker"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
 
 ## Android App Metadata Scraper: Google Play Details, Ratings
 
