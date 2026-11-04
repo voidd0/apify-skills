@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 18 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 17 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -38,13 +38,13 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/indeed-scraper" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors info "v0iddo/wellfound-jobs-scraper" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/indeed-scraper" -i '{"query": "data analyst", "location": "Remote", "datePosted": "any", "jobType": "", "maxPages": 1, "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors call "v0iddo/wellfound-jobs-scraper" -i '{"roles": ["Software Engineer"], "locations": ["New York"], "includeDetails": true, "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,7 +54,6 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary ran... | `v0iddo/indeed-scraper` | $0.13 |
 | Scrape startup jobs from Wellfound (AngelList Talent) by role and location, remote jobs or any search page:... | `v0iddo/wellfound-jobs-scraper` | $0.50 |
 | Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: titl... | `v0iddo/remote-jobs-scraper` | $0.50 |
 | Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, emp... | `v0iddo/instahyre-jobs-scraper` | $0.50 |
@@ -75,11 +74,11 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/hirist-jobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/hirist-jobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper,v0iddo/ats-jobs-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~indeed-scraper/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"query": "data analyst", "location": "Remote", "datePosted": "any", "jobType": "", "maxPages": 1, "maxItems": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~wellfound-jobs-scraper/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"roles": ["Software Engineer"], "locations": ["New York"], "includeDetails": true, "maxItems": 20}'
 
 ## Troubleshooting
 

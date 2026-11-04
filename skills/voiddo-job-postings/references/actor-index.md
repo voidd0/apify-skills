@@ -2,29 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Indeed Jobs Scraper: Listings, Salary, Company Rating, Remote
-
-- Actor ID: `v0iddo/indeed-scraper`
-- Store page: https://apify.com/v0iddo/indeed-scraper
-- Price: $0.13 per 1,000 results, nothing per run
-
-Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary range and period where the employer shows it, job types, posting date, urgent and easy apply flags, snippet and job URL.
-
-Example input:
-
-```json
-{
-  "query": "data analyst",
-  "location": "Remote",
-  "datePosted": "any",
-  "jobType": "",
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `remote`, `salary`, `salaryMin`, `salaryMax`, `salaryPeriod`, `postedAt`, `jobTypes`, `sponsored`, `jobUrl`
-
 ## Wellfound Jobs Scraper: Salary, Equity, Stage
 
 - Actor ID: `v0iddo/wellfound-jobs-scraper`

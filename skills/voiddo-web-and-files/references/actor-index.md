@@ -96,7 +96,7 @@ Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitP
 
 - Actor ID: `v0iddo/internshala-scraper`
 - Store page: https://apify.com/v0iddo/internshala-scraper
-- Price: $0.78 per 1,000 results, nothing per run
+- Price: $0.39 per 1,000 results, nothing per run
 
 Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-from-home flag, and direct URL.
 
@@ -234,6 +234,28 @@ Example input:
 
 Output fields: `imageUrl`, `timecode`, `frameNumber`, `kind`, `videoFile`, `imageWidth`, `imageHeight`, `videoDurationSeconds`
 
+## Bluesky Scraper
+
+- Actor ID: `v0iddo/bluesky-scraper`
+- Store page: https://apify.com/v0iddo/bluesky-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media flag, and timestamp.
+
+Example input:
+
+```json
+{
+  "handles": [
+    "bsky.app"
+  ],
+  "postsPerHandle": 20,
+  "maxItems": 20
+}
+```
+
+Output fields: `postUri`, `url`, `handle`, `did`, `text`, `likeCount`, `repostCount`, `replyCount`, `indexedAt`, `hasMedia`, `lang`
+
 ## SEO Audit Tool (On-Page Checker, Canonical, Alt Text)
 
 - Actor ID: `v0iddo/seo-audit`
@@ -358,7 +380,7 @@ Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `
 
 - Actor ID: `v0iddo/moz-scraper`
 - Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $1.70 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
 
@@ -393,7 +415,7 @@ Example input:
     "python.org",
     "mozilla.org",
     "voiddo.com",
-    "bbc.co.uk",
+    "bbc.com",
     "example.net",
     "voiddo-availability-sample-7q3.com",
     "voiddo-availability-sample-7q3.org",
@@ -473,6 +495,28 @@ Example input:
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
 
+## Myntra Product Scraper
+
+- Actor ID: `v0iddo/myntra-product-scraper`
+- Store page: https://apify.com/v0iddo/myntra-product-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.myntra.com/men-tshirts"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
+
 ## TheFork Restaurant Reviews Scraper
 
 - Actor ID: `v0iddo/thefork-restaurant-reviews-scraper`
@@ -493,24 +537,6 @@ Example input:
 ```
 
 Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
-
-## Website Screenshot Generator: URL to PNG, JPEG or WEBP
-
-- Actor ID: `v0iddo/url-screenshot`
-- Store page: https://apify.com/v0iddo/url-screenshot
-- Price: $3.40 per 1,000 results, nothing per run
-
-Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
-
-Example input:
-
-```json
-{
-  "url": "https://example.com"
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 ## DuckDuckGo Search Scraper
 
@@ -536,6 +562,24 @@ Example input:
 ```
 
 Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
+
+## Website Screenshot Generator: URL to PNG, JPEG or WEBP
+
+- Actor ID: `v0iddo/url-screenshot`
+- Store page: https://apify.com/v0iddo/url-screenshot
+- Price: $3.40 per 1,000 results, nothing per run
+
+Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
+
+Example input:
+
+```json
+{
+  "url": "https://example.com"
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 ## Substack Newsletter Scraper
 
@@ -589,7 +633,7 @@ Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `
 
 - Actor ID: `v0iddo/html-to-pdf`
 - Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $3.72 per 1,000 results, nothing per run
+- Price: $3.40 per 1,000 results, nothing per run
 
 Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
 
@@ -607,7 +651,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/jobteaser-job-scraper`
 - Store page: https://apify.com/v0iddo/jobteaser-job-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.79 per 1,000 results, nothing per run
 
 Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
 
@@ -626,7 +670,7 @@ Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedA
 
 - Actor ID: `v0iddo/peopleperhour-job-scraper`
 - Store page: https://apify.com/v0iddo/peopleperhour-job-scraper
-- Price: $1.49 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, project type, category, proposal count, posted date, expiry date and job URL.
 
@@ -648,7 +692,7 @@ Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`
 
 - Actor ID: `v0iddo/rakuten-japan-listings-scraper`
 - Store page: https://apify.com/v0iddo/rakuten-japan-listings-scraper
-- Price: $2.55 per 1,000 results, nothing per run
+- Price: $1.28 per 1,000 results, nothing per run
 
 Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review count, Rakuten points, shipping included flag, sold-out flag, item URL, and thumbnail image.
 
@@ -713,7 +757,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/validate-json-schema`
 - Store page: https://apify.com/v0iddo/validate-json-schema
-- Price: $1.70 per 1,000 results, nothing per run
+- Price: $1.27 per 1,000 results, nothing per run
 
 Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and list every error with its path.
 

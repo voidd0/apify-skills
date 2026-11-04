@@ -2,24 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## USAspending Awards Scraper: Federal Contracts and Grants
-
-- Actor ID: `v0iddo/usaspending-federal-awards`
-- Store page: https://apify.com/v0iddo/usaspending-federal-awards
-- Price: $1.70 per 1,000 results, nothing per run
-
-Pull recent federal contract and grant awards from USAspending.gov.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
-
 ## ClinicalTrials.gov Scraper: Trial Updates by Query
 
 - Actor ID: `v0iddo/clinicaltrials-updates-tracker`
@@ -41,6 +23,24 @@ Example input:
 
 Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
 
+## USAspending Awards Scraper: Federal Contracts and Grants
+
+- Actor ID: `v0iddo/usaspending-federal-awards`
+- Store page: https://apify.com/v0iddo/usaspending-federal-awards
+- Price: $1.70 per 1,000 results, nothing per run
+
+Pull recent federal contract and grant awards from USAspending.gov.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
+
 ## Federal Register Scraper: Rules, Proposed Rules, Notices
 
 - Actor ID: `v0iddo/federal-register-tracker`
@@ -58,27 +58,6 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
-
-## SEC 8-K Scraper: Material Events by Ticker
-
-- Actor ID: `v0iddo/sec-8k-material-events-tracker`
-- Store page: https://apify.com/v0iddo/sec-8k-material-events-tracker
-- Price: $10.00 per 1,000 results, nothing per run
-
-Pull recent SEC 8-K filings (Current Reports) by stock ticker.
-
-Example input:
-
-```json
-{
-  "tickers": [
-    "TSLA",
-    "JPM"
-  ]
-}
-```
-
-Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
 
 ## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
 
@@ -119,6 +98,27 @@ Example input:
 ```
 
 Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
+
+## SEC 8-K Scraper: Material Events by Ticker
+
+- Actor ID: `v0iddo/sec-8k-material-events-tracker`
+- Store page: https://apify.com/v0iddo/sec-8k-material-events-tracker
+- Price: $10.00 per 1,000 results, nothing per run
+
+Pull recent SEC 8-K filings (Current Reports) by stock ticker.
+
+Example input:
+
+```json
+{
+  "tickers": [
+    "TSLA",
+    "JPM"
+  ]
+}
+```
+
+Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
 
 ## openFDA Drug Recalls Scraper: Enforcement Reports
 
