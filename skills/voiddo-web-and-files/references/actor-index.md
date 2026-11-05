@@ -96,7 +96,7 @@ Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitP
 
 - Actor ID: `v0iddo/internshala-scraper`
 - Store page: https://apify.com/v0iddo/internshala-scraper
-- Price: $0.39 per 1,000 results, nothing per run
+- Price: $0.34 per 1,000 results, nothing per run
 
 Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-from-home flag, and direct URL.
 
@@ -827,3 +827,24 @@ Example input:
 ```
 
 Output fields: `index`, `input`, `from_tz`, `output`, `offset_from`, `offset_to`, `dst_to`, `day_offset`
+
+## Eluta.ca Job Scraper
+
+- Actor ID: `v0iddo/eluta-ca-job-scraper`
+- Store page: https://apify.com/v0iddo/eluta-ca-job-scraper
+- Price: $0.77 per 1,000 results, nothing per run
+
+Scrape Canadian job listings from eluta.ca by keyword and location.
+
+Example input:
+
+```json
+{
+  "keyword": "software developer",
+  "location": "Toronto ON",
+  "maxPages": 2,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `employer`, `location`, `remote`, `salaryMin`, `salaryMax`, `topEmployer`, `snippet`, `lastSeen`, `url`
