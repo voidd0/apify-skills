@@ -2,27 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## ClinicalTrials.gov Scraper: Trial Updates by Query
-
-- Actor ID: `v0iddo/clinicaltrials-updates-tracker`
-- Store page: https://apify.com/v0iddo/clinicaltrials-updates-tracker
-- Price: $2.98 per 1,000 results, nothing per run
-
-Pull recently-updated ClinicalTrials.gov studies matching a query.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "lung cancer"
-  ],
-  "maxResultsPerQuery": 20
-}
-```
-
-Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
-
 ## USAspending Awards Scraper: Federal Contracts and Grants
 
 - Actor ID: `v0iddo/usaspending-federal-awards`
@@ -40,6 +19,27 @@ Example input:
 ```
 
 Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
+
+## ClinicalTrials.gov Scraper: Trial Updates by Query
+
+- Actor ID: `v0iddo/clinicaltrials-updates-tracker`
+- Store page: https://apify.com/v0iddo/clinicaltrials-updates-tracker
+- Price: $1.91 per 1,000 results, nothing per run
+
+Pull recently-updated ClinicalTrials.gov studies matching a query.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "lung cancer"
+  ],
+  "maxResultsPerQuery": 20
+}
+```
+
+Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
 
 ## Federal Register Scraper: Rules, Proposed Rules, Notices
 
@@ -80,25 +80,6 @@ Example input:
 
 Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
 
-## NIH RePORTER Scraper: Research Grants by Query
-
-- Actor ID: `v0iddo/nih-reporter-grants`
-- Store page: https://apify.com/v0iddo/nih-reporter-grants
-- Price: $3.00 per 1,000 results, nothing per run
-
-Pull recent NIH research grants from RePORTER.
-
-Example input:
-
-```json
-{
-  "sinceProjectStartDays": 90,
-  "maxResults": 20
-}
-```
-
-Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
-
 ## SEC 8-K Scraper: Material Events by Ticker
 
 - Actor ID: `v0iddo/sec-8k-material-events-tracker`
@@ -119,6 +100,25 @@ Example input:
 ```
 
 Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
+
+## NIH RePORTER Scraper: Research Grants by Query
+
+- Actor ID: `v0iddo/nih-reporter-grants`
+- Store page: https://apify.com/v0iddo/nih-reporter-grants
+- Price: $3.00 per 1,000 results, nothing per run
+
+Pull recent NIH research grants from RePORTER.
+
+Example input:
+
+```json
+{
+  "sinceProjectStartDays": 90,
+  "maxResults": 20
+}
+```
+
+Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
 
 ## openFDA Drug Recalls Scraper: Enforcement Reports
 

@@ -3,7 +3,7 @@
 Agent skills for Claude Code, Codex, Copilot, Cursor and any agent that reads `SKILL.md`. Each skill turns a data
 request ("export these careers pages to CSV", "top iPhone apps in Germany", "screen these names against OFAC") into a
 run of the right Actor on the Apify Store, with the input schema fetched, the cost sized before the run and the rows
-checked before delivery. 104 Actors in 11 skills, all pay per result.
+checked before delivery. 107 Actors in 11 skills, all pay per result.
 
 ## Install
 
@@ -24,10 +24,10 @@ Or copy a folder from `skills/` into your agent's skills directory. You need an 
 
 | Skill | Covers | Actors |
 | --- | --- | --- |
-| [`voiddo-job-postings`](skills/voiddo-job-postings/SKILL.md) | Job postings from careers pages and job boards | 17 |
+| [`voiddo-job-postings`](skills/voiddo-job-postings/SKILL.md) | Job postings from careers pages and job boards | 19 |
 | [`voiddo-ecommerce-products`](skills/voiddo-ecommerce-products/SKILL.md) | Products, prices and sales signals from marketplaces | 8 |
 | [`voiddo-real-estate-listings`](skills/voiddo-real-estate-listings/SKILL.md) | Real estate listings for sale and rent | 3 |
-| [`voiddo-app-store-data`](skills/voiddo-app-store-data/SKILL.md) | App stores and extension marketplaces | 10 |
+| [`voiddo-app-store-data`](skills/voiddo-app-store-data/SKILL.md) | App stores and extension marketplaces | 11 |
 | [`voiddo-public-records`](skills/voiddo-public-records/SKILL.md) | Government and regulatory records | 10 |
 | [`voiddo-market-data`](skills/voiddo-market-data/SKILL.md) | Stock quotes, exchange rates and crypto market data | 5 |
 | [`voiddo-developer-data`](skills/voiddo-developer-data/SKILL.md) | Packages, repositories and vulnerabilities | 5 |

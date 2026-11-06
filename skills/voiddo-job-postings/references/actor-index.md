@@ -2,6 +2,29 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
+## Indeed Jobs Scraper: Listings, Salary, Company Rating, Remote
+
+- Actor ID: `v0iddo/indeed-scraper`
+- Store page: https://apify.com/v0iddo/indeed-scraper
+- Price: $0.10 per 1,000 results, nothing per run
+
+Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary range and period where the employer shows it, job types, posting date, urgent and easy apply flags, snippet and job URL.
+
+Example input:
+
+```json
+{
+  "query": "data analyst",
+  "location": "Remote",
+  "datePosted": "any",
+  "jobType": "",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `remote`, `salary`, `salaryMin`, `salaryMax`, `salaryPeriod`, `postedAt`, `jobTypes`, `sponsored`, `jobUrl`
+
 ## Wellfound Jobs Scraper: Salary, Equity, Stage
 
 - Actor ID: `v0iddo/wellfound-jobs-scraper`
@@ -147,31 +170,6 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
-## Hirist Jobs Scraper: India Tech Jobs, Salary
-
-- Actor ID: `v0iddo/hirist-jobs-scraper`
-- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "python"
-  ],
-  "locations": [
-    "Bangalore"
-  ],
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
-
 ## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
 
 - Actor ID: `v0iddo/jobs-ch-scraper`
@@ -221,6 +219,31 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractType`, `schedule`, `workMode`, `postedDate`, `url`
+
+## Hirist Jobs Scraper: India Tech Jobs, Salary
+
+- Actor ID: `v0iddo/hirist-jobs-scraper`
+- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "locations": [
+    "Bangalore"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## Greenhouse, Lever, Workday & Ashby Jobs Scraper: Careers API
 
@@ -337,6 +360,28 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
+
+## Freelancer.com Jobs and Projects Scraper
+
+- Actor ID: `v0iddo/freelancer-jobs-projects-scraper`
+- Store page: https://apify.com/v0iddo/freelancer-jobs-projects-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Freelancer.com job listings by skill: project title, description, budget range, bid count, required skills, payment verification status, and project URL.
+
+Example input:
+
+```json
+{
+  "skills": [
+    "python"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `description`, `budgetMin`, `budgetMax`, `currency`, `bidCount`, `skills`, `paymentVerified`, `daysLeft`, `url`
 
 ## Ashby Jobs API and Scraper: Job Postings by Company
 

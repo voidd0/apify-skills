@@ -1,6 +1,6 @@
 ---
 name: voiddo-app-store-data
-description: "Read app and extension data from the Apple App Store, Google Play, Chrome Web Store, VS Code marketplace, JetBrains Marketplace and Steam: metadata, ratings, top charts, developer portfolios and reviews. Routes to 10 pay-per-result Apify Actors by vøiddo. Use when the user asks to research competitor apps, track app rankings, collect app reviews by country, list a developer's apps, find popular extensions or plugins."
+description: "Read app and extension data from the Apple App Store, Google Play, Chrome Web Store, VS Code marketplace, JetBrains Marketplace and Steam: metadata, ratings, top charts, developer portfolios and reviews. Routes to 11 pay-per-result Apify Actors by vøiddo. Use when the user asks to research competitor apps, track app rankings, collect app reviews by country, list a developer's apps, find popular extensions or plugins."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -60,6 +60,7 @@ Out of scope (the boundary): Downloading app binaries: out of scope.
 | Search the Apple Podcasts catalog via the public iTunes Search API. | `v0iddo/itunes-podcast-search` | $0.20 |
 | Scrape Steam player reviews by App ID. | `v0iddo/steam-game-reviews` | $1.00 |
 | Search the Apple App Store by keyword and country. | `v0iddo/app-store-search` | $0.20 |
+| Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100... | `v0iddo/app-store-top-charts` | $0.10 |
 | Snapshot Android app metadata from Google Play for any package name, in any country. | `v0iddo/google-play-app-metadata` | $0.50 |
 | Fetches extension metadata (downloads, version, publisher, repo, license, tags, timestamps) from the Open V... | `v0iddo/vscode-marketplace-extensions` | $1.00 |
 | Pull every app under an Apple App Store developer identifier (artistId). | `v0iddo/itunes-developer-portfolio` | $2.38 |
@@ -67,7 +68,7 @@ Out of scope (the boundary): Downloading app binaries: out of scope.
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/app-store-app-metadata,v0iddo/app-store-reviews-tracker,v0iddo/chrome-webstore-extensions,v0iddo/itunes-podcast-search,v0iddo/steam-game-reviews,v0iddo/app-store-search,v0iddo/google-play-app-metadata,v0iddo/vscode-marketplace-extensions,v0iddo/itunes-developer-portfolio,v0iddo/jetbrains-marketplace-plugins`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/app-store-app-metadata,v0iddo/app-store-reviews-tracker,v0iddo/chrome-webstore-extensions,v0iddo/itunes-podcast-search,v0iddo/steam-game-reviews,v0iddo/app-store-search,v0iddo/app-store-top-charts,v0iddo/google-play-app-metadata,v0iddo/vscode-marketplace-extensions,v0iddo/itunes-developer-portfolio`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~app-store-app-metadata/run-sync-get-dataset-items" \

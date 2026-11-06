@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 17 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 19 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -38,13 +38,13 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/wellfound-jobs-scraper" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors info "v0iddo/indeed-scraper" --input --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/wellfound-jobs-scraper" -i '{"roles": ["Software Engineer"], "locations": ["New York"], "includeDetails": true, "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
+       apify actors call "v0iddo/indeed-scraper" -i '{"query": "data analyst", "location": "Remote", "datePosted": "any", "jobType": "", "maxPages": 1, "maxItems": 20}' --json --user-agent voiddo-skills/voiddo-job-postings 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,31 +54,33 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
+| Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary ran... | `v0iddo/indeed-scraper` | $0.10 |
 | Scrape startup jobs from Wellfound (AngelList Talent) by role and location, remote jobs or any search page:... | `v0iddo/wellfound-jobs-scraper` | $0.50 |
 | Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: titl... | `v0iddo/remote-jobs-scraper` | $0.50 |
 | Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, emp... | `v0iddo/instahyre-jobs-scraper` | $0.50 |
 | Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
 | Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
 | Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
-| Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $0.50 |
+| Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
 | Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
 | Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |
+| Scrape Freelancer.com job listings by skill: project title, description, budget range, bid count, required... | `v0iddo/freelancer-jobs-projects-scraper` | $0.50 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/hirist-jobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper,v0iddo/ats-jobs-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/indeed-scraper,v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/iimjobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/computrabajo-scraper,v0iddo/hirist-jobs-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~wellfound-jobs-scraper/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"roles": ["Software Engineer"], "locations": ["New York"], "includeDetails": true, "maxItems": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~indeed-scraper/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"query": "data analyst", "location": "Remote", "datePosted": "any", "jobType": "", "maxPages": 1, "maxItems": 20}'
 
 ## Troubleshooting
 
