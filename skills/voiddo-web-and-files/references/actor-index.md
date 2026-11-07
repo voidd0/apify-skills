@@ -92,28 +92,6 @@ Example input:
 
 Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
 
-## Audio Transcription: Audio to Text Converter, Podcast, Video
-
-- Actor ID: `v0iddo/audio-transcription`
-- Store page: https://apify.com/v0iddo/audio-transcription
-- Price: $10.00 per 1,000 results, nothing per run
-
-Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
-
-Example input:
-
-```json
-{
-  "mediaUrls": [
-    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
-  ],
-  "maxMinutesPerFile": 8,
-  "maxItems": 1
-}
-```
-
-Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
-
 ## Internshala Scraper
 
 - Actor ID: `v0iddo/internshala-scraper`
@@ -135,6 +113,28 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `workFromHome`, `stipend`, `duration`, `listingType`, `postedOn`, `url`
+
+## Audio Transcription: Audio to Text Converter, Podcast, Video
+
+- Actor ID: `v0iddo/audio-transcription`
+- Store page: https://apify.com/v0iddo/audio-transcription
+- Price: $10.00 per 1,000 results, nothing per run
+
+Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
+
+Example input:
+
+```json
+{
+  "mediaUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
+  ],
+  "maxMinutesPerFile": 8,
+  "maxItems": 1
+}
+```
+
+Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
 
 ## Extract Text from PDF: Markdown & Metadata
 
@@ -163,7 +163,7 @@ Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 - Store page: https://apify.com/v0iddo/snapchat-scraper
 - Price: $1.49 per 1,000 results, nothing per run
 
-Scrape Snapchat public creator profiles: display name, subscriber count, bio, and per-video Spotlight stats including view count, like count, upload date, duration, and thumbnail.
+Scrape Snapchat public creator profiles: display name, subscriber count, bio, and per-video Spotlight stats including view count, like count, comment count, share count, upload date, duration, and thumbnail.
 
 Example input:
 
@@ -346,6 +346,26 @@ Example input:
 
 Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
 
+## Moz Top 500 Scraper: Domain Rankings
+
+- Actor ID: `v0iddo/moz-scraper`
+- Store page: https://apify.com/v0iddo/moz-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
+
+Example input:
+
+```json
+{
+  "minDaScore": 0,
+  "maxRank": 500,
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
+
 ## North Data Scraper
 
 - Actor ID: `v0iddo/north-data-scraper`
@@ -375,26 +395,6 @@ Example input:
 ```
 
 Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `city`, `postalCode`, `country`, `foundingDate`, `corporatePurpose`, `officerCount`, `url`
-
-## Moz Top 500 Scraper: Domain Rankings
-
-- Actor ID: `v0iddo/moz-scraper`
-- Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $0.85 per 1,000 results, nothing per run
-
-Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
-
-Example input:
-
-```json
-{
-  "minDaScore": 0,
-  "maxRank": 500,
-  "maxItems": 20
-}
-```
-
-Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
 
 ## Domain Availability Checker: Bulk RDAP
 
@@ -471,6 +471,28 @@ Example input:
 
 Output fields: `keyword`, `page`, `position`, `name`, `category`, `lowPriceUsd`, `highPriceUsd`, `supplierName`, `inStock`, `image`, `url`
 
+## Myntra Product Scraper
+
+- Actor ID: `v0iddo/myntra-product-scraper`
+- Store page: https://apify.com/v0iddo/myntra-product-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.myntra.com/men-tshirts"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
+
 ## CarGurus Zipcode Search Scraper
 
 - Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
@@ -494,28 +516,6 @@ Example input:
 ```
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
-
-## Myntra Product Scraper
-
-- Actor ID: `v0iddo/myntra-product-scraper`
-- Store page: https://apify.com/v0iddo/myntra-product-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
-
-Example input:
-
-```json
-{
-  "categoryUrls": [
-    "https://www.myntra.com/men-tshirts"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
 
 ## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
 
@@ -557,31 +557,6 @@ Example input:
 ```
 
 Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
-
-## DuckDuckGo Search Scraper
-
-- Actor ID: `v0iddo/duckduckgo-scraper`
-- Store page: https://apify.com/v0iddo/duckduckgo-scraper
-- Price: $0.51 per 1,000 results, nothing per run
-
-Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "web scraping tools",
-    "python tutorial"
-  ],
-  "region": "us-en",
-  "maxPages": 1,
-  "safeSearch": "moderate",
-  "maxItems": 20
-}
-```
-
-Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
 
 ## Substack Newsletter Scraper
 
@@ -630,6 +605,31 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## DuckDuckGo Search Scraper
+
+- Actor ID: `v0iddo/duckduckgo-scraper`
+- Store page: https://apify.com/v0iddo/duckduckgo-scraper
+- Price: $0.51 per 1,000 results, nothing per run
+
+Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "web scraping tools",
+    "python tutorial"
+  ],
+  "region": "us-en",
+  "maxPages": 1,
+  "safeSearch": "moderate",
+  "maxItems": 20
+}
+```
+
+Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
 
 ## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
 
