@@ -24,7 +24,7 @@ Or copy a folder from `skills/` into your agent's skills directory. You need an 
 
 | Skill | Covers | Actors |
 | --- | --- | --- |
-| [`voiddo-job-postings`](skills/voiddo-job-postings/SKILL.md) | Job postings from careers pages and job boards | 19 |
+| [`voiddo-job-postings`](skills/voiddo-job-postings/SKILL.md) | Job postings from careers pages and job boards | 18 |
 | [`voiddo-ecommerce-products`](skills/voiddo-ecommerce-products/SKILL.md) | Products, prices and sales signals from marketplaces | 8 |
 | [`voiddo-real-estate-listings`](skills/voiddo-real-estate-listings/SKILL.md) | Real estate listings for sale and rent | 3 |
 | [`voiddo-app-store-data`](skills/voiddo-app-store-data/SKILL.md) | App stores and extension marketplaces | 11 |
@@ -34,7 +34,7 @@ Or copy a folder from `skills/` into your agent's skills directory. You need an 
 | [`voiddo-research-and-news`](skills/voiddo-research-and-news/SKILL.md) | Papers, articles, newsletters and podcasts | 6 |
 | [`voiddo-events`](skills/voiddo-events/SKILL.md) | Events by place and topic | 2 |
 | [`voiddo-ads-library`](skills/voiddo-ads-library/SKILL.md) | Ads from the Meta Ad Library | 1 |
-| [`voiddo-web-and-files`](skills/voiddo-web-and-files/SKILL.md) | Web pages, documents and media files | 37 |
+| [`voiddo-web-and-files`](skills/voiddo-web-and-files/SKILL.md) | Web pages, documents and media files | 38 |
 
 The list of every Actor with prices and example code: [voidd0/apify-actors](https://github.com/voidd0/apify-actors).
 

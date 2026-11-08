@@ -2,13 +2,13 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Yahoo Finance Scraper: Stock Quotes and Key Statistics
+## Yahoo Finance Scraper: Options Chain, Stock Quotes, Stats
 
 - Actor ID: `v0iddo/yahoo-finance-scraper`
 - Store page: https://apify.com/v0iddo/yahoo-finance-scraper
 - Price: $0.50 per 1,000 results, nothing per run
 
-Scrape Yahoo Finance quotes and key statistics for stocks, ETFs, indexes, crypto, currencies and futures: price, change, volume, market cap, P/E, EPS, dividend, 52 week range, analyst target, sector and next earnings date.
+Scrape Yahoo Finance quotes and key statistics (price, change, volume, market cap, P/E, dividend, 52 week range, earnings date) for stocks, ETFs, indexes, crypto and currencies, or options chains: every call and put with strike, bid, ask, volume, open interest and implied volatility.
 
 Example input:
 

@@ -157,13 +157,13 @@ Example input:
 
 Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 
-## Snapchat Profile and Spotlight Scraper
+## Snapchat Scraper: Spotlight, Highlights
 
 - Actor ID: `v0iddo/snapchat-scraper`
 - Store page: https://apify.com/v0iddo/snapchat-scraper
 - Price: $1.49 per 1,000 results, nothing per run
 
-Scrape Snapchat public creator profiles: display name, subscriber count, bio, and per-video Spotlight stats including view count, like count, comment count, share count, upload date, duration, and thumbnail.
+Scrape Snapchat public creator profiles: name, subscribers, bio, and per-video Spotlight stats: views, likes, comments, shares, upload date, duration, thumbnail.
 
 Example input:
 
@@ -173,11 +173,12 @@ Example input:
     "kyliejenner",
     "daviddobrik"
   ],
+  "includeHighlights": true,
   "maxItems": 20
 }
 ```
 
-Output fields: `handle`, `displayName`, `subscriberCount`, `videoTitle`, `viewCount`, `likeCount`, `uploadDate`, `durationSecs`, `thumbnailUrl`, `url`
+Output fields: `handle`, `rowType`, `displayName`, `subscriberCount`, `videoTitle`, `viewCount`, `likeCount`, `uploadDate`, `durationSecs`, `highlightTitle`, `snapCount`, `thumbnailUrl`, `url`, `mediaUrls`
 
 ## Extract Frames from Video: Video Frame Extractor, Thumbnails
 
@@ -225,8 +226,8 @@ Example input:
     "https://www.ycombinator.com/companies/gitlab",
     "https://www.ycombinator.com/companies/gusto",
     "https://www.ycombinator.com/companies/brex",
-    "https://www.ycombinator.com/companies/openai",
-    "https://www.ycombinator.com/companies/figma"
+    "https://www.ycombinator.com/companies/zapier",
+    "https://www.ycombinator.com/companies/razorpay"
   ],
   "maxItems": 20
 }
@@ -344,7 +345,7 @@ Example input:
 }
 ```
 
-Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`
+Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`, `pageUrl`
 
 ## Moz Top 500 Scraper: Domain Rankings
 
@@ -471,6 +472,26 @@ Example input:
 
 Output fields: `keyword`, `page`, `position`, `name`, `category`, `lowPriceUsd`, `highPriceUsd`, `supplierName`, `inStock`, `image`, `url`
 
+## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
+
+- Actor ID: `v0iddo/html-to-image`
+- Store page: https://apify.com/v0iddo/html-to-image
+- Price: $3.40 per 1,000 results, nothing per run
+
+Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
+
+Example input:
+
+```json
+{
+  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
+  "width": 600,
+  "height": 200
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
 ## Myntra Product Scraper
 
 - Actor ID: `v0iddo/myntra-product-scraper`
@@ -517,46 +538,23 @@ Example input:
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
 
-## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
+## Website Screenshot Generator: URL to PNG, JPEG or WEBP
 
-- Actor ID: `v0iddo/html-to-image`
-- Store page: https://apify.com/v0iddo/html-to-image
+- Actor ID: `v0iddo/url-screenshot`
+- Store page: https://apify.com/v0iddo/url-screenshot
 - Price: $3.40 per 1,000 results, nothing per run
 
-Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
+Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
 
 Example input:
 
 ```json
 {
-  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
-  "width": 600,
-  "height": 200
+  "url": "https://example.com"
 }
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
-## TheFork Restaurant Reviews Scraper
-
-- Actor ID: `v0iddo/thefork-restaurant-reviews-scraper`
-- Store page: https://apify.com/v0iddo/thefork-restaurant-reviews-scraper
-- Price: $1.70 per 1,000 results, nothing per run
-
-Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review count, average price, price range level, Michelin distinctions, booking status, and a direct link.
-
-Example input:
-
-```json
-{
-  "cityUrls": [
-    "https://www.thefork.com/restaurants/paris-c415144"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
 
 ## Substack Newsletter Scraper
 
@@ -588,23 +586,26 @@ Example input:
 
 Output fields: `publicationName`, `publicationUrl`, `subdomain`, `description`, `hasPaidTier`, `paymentsState`, `homepageType`, `communityEnabled`, `createdAt`, `logoUrl`
 
-## Website Screenshot Generator: URL to PNG, JPEG or WEBP
+## TheFork Restaurant Reviews Scraper
 
-- Actor ID: `v0iddo/url-screenshot`
-- Store page: https://apify.com/v0iddo/url-screenshot
-- Price: $3.40 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/thefork-restaurant-reviews-scraper`
+- Store page: https://apify.com/v0iddo/thefork-restaurant-reviews-scraper
+- Price: $1.70 per 1,000 results, nothing per run
 
-Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
+Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review count, average price, price range level, Michelin distinctions, booking status, and a direct link.
 
 Example input:
 
 ```json
 {
-  "url": "https://example.com"
+  "cityUrls": [
+    "https://www.thefork.com/restaurants/paris-c415144"
+  ],
+  "maxItems": 20
 }
 ```
 
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
 
 ## DuckDuckGo Search Scraper
 
@@ -667,6 +668,25 @@ Example input:
 
 Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
 
+## JobTeaser Job Scraper
+
+- Actor ID: `v0iddo/jobteaser-job-scraper`
+- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
+- Price: $0.79 per 1,000 results, nothing per run
+
+Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
+
+Example input:
+
+```json
+{
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
+
 ## PeoplePerHour Job Scraper
 
 - Actor ID: `v0iddo/peopleperhour-job-scraper`
@@ -689,24 +709,26 @@ Example input:
 
 Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
 
-## JobTeaser Job Scraper
+## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
 
-- Actor ID: `v0iddo/jobteaser-job-scraper`
-- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
-- Price: $0.79 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/tennis-scores-api`
+- Store page: https://apify.com/v0iddo/tennis-scores-api
+- Price: $1.95 per 1,000 results, nothing per run
 
-Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
+Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
 
 Example input:
 
 ```json
 {
-  "maxPages": 1,
+  "dataType": "match_results",
+  "matchType": "all",
+  "days": 1,
   "maxItems": 20
 }
 ```
 
-Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
+Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
 
 ## Rakuten Ichiba Listings Scraper
 

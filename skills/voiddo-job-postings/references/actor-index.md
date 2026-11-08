@@ -2,29 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Indeed Jobs Scraper: Listings, Salary, Company Rating, Remote
-
-- Actor ID: `v0iddo/indeed-scraper`
-- Store page: https://apify.com/v0iddo/indeed-scraper
-- Price: $0.10 per 1,000 results, nothing per run
-
-Scrape Indeed.com job search results: title, company and its rating, location, remote or hybrid, salary range and period where the employer shows it, job types, posting date, urgent and easy apply flags, snippet and job URL.
-
-Example input:
-
-```json
-{
-  "query": "data analyst",
-  "location": "Remote",
-  "datePosted": "any",
-  "jobType": "",
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `remote`, `salary`, `salaryMin`, `salaryMax`, `salaryPeriod`, `postedAt`, `jobTypes`, `sponsored`, `jobUrl`
-
 ## Wellfound Jobs Scraper: Salary, Equity, Stage
 
 - Actor ID: `v0iddo/wellfound-jobs-scraper`
@@ -270,29 +247,6 @@ Example input:
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
-## Rozee.pk Jobs Scraper
-
-- Actor ID: `v0iddo/rozeepk-jobs-scraper`
-- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
-- Price: $0.79 per 1,000 results, nothing per run
-
-Scrape job listings from Rozee.pk by keyword and optional city.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "developer"
-  ],
-  "city": "",
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
-
 ## Kariyer Scraper: Kariyer.net Turkey Job Listings
 
 - Actor ID: `v0iddo/kariyer-scraper`
@@ -314,29 +268,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
-
-## Gupy Jobs Scraper: Brazil Job Vacancies
-
-- Actor ID: `v0iddo/gupy-scraper`
-- Store page: https://apify.com/v0iddo/gupy-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, company, city, state, job type, remote or hybrid, posted and deadline dates, requirements, hiring steps and the reason for the opening.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "analista de dados"
-  ],
-  "state": "São Paulo",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
 
 ## Pracuj.pl Scraper: Poland Jobs and Salaries
 
@@ -361,13 +292,59 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
+## Rozee.pk Jobs Scraper
+
+- Actor ID: `v0iddo/rozeepk-jobs-scraper`
+- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
+- Price: $0.79 per 1,000 results, nothing per run
+
+Scrape job listings from Rozee.pk by keyword and optional city.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "developer"
+  ],
+  "city": "",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
+
+## Gupy Jobs Scraper: Brazil Job Vacancies
+
+- Actor ID: `v0iddo/gupy-scraper`
+- Store page: https://apify.com/v0iddo/gupy-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, company, city, state, job type, remote or hybrid, posted and deadline dates, requirements, hiring steps and the reason for the opening.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "analista de dados"
+  ],
+  "state": "São Paulo",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
+
 ## Freelancer.com Jobs and Projects Scraper
 
 - Actor ID: `v0iddo/freelancer-jobs-projects-scraper`
 - Store page: https://apify.com/v0iddo/freelancer-jobs-projects-scraper
-- Price: $0.25 per 1,000 results, nothing per run
+- Price: $0.13 per 1,000 results, nothing per run
 
-Scrape Freelancer.com job listings by skill: project title, description, budget range, bid count, required skills, payment verification status, and project URL.
+Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hourly, bid count, required skills, payment verification status, and project URL.
 
 Example input:
 
@@ -381,29 +358,7 @@ Example input:
 }
 ```
 
-Output fields: `title`, `description`, `budgetMin`, `budgetMax`, `currency`, `bidCount`, `skills`, `paymentVerified`, `daysLeft`, `url`
-
-## Ashby Jobs API and Scraper: Job Postings by Company
-
-- Actor ID: `v0iddo/ashby-public-jobs`
-- Store page: https://apify.com/v0iddo/ashby-public-jobs
-- Price: $1.70 per 1,000 results, nothing per run
-
-Ashby jobs API and scraper.
-
-Example input:
-
-```json
-{
-  "companies": [
-    "linear",
-    "posthog",
-    "notion"
-  ]
-}
-```
-
-Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
+Output fields: `title`, `description`, `avgBid`, `hourly`, `currency`, `bidCount`, `skills`, `paymentVerified`, `daysLeft`, `url`
 
 ## Greenhouse Jobs API and Scraper: Job Postings by Company
 
@@ -427,6 +382,28 @@ Example input:
 ```
 
 Output fields: `company`, `companyName`, `jobId`, `internalJobId`, `title`, `location`, `departments`, `offices`, `language`, `requisitionId`, `firstPublished`, `updatedAt`
+
+## Ashby Jobs API and Scraper: Job Postings by Company
+
+- Actor ID: `v0iddo/ashby-public-jobs`
+- Store page: https://apify.com/v0iddo/ashby-public-jobs
+- Price: $1.70 per 1,000 results, nothing per run
+
+Ashby jobs API and scraper.
+
+Example input:
+
+```json
+{
+  "companies": [
+    "linear",
+    "posthog",
+    "notion"
+  ]
+}
+```
+
+Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
 
 ## Lever Jobs API and Scraper: Job Postings by Company
 

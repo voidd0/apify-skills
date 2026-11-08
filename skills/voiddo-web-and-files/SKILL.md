@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 37 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 38 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -61,7 +61,7 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-... | `v0iddo/internshala-scraper` | $0.34 |
 | Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT... | `v0iddo/audio-transcription` | $10.00 |
 | Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and par... | `v0iddo/pdf-text-extractor` | $1.00 |
-| Scrape Snapchat public creator profiles: display name, subscriber count, bio, and per-video Spotlight stats... | `v0iddo/snapchat-scraper` | $1.49 |
+| Scrape Snapchat public creator profiles: name, subscribers, bio, and per-video Spotlight stats: views, like... | `v0iddo/snapchat-scraper` | $1.49 |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
 | Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $1.27 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $0.85 |
@@ -74,17 +74,18 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Check if domains are available, in bulk: one row per domain with available or registered, registrar, creati... | `v0iddo/domain-availability-checker` | $1.00 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $0.70 |
 | Scrape Made-in-China.com product search pages by keyword. | `v0iddo/made-in-china-scraper` | $0.85 |
+| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $1.00 |
 | Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
-| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
-| Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review coun... | `v0iddo/thefork-restaurant-reviews-scraper` | $1.70 |
-| Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $1.53 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
+| Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $1.53 |
+| Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review coun... | `v0iddo/thefork-restaurant-reviews-scraper` | $1.70 |
 | Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.51 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.50 |
-| Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, proj... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
 | Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply an... | `v0iddo/jobteaser-job-scraper` | $0.79 |
+| Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, proj... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
+| Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pr... | `v0iddo/tennis-scores-api` | $1.95 |
 | Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review c... | `v0iddo/rakuten-japan-listings-scraper` | $1.28 |
 | Scrape Canadian job listings from eluta.ca by keyword and location. | `v0iddo/eluta-ca-job-scraper` | $0.77 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |
