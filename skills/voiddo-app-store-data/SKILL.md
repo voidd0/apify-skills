@@ -60,15 +60,15 @@ Out of scope (the boundary): Downloading app binaries: out of scope.
 | Search the Apple Podcasts catalog via the public iTunes Search API. | `v0iddo/itunes-podcast-search` | $0.20 |
 | Scrape Steam player reviews by App ID. | `v0iddo/steam-game-reviews` | $1.00 |
 | Search the Apple App Store by keyword and country. | `v0iddo/app-store-search` | $0.20 |
-| Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100... | `v0iddo/app-store-top-charts` | $0.10 |
 | Snapshot Android app metadata from Google Play for any package name, in any country. | `v0iddo/google-play-app-metadata` | $0.50 |
+| Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100... | `v0iddo/app-store-top-charts` | $0.10 |
 | Fetches extension metadata (downloads, version, publisher, repo, license, tags, timestamps) from the Open V... | `v0iddo/vscode-marketplace-extensions` | $1.00 |
 | Pull every app under an Apple App Store developer identifier (artistId). | `v0iddo/itunes-developer-portfolio` | $2.38 |
 | Scrape JetBrains Marketplace plugins by numeric ID: name, vendor, rating, downloads, description, link, pre... | `v0iddo/jetbrains-marketplace-plugins` | $1.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/app-store-app-metadata,v0iddo/app-store-reviews-tracker,v0iddo/chrome-webstore-extensions,v0iddo/itunes-podcast-search,v0iddo/steam-game-reviews,v0iddo/app-store-search,v0iddo/app-store-top-charts,v0iddo/google-play-app-metadata,v0iddo/vscode-marketplace-extensions,v0iddo/itunes-developer-portfolio`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/app-store-app-metadata,v0iddo/app-store-reviews-tracker,v0iddo/chrome-webstore-extensions,v0iddo/itunes-podcast-search,v0iddo/steam-game-reviews,v0iddo/app-store-search,v0iddo/google-play-app-metadata,v0iddo/app-store-top-charts,v0iddo/vscode-marketplace-extensions,v0iddo/itunes-developer-portfolio`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~app-store-app-metadata/run-sync-get-dataset-items" \

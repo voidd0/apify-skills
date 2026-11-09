@@ -94,7 +94,7 @@ Example input:
 
 Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `category`, `listType`, `image`, `url`
 
-## TikTok Shop Scraper: Products, Units Sold
+## TikTok Shop Scraper: Products, Prices, Units Sold, Shops
 
 - Actor ID: `v0iddo/tiktok-shop-product-scraper`
 - Store page: https://apify.com/v0iddo/tiktok-shop-product-scraper
@@ -122,13 +122,13 @@ Example input:
 
 Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `status`, `mainImage`, `url`
 
-## Alibaba Scraper: Prices, MOQ, Suppliers
+## Alibaba Scraper: Prices, MOQ, Verified Suppliers
 
 - Actor ID: `v0iddo/alibaba-scraper`
 - Store page: https://apify.com/v0iddo/alibaba-scraper
 - Price: $0.75 per 1,000 results, nothing per run
 
-Scrape Alibaba.com product offers by keyword: title, price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, Gold and verified badges, Trade Assurance and response rate.
+Scrape Alibaba.com product offers by keyword: price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, verified badge and response rate.
 
 Example input:
 

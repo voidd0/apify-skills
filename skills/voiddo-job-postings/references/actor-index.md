@@ -97,7 +97,7 @@ Example input:
 }
 ```
 
-Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+Output fields: `ats`, `company`, `title`, `location`, `country`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
 ## Reed Jobs Scraper: UK Jobs and Salaries
 
@@ -121,31 +121,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
-
-## IIMJobs Scraper: India Finance and MBA Jobs
-
-- Actor ID: `v0iddo/iimjobs-scraper`
-- Store page: https://apify.com/v0iddo/iimjobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, experience in years, salary in lakhs when shown, skills, category, posting time, the employer's AmbitionBox rating and profile, and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "finance manager"
-  ],
-  "locations": [
-    "Mumbai"
-  ],
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## Computrabajo Scraper: LATAM Jobs and Salaries
 
@@ -172,6 +147,31 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractType`, `schedule`, `workMode`, `postedDate`, `url`
+
+## IIMJobs Scraper: India Finance and MBA Jobs
+
+- Actor ID: `v0iddo/iimjobs-scraper`
+- Store page: https://apify.com/v0iddo/iimjobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, experience in years, salary in lakhs when shown, skills, category, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "finance manager"
+  ],
+  "locations": [
+    "Mumbai"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
 
@@ -222,7 +222,7 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
-## Greenhouse, Lever, Workday & Ashby Jobs Scraper: Careers API
+## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
 - Store page: https://apify.com/v0iddo/ats-jobs-scraper
@@ -268,29 +268,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
-
-## Pracuj.pl Scraper: Poland Jobs and Salaries
-
-- Actor ID: `v0iddo/pracuj-pl-scraper`
-- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Rozee.pk Jobs Scraper
 
@@ -338,11 +315,34 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
 
+## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
+
 ## Freelancer.com Jobs and Projects Scraper
 
 - Actor ID: `v0iddo/freelancer-jobs-projects-scraper`
 - Store page: https://apify.com/v0iddo/freelancer-jobs-projects-scraper
-- Price: $0.13 per 1,000 results, nothing per run
+- Price: $0.09 per 1,000 results, nothing per run
 
 Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hourly, bid count, required skills, payment verification status, and project URL.
 

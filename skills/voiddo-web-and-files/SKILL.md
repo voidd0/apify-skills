@@ -65,9 +65,9 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
 | Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $1.27 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $0.85 |
-| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.00 |
+| Download files in bulk from links, web pages, a CSV or Google Sheet, or another actor's dataset: images, vi... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, te... | `v0iddo/hiring-cafe-scraper` | $1.00 |
-| Download files in bulk from direct links, or every image, video, audio file, PDF, document or archive on a... | `v0iddo/bulk-file-downloader` | $2.00 |
+| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.00 |
 | Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $0.85 |
 | Extract European company profiles from northdata.com: company name, register number, court, LEI code, addre... | `v0iddo/north-data-scraper` | $2.98 |
@@ -77,15 +77,15 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $1.00 |
 | Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
-| Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $1.53 |
 | Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review coun... | `v0iddo/thefork-restaurant-reviews-scraper` | $1.70 |
+| Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.51 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.50 |
 | Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply an... | `v0iddo/jobteaser-job-scraper` | $0.79 |
-| Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, proj... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
 | Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pr... | `v0iddo/tennis-scores-api` | $1.95 |
+| Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, proj... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
 | Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review c... | `v0iddo/rakuten-japan-listings-scraper` | $1.28 |
 | Scrape Canadian job listings from eluta.ca by keyword and location. | `v0iddo/eluta-ca-job-scraper` | $0.77 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |

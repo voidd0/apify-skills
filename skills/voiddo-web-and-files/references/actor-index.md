@@ -257,6 +257,50 @@ Example input:
 
 Output fields: `postUri`, `url`, `handle`, `did`, `text`, `likeCount`, `repostCount`, `replyCount`, `indexedAt`, `hasMedia`, `lang`
 
+## Bulk File Downloader and Image Downloader: Web Pages, PDFs
+
+- Actor ID: `v0iddo/bulk-file-downloader`
+- Store page: https://apify.com/v0iddo/bulk-file-downloader
+- Price: $2.00 per 1,000 results, nothing per run
+
+Download files in bulk from links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://en.wikipedia.org/wiki/Hummingbird"
+  ],
+  "fileTypes": [
+    "image"
+  ],
+  "maxFilesPerPage": 20,
+  "maxItems": 20
+}
+```
+
+Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
+
+## Hiring.Cafe Jobs Scraper
+
+- Actor ID: `v0iddo/hiring-cafe-scraper`
+- Store page: https://apify.com/v0iddo/hiring-cafe-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, technical tools, requirements summary, visa sponsorship, and apply link.
+
+Example input:
+
+```json
+{
+  "keyword": "software engineer",
+  "maxItems": 20
+}
+```
+
+Output fields: `jobTitle`, `companyName`, `location`, `workplaceType`, `seniorityLevel`, `employmentType`, `jobCategory`, `technicalTools`, `applyUrl`, `url`
+
 ## SEO Audit Tool (On-Page Checker, Canonical, Alt Text)
 
 - Actor ID: `v0iddo/seo-audit`
@@ -280,50 +324,6 @@ Example input:
 ```
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
-
-## Hiring.Cafe Jobs Scraper
-
-- Actor ID: `v0iddo/hiring-cafe-scraper`
-- Store page: https://apify.com/v0iddo/hiring-cafe-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, technical tools, requirements summary, visa sponsorship, and apply link.
-
-Example input:
-
-```json
-{
-  "keyword": "software engineer",
-  "maxItems": 20
-}
-```
-
-Output fields: `jobTitle`, `companyName`, `location`, `workplaceType`, `seniorityLevel`, `employmentType`, `jobCategory`, `technicalTools`, `applyUrl`, `url`
-
-## Bulk File Downloader and Image Downloader: Web Pages, PDFs
-
-- Actor ID: `v0iddo/bulk-file-downloader`
-- Store page: https://apify.com/v0iddo/bulk-file-downloader
-- Price: $2.00 per 1,000 results, nothing per run
-
-Download files in bulk from direct links, or every image, video, audio file, PDF, document or archive on a list of web pages.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://en.wikipedia.org/wiki/Hummingbird"
-  ],
-  "fileTypes": [
-    "image"
-  ],
-  "maxFilesPerPage": 20,
-  "maxItems": 20
-}
-```
-
-Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
 ## Luma Event Scraper
 
@@ -538,24 +538,6 @@ Example input:
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
 
-## Website Screenshot Generator: URL to PNG, JPEG or WEBP
-
-- Actor ID: `v0iddo/url-screenshot`
-- Store page: https://apify.com/v0iddo/url-screenshot
-- Price: $3.40 per 1,000 results, nothing per run
-
-Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
-
-Example input:
-
-```json
-{
-  "url": "https://example.com"
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
 ## Substack Newsletter Scraper
 
 - Actor ID: `v0iddo/creator-leads-scraper`
@@ -606,6 +588,24 @@ Example input:
 ```
 
 Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
+
+## Website Screenshot Generator: URL to PNG, JPEG or WEBP
+
+- Actor ID: `v0iddo/url-screenshot`
+- Store page: https://apify.com/v0iddo/url-screenshot
+- Price: $3.40 per 1,000 results, nothing per run
+
+Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optional cookie-banner hiding.
+
+Example input:
+
+```json
+{
+  "url": "https://example.com"
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 ## DuckDuckGo Search Scraper
 
@@ -687,6 +687,27 @@ Example input:
 
 Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
 
+## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
+
+- Actor ID: `v0iddo/tennis-scores-api`
+- Store page: https://apify.com/v0iddo/tennis-scores-api
+- Price: $1.95 per 1,000 results, nothing per run
+
+Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
+
+Example input:
+
+```json
+{
+  "dataType": "match_results",
+  "matchType": "all",
+  "days": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
+
 ## PeoplePerHour Job Scraper
 
 - Actor ID: `v0iddo/peopleperhour-job-scraper`
@@ -708,27 +729,6 @@ Example input:
 ```
 
 Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
-
-## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
-
-- Actor ID: `v0iddo/tennis-scores-api`
-- Store page: https://apify.com/v0iddo/tennis-scores-api
-- Price: $1.95 per 1,000 results, nothing per run
-
-Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
-
-Example input:
-
-```json
-{
-  "dataType": "match_results",
-  "matchType": "all",
-  "days": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
 
 ## Rakuten Ichiba Listings Scraper
 

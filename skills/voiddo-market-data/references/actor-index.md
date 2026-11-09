@@ -2,13 +2,13 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Yahoo Finance Scraper: Options Chain, Stock Quotes, Stats
+## Yahoo Finance Scraper: Options Chain, History, Stock Quotes
 
 - Actor ID: `v0iddo/yahoo-finance-scraper`
 - Store page: https://apify.com/v0iddo/yahoo-finance-scraper
 - Price: $0.50 per 1,000 results, nothing per run
 
-Scrape Yahoo Finance quotes and key statistics (price, change, volume, market cap, P/E, dividend, 52 week range, earnings date) for stocks, ETFs, indexes, crypto and currencies, or options chains: every call and put with strike, bid, ask, volume, open interest and implied volatility.
+Scrape Yahoo Finance for stocks, ETFs, indexes, crypto and currencies: quotes and key statistics (price, market cap, P/E, dividend, earnings date), price history with adjusted close and dividends, or options chains with bid, ask, open interest, implied volatility, greeks and max pain.
 
 Example input:
 
@@ -34,28 +34,6 @@ Example input:
 
 Output fields: `symbol`, `name`, `quoteType`, `price`, `currency`, `changePercent`, `volume`, `marketCap`, `trailingPE`, `dividendYield`, `fiftyTwoWeekLow`, `fiftyTwoWeekHigh`, `regularMarketTime`, `url`
 
-## CoinGecko Scraper: Crypto Market Data by Category
-
-- Actor ID: `v0iddo/coingecko-category-snapshot`
-- Store page: https://apify.com/v0iddo/coingecko-category-snapshot
-- Price: $0.10 per 1,000 results, nothing per run
-
-For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 per category by default, more if you raise the cap.
-
-Example input:
-
-```json
-{
-  "categories": [
-    "layer-1",
-    "meme-token"
-  ],
-  "maxCoinsPerCategory": 20
-}
-```
-
-Output fields: `category`, `vsCurrency`, `snapshotAt`, `id`, `symbol`, `name`, `image`, `currentPrice`, `marketCap`, `marketCapRank`, `fdv`, `totalVolume`
-
 ## Currency Exchange Rates (ECB)
 
 - Actor ID: `v0iddo/currency-exchange-rates`
@@ -77,6 +55,28 @@ Example input:
 ```
 
 Output fields: `index`, `amount`, `from`, `to`, `rate`, `result`, `date_used`, `source`
+
+## CoinGecko Scraper: Crypto Market Data by Category
+
+- Actor ID: `v0iddo/coingecko-category-snapshot`
+- Store page: https://apify.com/v0iddo/coingecko-category-snapshot
+- Price: $0.10 per 1,000 results, nothing per run
+
+For each CoinGecko category ID (`layer-1`, `defi`, `meme-token`, etc.), pull its coins by market cap: 250 per category by default, more if you raise the cap.
+
+Example input:
+
+```json
+{
+  "categories": [
+    "layer-1",
+    "meme-token"
+  ],
+  "maxCoinsPerCategory": 20
+}
+```
+
+Output fields: `category`, `vsCurrency`, `snapshotAt`, `id`, `symbol`, `name`, `image`, `currentPrice`, `marketCap`, `marketCapRank`, `fdv`, `totalVolume`
 
 ## CoinGecko Tokens Scraper: Token List by Category
 

@@ -130,6 +130,27 @@ Example input:
 
 Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
 
+## Android App Metadata Scraper: Google Play Details, Ratings
+
+- Actor ID: `v0iddo/google-play-app-metadata`
+- Store page: https://apify.com/v0iddo/google-play-app-metadata
+- Price: $0.50 per 1,000 results, nothing per run
+
+Snapshot Android app metadata from Google Play for any package name, in any country.
+
+Example input:
+
+```json
+{
+  "packageNames": [
+    "com.instagram.android",
+    "com.openai.chatgpt"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
+
 ## App Store Top Charts Scraper: Ranks by Country
 
 - Actor ID: `v0iddo/app-store-top-charts`
@@ -154,27 +175,6 @@ Example input:
 ```
 
 Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
-
-## Android App Metadata Scraper: Google Play Details, Ratings
-
-- Actor ID: `v0iddo/google-play-app-metadata`
-- Store page: https://apify.com/v0iddo/google-play-app-metadata
-- Price: $0.50 per 1,000 results, nothing per run
-
-Snapshot Android app metadata from Google Play for any package name, in any country.
-
-Example input:
-
-```json
-{
-  "packageNames": [
-    "com.instagram.android",
-    "com.openai.chatgpt"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
 
 ## VS Code Extension Scraper: Open VSX Registry Metadata
 
