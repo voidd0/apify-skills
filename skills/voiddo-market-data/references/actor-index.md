@@ -34,28 +34,6 @@ Example input:
 
 Output fields: `symbol`, `name`, `quoteType`, `price`, `currency`, `changePercent`, `volume`, `marketCap`, `trailingPE`, `dividendYield`, `fiftyTwoWeekLow`, `fiftyTwoWeekHigh`, `regularMarketTime`, `url`
 
-## Currency Exchange Rates (ECB)
-
-- Actor ID: `v0iddo/currency-exchange-rates`
-- Store page: https://apify.com/v0iddo/currency-exchange-rates
-- Price: $3.40 per 1,000 results, nothing per run
-
-Latest and historical euro foreign exchange reference rates from the European Central Bank, with conversion between any two of its currencies.
-
-Example input:
-
-```json
-{
-  "op": "convert",
-  "amount": "100",
-  "from": "EUR",
-  "to": "USD",
-  "date": "2026-01-02"
-}
-```
-
-Output fields: `index`, `amount`, `from`, `to`, `rate`, `result`, `date_used`, `source`
-
 ## CoinGecko Scraper: Crypto Market Data by Category
 
 - Actor ID: `v0iddo/coingecko-category-snapshot`
@@ -77,6 +55,28 @@ Example input:
 ```
 
 Output fields: `category`, `vsCurrency`, `snapshotAt`, `id`, `symbol`, `name`, `image`, `currentPrice`, `marketCap`, `marketCapRank`, `fdv`, `totalVolume`
+
+## Currency Exchange Rates (ECB)
+
+- Actor ID: `v0iddo/currency-exchange-rates`
+- Store page: https://apify.com/v0iddo/currency-exchange-rates
+- Price: $3.40 per 1,000 results, nothing per run
+
+Latest and historical euro foreign exchange reference rates from the European Central Bank, with conversion between any two of its currencies.
+
+Example input:
+
+```json
+{
+  "op": "convert",
+  "amount": "100",
+  "from": "EUR",
+  "to": "USD",
+  "date": "2026-01-02"
+}
+```
+
+Output fields: `index`, `amount`, `from`, `to`, `rate`, `result`, `date_used`, `source`
 
 ## CoinGecko Tokens Scraper: Token List by Category
 

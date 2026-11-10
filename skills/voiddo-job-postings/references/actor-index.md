@@ -269,6 +269,29 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
 
+## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
+
 ## Rozee.pk Jobs Scraper
 
 - Actor ID: `v0iddo/rozeepk-jobs-scraper`
@@ -314,29 +337,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
-
-## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
-
-- Actor ID: `v0iddo/pracuj-pl-scraper`
-- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Freelancer.com Jobs and Projects Scraper
 

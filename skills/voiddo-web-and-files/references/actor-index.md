@@ -235,28 +235,6 @@ Example input:
 
 Output fields: `name`, `batch`, `status`, `industries`, `location`, `website`, `oneLiner`, `teamSize`, `jobCount`, `url`
 
-## Bluesky Scraper
-
-- Actor ID: `v0iddo/bluesky-scraper`
-- Store page: https://apify.com/v0iddo/bluesky-scraper
-- Price: $0.85 per 1,000 results, nothing per run
-
-Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media flag, and timestamp.
-
-Example input:
-
-```json
-{
-  "handles": [
-    "bsky.app"
-  ],
-  "postsPerHandle": 20,
-  "maxItems": 20
-}
-```
-
-Output fields: `postUri`, `url`, `handle`, `did`, `text`, `likeCount`, `repostCount`, `replyCount`, `indexedAt`, `hasMedia`, `lang`
-
 ## Bulk File Downloader and Image Downloader: Web Pages, PDFs
 
 - Actor ID: `v0iddo/bulk-file-downloader`
@@ -301,6 +279,50 @@ Example input:
 
 Output fields: `jobTitle`, `companyName`, `location`, `workplaceType`, `seniorityLevel`, `employmentType`, `jobCategory`, `technicalTools`, `applyUrl`, `url`
 
+## Bluesky Scraper
+
+- Actor ID: `v0iddo/bluesky-scraper`
+- Store page: https://apify.com/v0iddo/bluesky-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media flag, and timestamp.
+
+Example input:
+
+```json
+{
+  "handles": [
+    "bsky.app"
+  ],
+  "postsPerHandle": 20,
+  "maxItems": 20
+}
+```
+
+Output fields: `postUri`, `url`, `handle`, `did`, `text`, `likeCount`, `repostCount`, `replyCount`, `indexedAt`, `hasMedia`, `lang`
+
+## Luma Event Scraper
+
+- Actor ID: `v0iddo/luma-event-scraper`
+- Store page: https://apify.com/v0iddo/luma-event-scraper
+- Price: $2.38 per 1,000 results, nothing per run
+
+Scrape public event listings from luma.com city and calendar pages.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://luma.com/nyc",
+    "https://luma.com/sf"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`, `pageUrl`
+
 ## SEO Audit Tool (On-Page Checker, Canonical, Alt Text)
 
 - Actor ID: `v0iddo/seo-audit`
@@ -325,28 +347,6 @@ Example input:
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
 
-## Luma Event Scraper
-
-- Actor ID: `v0iddo/luma-event-scraper`
-- Store page: https://apify.com/v0iddo/luma-event-scraper
-- Price: $2.38 per 1,000 results, nothing per run
-
-Scrape public event listings from luma.com city and calendar pages.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://luma.com/nyc",
-    "https://luma.com/sf"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`, `pageUrl`
-
 ## Moz Top 500 Scraper: Domain Rankings
 
 - Actor ID: `v0iddo/moz-scraper`
@@ -366,36 +366,6 @@ Example input:
 ```
 
 Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
-
-## North Data Scraper
-
-- Actor ID: `v0iddo/north-data-scraper`
-- Store page: https://apify.com/v0iddo/north-data-scraper
-- Price: $2.98 per 1,000 results, nothing per run
-
-Extract European company profiles from northdata.com: company name, register number, court, LEI code, address, founding date, corporate purpose, and officer count.
-
-Example input:
-
-```json
-{
-  "companyUrls": [
-    "https://www.northdata.com/BMW-AG,+M%C3%BCnchen/HRB+42243",
-    "https://www.northdata.com/Volkswagen+AG,+Wolfsburg/HRB+100484",
-    "https://www.northdata.com/Siemens+AG,+M%C3%BCnchen/HRB+6684",
-    "https://www.northdata.com/Deutsche+Telekom+AG,+Bonn/HRB+6794",
-    "https://www.northdata.com/BASF+SE,+Ludwigshafen+am+Rhein/HRB+6729",
-    "https://www.northdata.com/Bayer+AG,+Leverkusen/HRB+48248",
-    "https://www.northdata.com/Allianz+SE,+M%C3%BCnchen/HRB+164232",
-    "https://www.northdata.com/SAP+SE,+Walldorf/HRB+755676",
-    "https://www.northdata.com/Mercedes-Benz+Group+AG,+Stuttgart/HRB+19360",
-    "https://www.northdata.com/Deutsche+Bank+AG,+Frankfurt+am+Main/HRB+30000"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `city`, `postalCode`, `country`, `foundingDate`, `corporatePurpose`, `officerCount`, `url`
 
 ## Domain Availability Checker: Bulk RDAP
 
@@ -449,6 +419,36 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
+## North Data Scraper
+
+- Actor ID: `v0iddo/north-data-scraper`
+- Store page: https://apify.com/v0iddo/north-data-scraper
+- Price: $2.98 per 1,000 results, nothing per run
+
+Extract European company profiles from northdata.com: company name, register number, court, LEI code, address, founding date, corporate purpose, and officer count.
+
+Example input:
+
+```json
+{
+  "companyUrls": [
+    "https://www.northdata.com/BMW-AG,+M%C3%BCnchen/HRB+42243",
+    "https://www.northdata.com/Volkswagen+AG,+Wolfsburg/HRB+100484",
+    "https://www.northdata.com/Siemens+AG,+M%C3%BCnchen/HRB+6684",
+    "https://www.northdata.com/Deutsche+Telekom+AG,+Bonn/HRB+6794",
+    "https://www.northdata.com/BASF+SE,+Ludwigshafen+am+Rhein/HRB+6729",
+    "https://www.northdata.com/Bayer+AG,+Leverkusen/HRB+48248",
+    "https://www.northdata.com/Allianz+SE,+M%C3%BCnchen/HRB+164232",
+    "https://www.northdata.com/SAP+SE,+Walldorf/HRB+755676",
+    "https://www.northdata.com/Mercedes-Benz+Group+AG,+Stuttgart/HRB+19360",
+    "https://www.northdata.com/Deutsche+Bank+AG,+Frankfurt+am+Main/HRB+30000"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `registerNumber`, `registerCourt`, `leiCode`, `street`, `city`, `postalCode`, `country`, `foundingDate`, `corporatePurpose`, `officerCount`, `url`
+
 ## Made-in-China.com Product Scraper
 
 - Actor ID: `v0iddo/made-in-china-scraper`
@@ -492,28 +492,6 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
-## Myntra Product Scraper
-
-- Actor ID: `v0iddo/myntra-product-scraper`
-- Store page: https://apify.com/v0iddo/myntra-product-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
-
-Example input:
-
-```json
-{
-  "categoryUrls": [
-    "https://www.myntra.com/men-tshirts"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
-
 ## CarGurus Zipcode Search Scraper
 
 - Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
@@ -537,6 +515,28 @@ Example input:
 ```
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
+
+## Myntra Product Scraper
+
+- Actor ID: `v0iddo/myntra-product-scraper`
+- Store page: https://apify.com/v0iddo/myntra-product-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.myntra.com/men-tshirts"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
 
 ## Substack Newsletter Scraper
 
@@ -567,27 +567,6 @@ Example input:
 ```
 
 Output fields: `publicationName`, `publicationUrl`, `subdomain`, `description`, `hasPaidTier`, `paymentsState`, `homepageType`, `communityEnabled`, `createdAt`, `logoUrl`
-
-## TheFork Restaurant Reviews Scraper
-
-- Actor ID: `v0iddo/thefork-restaurant-reviews-scraper`
-- Store page: https://apify.com/v0iddo/thefork-restaurant-reviews-scraper
-- Price: $1.70 per 1,000 results, nothing per run
-
-Scrape TheFork city listing pages into restaurant rows: name, cuisine, address, TheFork rating, review count, average price, price range level, Michelin distinctions, booking status, and a direct link.
-
-Example input:
-
-```json
-{
-  "cityUrls": [
-    "https://www.thefork.com/restaurants/paris-c415144"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `restaurantId`, `name`, `cuisine`, `address`, `rating`, `reviewCount`, `avgPriceEur`, `priceRangeLevel`, `distinctions`, `imageUrl`, `url`
 
 ## Website Screenshot Generator: URL to PNG, JPEG or WEBP
 
@@ -668,25 +647,6 @@ Example input:
 
 Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `days_to_expiry`, `status`, `nameservers`, `dnssec`
 
-## JobTeaser Job Scraper
-
-- Actor ID: `v0iddo/jobteaser-job-scraper`
-- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
-- Price: $0.79 per 1,000 results, nothing per run
-
-Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
-
-Example input:
-
-```json
-{
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
-
 ## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
 
 - Actor ID: `v0iddo/tennis-scores-api`
@@ -708,27 +668,24 @@ Example input:
 
 Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
 
-## PeoplePerHour Job Scraper
+## JobTeaser Job Scraper
 
-- Actor ID: `v0iddo/peopleperhour-job-scraper`
-- Store page: https://apify.com/v0iddo/peopleperhour-job-scraper
-- Price: $0.85 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/jobteaser-job-scraper`
+- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
+- Price: $0.79 per 1,000 results, nothing per run
 
-Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, project type, category, proposal count, posted date, expiry date and job URL.
+Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
 
 Example input:
 
 ```json
 {
-  "categorySlugs": [
-    "technology"
-  ],
   "maxPages": 1,
   "maxItems": 20
 }
 ```
 
-Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
+Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
 
 ## Rakuten Ichiba Listings Scraper
 
@@ -752,6 +709,28 @@ Example input:
 
 Output fields: `title`, `price`, `shopName`, `reviewScore`, `reviewCount`, `points`, `freeShipping`, `isSoldOut`, `image`, `url`
 
+## PeoplePerHour Job Scraper
+
+- Actor ID: `v0iddo/peopleperhour-job-scraper`
+- Store page: https://apify.com/v0iddo/peopleperhour-job-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, project type, category, proposal count, posted date, expiry date and job URL.
+
+Example input:
+
+```json
+{
+  "categorySlugs": [
+    "technology"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
+
 ## Eluta.ca Job Scraper
 
 - Actor ID: `v0iddo/eluta-ca-job-scraper`
@@ -773,34 +752,11 @@ Example input:
 
 Output fields: `jobId`, `title`, `employer`, `location`, `remote`, `salaryMin`, `salaryMax`, `topEmployer`, `snippet`, `lastSeen`, `url`
 
-## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
-
-- Actor ID: `v0iddo/sitemap-url-extractor`
-- Store page: https://apify.com/v0iddo/sitemap-url-extractor
-- Price: $1.00 per 1,000 results, nothing per run
-
-Sitemap URL extractor and sitemap index crawler.
-
-Example input:
-
-```json
-{
-  "domains": [
-    "stripe.com",
-    "shopify.com",
-    "vercel.com"
-  ],
-  "maxUrlsPerDomain": 20
-}
-```
-
-Output fields: `domain`, `url`, `lastmod`, `changefreq`, `priority`, `source`
-
 ## JSON Schema Validator: Bulk, Draft 7, 2019-09, 2020-12
 
 - Actor ID: `v0iddo/validate-json-schema`
 - Store page: https://apify.com/v0iddo/validate-json-schema
-- Price: $1.27 per 1,000 results, nothing per run
+- Price: $1.00 per 1,000 results, nothing per run
 
 Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and list every error with its path.
 
@@ -829,6 +785,29 @@ Example input:
 ```
 
 Output fields: `index`, `valid`, `count`, `errors`
+
+## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
+
+- Actor ID: `v0iddo/sitemap-url-extractor`
+- Store page: https://apify.com/v0iddo/sitemap-url-extractor
+- Price: $1.00 per 1,000 results, nothing per run
+
+Sitemap URL extractor and sitemap index crawler.
+
+Example input:
+
+```json
+{
+  "domains": [
+    "stripe.com",
+    "shopify.com",
+    "vercel.com"
+  ],
+  "maxUrlsPerDomain": 20
+}
+```
+
+Output fields: `domain`, `url`, `lastmod`, `changefreq`, `priority`, `source`
 
 ## QR Code Generator (PNG and SVG)
 

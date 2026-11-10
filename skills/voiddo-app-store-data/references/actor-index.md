@@ -23,27 +23,6 @@ Example input:
 
 Output fields: `snapshotAt`, `appId`, `country`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `sellerUrl`, `trackViewUrl`, `price`, `formattedPrice`
 
-## App Store Reviews Scraper: Ratings and Reviews by Country
-
-- Actor ID: `v0iddo/app-store-reviews-tracker`
-- Store page: https://apify.com/v0iddo/app-store-reviews-tracker
-- Price: $0.09 per 1,000 results, nothing per run
-
-Scrape Apple App Store reviews and ratings for any iOS app, storefront by storefront.
-
-Example input:
-
-```json
-{
-  "appIds": [
-    "389801252",
-    "544007664"
-  ]
-}
-```
-
-Output fields: `appName`, `country`, `rating`, `title`, `body`, `date`, `storefrontRating`, `storefrontRatingCount`, `stars5`, `stars1`, `url`
-
 ## Chrome Web Store Scraper: Extension Details and Ratings
 
 - Actor ID: `v0iddo/chrome-webstore-extensions`

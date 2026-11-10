@@ -58,7 +58,7 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, rati... | `v0iddo/amazon-search-scraper` | $0.51 |
 | Scrape AliExpress search results into product rows: product ID, title, sale price, original price, discount... | `v0iddo/aliexpress-scraper` | $1.50 |
 | Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rati... | `v0iddo/amazon-bestsellers-scraper` | $1.00 |
-| Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original pri... | `v0iddo/tiktok-shop-product-scraper` | $2.70 |
+| Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original pri... | `v0iddo/tiktok-shop-product-scraper` | $2.29 |
 | Scrape Alibaba.com product offers by keyword: price range and quantity price tiers, minimum order, units so... | `v0iddo/alibaba-scraper` | $0.75 |
 | Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
 | Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with cu... | `v0iddo/vinted-scraper` | $0.85 |

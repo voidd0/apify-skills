@@ -98,7 +98,7 @@ Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `cate
 
 - Actor ID: `v0iddo/tiktok-shop-product-scraper`
 - Store page: https://apify.com/v0iddo/tiktok-shop-product-scraper
-- Price: $2.70 per 1,000 results, nothing per run
+- Price: $2.29 per 1,000 results, nothing per run
 
 Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original price, discount, units sold, rating, review count, stock, variants, images, category, shipping and shop details.
 

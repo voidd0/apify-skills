@@ -20,27 +20,6 @@ Example input:
 
 Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
 
-## ClinicalTrials.gov Scraper: Trial Updates by Query
-
-- Actor ID: `v0iddo/clinicaltrials-updates-tracker`
-- Store page: https://apify.com/v0iddo/clinicaltrials-updates-tracker
-- Price: $1.91 per 1,000 results, nothing per run
-
-Pull recently-updated ClinicalTrials.gov studies matching a query.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "lung cancer"
-  ],
-  "maxResultsPerQuery": 20
-}
-```
-
-Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
-
 ## Federal Register Scraper: Rules, Proposed Rules, Notices
 
 - Actor ID: `v0iddo/federal-register-tracker`
@@ -79,6 +58,27 @@ Example input:
 ```
 
 Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
+
+## ClinicalTrials.gov Scraper: Trial Updates by Query
+
+- Actor ID: `v0iddo/clinicaltrials-updates-tracker`
+- Store page: https://apify.com/v0iddo/clinicaltrials-updates-tracker
+- Price: $1.91 per 1,000 results, nothing per run
+
+Pull recently-updated ClinicalTrials.gov studies matching a query.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "lung cancer"
+  ],
+  "maxResultsPerQuery": 20
+}
+```
+
+Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
 
 ## SEC 8-K Scraper: Material Events by Ticker
 
