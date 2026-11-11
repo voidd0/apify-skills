@@ -38,27 +38,6 @@ Example input:
 
 Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
 
-## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
-
-- Actor ID: `v0iddo/sec-form4-insider-trades`
-- Store page: https://apify.com/v0iddo/sec-form4-insider-trades
-- Price: $1.70 per 1,000 results, nothing per run
-
-Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker.
-
-Example input:
-
-```json
-{
-  "tickers": [
-    "AAPL",
-    "META"
-  ]
-}
-```
-
-Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
-
 ## ClinicalTrials.gov Scraper: Trial Updates by Query
 
 - Actor ID: `v0iddo/clinicaltrials-updates-tracker`
@@ -80,26 +59,26 @@ Example input:
 
 Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
 
-## SEC 8-K Scraper: Material Events by Ticker
+## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
 
-- Actor ID: `v0iddo/sec-8k-material-events-tracker`
-- Store page: https://apify.com/v0iddo/sec-8k-material-events-tracker
-- Price: $10.00 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/sec-form4-insider-trades`
+- Store page: https://apify.com/v0iddo/sec-form4-insider-trades
+- Price: $1.70 per 1,000 results, nothing per run
 
-Pull recent SEC 8-K filings (Current Reports) by stock ticker.
+Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker.
 
 Example input:
 
 ```json
 {
   "tickers": [
-    "TSLA",
-    "JPM"
+    "AAPL",
+    "META"
   ]
 }
 ```
 
-Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
+Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
 
 ## NIH RePORTER Scraper: Research Grants by Query
 
@@ -141,6 +120,27 @@ Example input:
 ```
 
 Output fields: `cik`, `company_name`, `accession_number`, `form`, `filing_date`, `report_date`, `primary_document`, `primary_doc_description`
+
+## SEC 8-K Scraper: Material Events by Ticker
+
+- Actor ID: `v0iddo/sec-8k-material-events-tracker`
+- Store page: https://apify.com/v0iddo/sec-8k-material-events-tracker
+- Price: $10.00 per 1,000 results, nothing per run
+
+Pull recent SEC 8-K filings (Current Reports) by stock ticker.
+
+Example input:
+
+```json
+{
+  "tickers": [
+    "TSLA",
+    "JPM"
+  ]
+}
+```
+
+Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
 
 ## openFDA Drug Recalls Scraper: Enforcement Reports
 

@@ -65,13 +65,13 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
 | Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
-| Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
+| Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
-| Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
+| Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 
 ## Other ways to call them
 

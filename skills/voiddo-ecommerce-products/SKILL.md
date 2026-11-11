@@ -1,6 +1,6 @@
 ---
 name: voiddo-ecommerce-products
-description: "Pull product rows from marketplaces (Amazon search, product pages and Best Sellers, AliExpress, eBay, Vinted, TikTok Shop, Shopify stores): title, price, list price, rating, reviews count, seller, stock and rank where the page shows them. Routes to 8 pay-per-result Apify Actors by vøiddo. Use when the user asks to track competitor prices, research products, find best sellers, monitor a marketplace category, compare prices across sites, check a Shopify store's catalogue."
+description: "Pull product rows from marketplaces (Amazon search, product pages and Best Sellers, AliExpress, eBay, Vinted, TikTok Shop, Shopify stores): title, price, list price, rating, reviews count, seller, stock and rank where the page shows them. Routes to 9 pay-per-result Apify Actors by vøiddo. Use when the user asks to track competitor prices, research products, find best sellers, monitor a marketplace category, compare prices across sites, check a Shopify store's catalogue."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -62,10 +62,11 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | Scrape Alibaba.com product offers by keyword: price range and quantity price tiers, minimum order, units so... | `v0iddo/alibaba-scraper` | $0.75 |
 | Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
 | Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with cu... | `v0iddo/vinted-scraper` | $0.85 |
+| Get a ranked shortlist of Alibaba.com suppliers for each product you name: each supplier scored on price ag... | `v0iddo/alibaba-supplier-shortlist` | $490.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/amazon-search-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/alibaba-scraper,v0iddo/shopify-store-intelligence,v0iddo/vinted-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/amazon-search-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/alibaba-scraper,v0iddo/shopify-store-intelligence,v0iddo/vinted-scraper,v0iddo/alibaba-supplier-shortlist`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~amazon-product-scraper/run-sync-get-dataset-items" \

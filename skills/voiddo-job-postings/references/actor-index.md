@@ -269,29 +269,6 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
 
-## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
-
-- Actor ID: `v0iddo/pracuj-pl-scraper`
-- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
-
 ## Rozee.pk Jobs Scraper
 
 - Actor ID: `v0iddo/rozeepk-jobs-scraper`
@@ -314,6 +291,29 @@ Example input:
 ```
 
 Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
+
+## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 
@@ -383,28 +383,6 @@ Example input:
 
 Output fields: `company`, `companyName`, `jobId`, `internalJobId`, `title`, `location`, `departments`, `offices`, `language`, `requisitionId`, `firstPublished`, `updatedAt`
 
-## Ashby Jobs API and Scraper: Job Postings by Company
-
-- Actor ID: `v0iddo/ashby-public-jobs`
-- Store page: https://apify.com/v0iddo/ashby-public-jobs
-- Price: $1.70 per 1,000 results, nothing per run
-
-Ashby jobs API and scraper.
-
-Example input:
-
-```json
-{
-  "companies": [
-    "linear",
-    "posthog",
-    "notion"
-  ]
-}
-```
-
-Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
-
 ## Lever Jobs API and Scraper: Job Postings by Company
 
 - Actor ID: `v0iddo/lever-public-jobs`
@@ -426,3 +404,25 @@ Example input:
 ```
 
 Output fields: `company`, `jobId`, `title`, `team`, `department`, `location`, `allLocations`, `country`, `workplaceType`, `commitment`, `createdAtMs`, `createdAt`
+
+## Ashby Jobs API and Scraper: Job Postings by Company
+
+- Actor ID: `v0iddo/ashby-public-jobs`
+- Store page: https://apify.com/v0iddo/ashby-public-jobs
+- Price: $1.70 per 1,000 results, nothing per run
+
+Ashby jobs API and scraper.
+
+Example input:
+
+```json
+{
+  "companies": [
+    "linear",
+    "posthog",
+    "notion"
+  ]
+}
+```
+
+Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
