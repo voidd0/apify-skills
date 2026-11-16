@@ -50,7 +50,7 @@ Output fields: `propertyId`, `address`, `price`, `rentPeriod`, `propertyType`, `
 
 - Actor ID: `v0iddo/rightmove-scraper`
 - Store page: https://apify.com/v0iddo/rightmove-scraper
-- Price: $0.75 per 1,000 results, nothing per run
+- Price: $1.00 per 1,000 results, nothing per run
 
 Scrape Rightmove property listings for sale or to rent across the UK: price, address, bedrooms, bathrooms, property type, estate agent branch, added or reduced date, coordinates, photo and link.
 

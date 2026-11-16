@@ -198,26 +198,6 @@ Example input:
 
 Output fields: `extension_id`, `namespace`, `name`, `version`, `display_name`, `description`, `published_by`, `download_count`, `average_rating`, `review_count`, `published_at`, `license`
 
-## App Store Developer Scraper: All Apps by Developer
-
-- Actor ID: `v0iddo/itunes-developer-portfolio`
-- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
-- Price: $2.38 per 1,000 results, nothing per run
-
-Pull every app under an Apple App Store developer identifier (artistId).
-
-Example input:
-
-```json
-{
-  "artistIds": [
-    "284882218"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`
-
 ## JetBrains Marketplace Plugin Scraper
 
 - Actor ID: `v0iddo/jetbrains-marketplace-plugins`
@@ -239,3 +219,23 @@ Example input:
 ```
 
 Output fields: `plugin_id`, `name`, `xml_id`, `link`, `description`, `vendor_name`, `rating`, `rating_votes`, `downloads`, `preview`, `family`
+
+## App Store Developer Scraper: All Apps by Developer
+
+- Actor ID: `v0iddo/itunes-developer-portfolio`
+- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
+- Price: $2.38 per 1,000 results, nothing per run
+
+Pull every app under an Apple App Store developer identifier (artistId).
+
+Example input:
+
+```json
+{
+  "artistIds": [
+    "284882218"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`

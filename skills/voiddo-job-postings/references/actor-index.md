@@ -126,7 +126,7 @@ Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `jobT
 
 - Actor ID: `v0iddo/computrabajo-scraper`
 - Store page: https://apify.com/v0iddo/computrabajo-scraper
-- Price: $0.50 per 1,000 results, nothing per run
+- Price: $1.39 + $0.000/start per 1,000 results
 
 Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, region, salary with currency and period, contract, schedule, remote or hybrid, education, experience, skills, industry and dates.
 
@@ -222,6 +222,30 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
+## IrishJobs.ie and Jobs.ie Scraper: Ireland Jobs and Salaries
+
+- Actor ID: `v0iddo/irishjobs-scraper`
+- Store page: https://apify.com/v0iddo/irishjobs-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR with min, max and period, date posted, closing date and snippet; with details, contract, work mode, province, map point and full text.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "accountant"
+  ],
+  "location": "Dublin",
+  "site": "irishjobs.ie",
+  "includeDetails": false,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
+
 ## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
@@ -246,6 +270,54 @@ Example input:
 ```
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+
+## Handshake Jobs Scraper
+
+- Actor ID: `v0iddo/handshake-jobs`
+- Store page: https://apify.com/v0iddo/handshake-jobs
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
+
+Example input:
+
+```json
+{
+  "keyword": "",
+  "employmentType": "",
+  "workplaceType": "",
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `description`, `url`, `applyUrl`
+
+## Computrabajo Salary Benchmark by Job Title and Country
+
+- Actor ID: `v0iddo/computrabajo-salary-benchmark`
+- Store page: https://apify.com/v0iddo/computrabajo-salary-benchmark
+- Price: $490.00 per 1,000 results, nothing per run
+
+Get a salary benchmark for any job title from Computrabajo postings in 18 Latin American countries: monthly median, quartiles and range in local currency, share of postings showing pay, listings, top employers, cities, work modes and contract types.
+
+Example input:
+
+```json
+{
+  "jobTitles": [
+    "contador"
+  ],
+  "countries": [
+    "mx"
+  ],
+  "location": "Monterrey",
+  "listingsPerBenchmark": 100,
+  "detailPages": 10,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobTitle`, `country`, `location`, `listingsOnSite`, `salariesUsed`, `salaryP25`, `salaryMedian`, `salaryP75`, `currency`, `salarySharePercent`, `searchUrl`
 
 ## Kariyer Scraper: Kariyer.net Turkey Job Listings
 
@@ -292,29 +364,6 @@ Example input:
 
 Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
 
-## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
-
-- Actor ID: `v0iddo/pracuj-pl-scraper`
-- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
-
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 
 - Actor ID: `v0iddo/gupy-scraper`
@@ -337,6 +386,29 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
+
+## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.95 + $0.004/start per 1,000 results
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Freelancer.com Jobs and Projects Scraper
 

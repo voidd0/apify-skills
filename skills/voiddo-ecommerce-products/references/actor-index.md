@@ -28,28 +28,6 @@ Example input:
 
 Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `ratingsCount`, `inStock`, `mainImage`, `url`
 
-## Amazon Search Scraper: Monthly Sales, Badges, Prices
-
-- Actor ID: `v0iddo/amazon-search-scraper`
-- Store page: https://apify.com/v0iddo/amazon-search-scraper
-- Price: $0.51 per 1,000 results, nothing per run
-
-Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "wireless earbuds"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `asin`, `title`, `price`, `rating`, `ratingsCount`, `badge`, `sponsored`, `url`
-
 ## AliExpress Scraper: Prices, Sold Counts
 
 - Actor ID: `v0iddo/aliexpress-scraper`
@@ -70,7 +48,29 @@ Example input:
 }
 ```
 
-Output fields: `productId`, `title`, `price`, `originalPrice`, `rating`, `sold`, `choice`, `url`
+Output fields: `productId`, `title`, `price`, `discountPercent`, `rating`, `sold`, `choice`, `url`
+
+## Amazon Search Scraper: Monthly Sales, Badges, Prices
+
+- Actor ID: `v0iddo/amazon-search-scraper`
+- Store page: https://apify.com/v0iddo/amazon-search-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "wireless earbuds"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `asin`, `title`, `price`, `rating`, `ratingsCount`, `badge`, `sponsored`, `url`
 
 ## Amazon Bestsellers Scraper: New Releases
 

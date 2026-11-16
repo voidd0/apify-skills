@@ -54,7 +54,7 @@ Out of scope (the boundary): Paywalled articles: the Actors read public pages on
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Extract news articles from any publisher. | `v0iddo/news-scraper` | $1.50 |
+| Extract news articles from any publisher. | `v0iddo/news-scraper` | $1.70 |
 | Pull Medium articles via the public RSS feed endpoints: /feed/@user, /feed/tag/{tag}, /feed/{publication-sl... | `v0iddo/medium-rss-tracker` | $0.20 |
 | Substack scraper for newsletter posts. | `v0iddo/substack-newsletter-posts` | $1.06 |
 | Collect the posts of any Substack publication: title, subtitle, date, link, paywall flag, reactions, commen... | `v0iddo/substack-scraper` | $0.85 |

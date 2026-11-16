@@ -56,7 +56,7 @@ Out of scope (the boundary): Owner phone numbers or agent contact details: never
 | --- | --- | --- |
 | Scrape Zillow search results for homes for sale, rentals and recently sold properties: price, address, beds... | `v0iddo/zillow-scraper` | $1.50 |
 | Scrape Fotocasa property listings for sale or to rent across Spain: price, price drop, rooms, bathrooms, su... | `v0iddo/fotocasa-scraper` | $0.77 |
-| Scrape Rightmove property listings for sale or to rent across the UK: price, address, bedrooms, bathrooms,... | `v0iddo/rightmove-scraper` | $0.75 |
+| Scrape Rightmove property listings for sale or to rent across the UK: price, address, bedrooms, bathrooms,... | `v0iddo/rightmove-scraper` | $1.00 |
 
 ## Other ways to call them
 

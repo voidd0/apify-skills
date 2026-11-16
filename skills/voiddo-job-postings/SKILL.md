@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 18 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 21 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -59,15 +59,18 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, emp... | `v0iddo/instahyre-jobs-scraper` | $0.50 |
 | Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
 | Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
-| Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $0.50 |
+| Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $1.39 + $0.000/start |
 | Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
+| Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR w... | `v0iddo/irishjobs-scraper` | $1.00 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
+| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $1.00 |
+| Get a salary benchmark for any job title from Computrabajo postings in 18 Latin American countries: monthly... | `v0iddo/computrabajo-salary-benchmark` | $490.00 |
 | Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
-| Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.50 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
+| Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.95 + $0.004/start |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
@@ -75,7 +78,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/computrabajo-scraper,v0iddo/iimjobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/hirist-jobs-scraper,v0iddo/ats-jobs-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/computrabajo-scraper,v0iddo/iimjobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/hirist-jobs-scraper,v0iddo/irishjobs-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~wellfound-jobs-scraper/run-sync-get-dataset-items" \

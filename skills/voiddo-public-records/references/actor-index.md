@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/usaspending-federal-awards`
 - Store page: https://apify.com/v0iddo/usaspending-federal-awards
-- Price: $1.70 per 1,000 results, nothing per run
+- Price: $1.61 per 1,000 results, nothing per run
 
 Pull recent federal contract and grant awards from USAspending.gov.
 
@@ -80,25 +80,6 @@ Example input:
 
 Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
 
-## NIH RePORTER Scraper: Research Grants by Query
-
-- Actor ID: `v0iddo/nih-reporter-grants`
-- Store page: https://apify.com/v0iddo/nih-reporter-grants
-- Price: $3.00 per 1,000 results, nothing per run
-
-Pull recent NIH research grants from RePORTER.
-
-Example input:
-
-```json
-{
-  "sinceProjectStartDays": 90,
-  "maxResults": 20
-}
-```
-
-Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
-
 ## SEC 13D/13G Beneficial Ownership Filings Scraper
 
 - Actor ID: `v0iddo/sec-13d-13g-beneficial-ownership`
@@ -141,6 +122,25 @@ Example input:
 ```
 
 Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
+
+## NIH RePORTER Scraper: Research Grants by Query
+
+- Actor ID: `v0iddo/nih-reporter-grants`
+- Store page: https://apify.com/v0iddo/nih-reporter-grants
+- Price: $3.00 per 1,000 results, nothing per run
+
+Pull recent NIH research grants from RePORTER.
+
+Example input:
+
+```json
+{
+  "sinceProjectStartDays": 90,
+  "maxResults": 20
+}
+```
+
+Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
 
 ## openFDA Drug Recalls Scraper: Enforcement Reports
 

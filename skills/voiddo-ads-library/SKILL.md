@@ -53,7 +53,7 @@ Out of scope (the boundary): Ad spend or targeting data that the library does no
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Collect public ads from the Meta Ad Library by keyword, advertiser Page ID or Ad Library link: ad text, hea... | `v0iddo/facebook-ads-library-scraper` | $0.50 |
+| Collect public ads from the Meta Ad Library by keyword, advertiser Page ID or Ad Library link: ad text, hea... | `v0iddo/facebook-ads-library-scraper` | $0.55 + $0.003/start |
 
 ## Other ways to call them
 

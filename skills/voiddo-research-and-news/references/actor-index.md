@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/news-scraper`
 - Store page: https://apify.com/v0iddo/news-scraper
-- Price: $1.50 per 1,000 results, nothing per run
+- Price: $1.70 per 1,000 results, nothing per run
 
 Extract news articles from any publisher.
 
