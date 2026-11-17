@@ -54,7 +54,7 @@ Out of scope (the boundary): Buying tickets: out of scope.
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Search Eventbrite events by keyword and location. | `v0iddo/eventbrite-events-search` | $0.30 |
-| Collect public Eventbrite events for any city or online: name, start and end, venue and city, online flag,... | `v0iddo/eventbrite-scraper` | $2.00 |
+| Collect public Eventbrite events for any city or online: name, start and end, venue and city, online flag,... | `v0iddo/eventbrite-scraper` | $2.55 |
 
 ## Other ways to call them
 

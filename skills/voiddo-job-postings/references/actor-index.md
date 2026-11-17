@@ -226,7 +226,7 @@ Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`,
 
 - Actor ID: `v0iddo/irishjobs-scraper`
 - Store page: https://apify.com/v0iddo/irishjobs-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $1.23 per 1,000 results, nothing per run
 
 Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR with min, max and period, date posted, closing date and snippet; with details, contract, work mode, province, map point and full text.
 
@@ -275,7 +275,7 @@ Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `w
 
 - Actor ID: `v0iddo/handshake-jobs`
 - Store page: https://apify.com/v0iddo/handshake-jobs
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
 
@@ -455,28 +455,6 @@ Example input:
 
 Output fields: `company`, `companyName`, `jobId`, `internalJobId`, `title`, `location`, `departments`, `offices`, `language`, `requisitionId`, `firstPublished`, `updatedAt`
 
-## Lever Jobs API and Scraper: Job Postings by Company
-
-- Actor ID: `v0iddo/lever-public-jobs`
-- Store page: https://apify.com/v0iddo/lever-public-jobs
-- Price: $0.20 per 1,000 results, nothing per run
-
-Lever jobs API and scraper.
-
-Example input:
-
-```json
-{
-  "companies": [
-    "spotify",
-    "palantir"
-  ],
-  "maxJobsPerCompany": 20
-}
-```
-
-Output fields: `company`, `jobId`, `title`, `team`, `department`, `location`, `allLocations`, `country`, `workplaceType`, `commitment`, `createdAtMs`, `createdAt`
-
 ## Ashby Jobs API and Scraper: Job Postings by Company
 
 - Actor ID: `v0iddo/ashby-public-jobs`
@@ -498,3 +476,25 @@ Example input:
 ```
 
 Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
+
+## Lever Jobs API and Scraper: Job Postings by Company
+
+- Actor ID: `v0iddo/lever-public-jobs`
+- Store page: https://apify.com/v0iddo/lever-public-jobs
+- Price: $0.20 per 1,000 results, nothing per run
+
+Lever jobs API and scraper.
+
+Example input:
+
+```json
+{
+  "companies": [
+    "spotify",
+    "palantir"
+  ],
+  "maxJobsPerCompany": 20
+}
+```
+
+Output fields: `company`, `jobId`, `title`, `team`, `department`, `location`, `allLocations`, `country`, `workplaceType`, `commitment`, `createdAtMs`, `createdAt`

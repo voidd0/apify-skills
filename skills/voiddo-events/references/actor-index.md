@@ -29,7 +29,7 @@ Output fields: `query`, `title`, `startDate`, `endDate`, `isOnline`, `venueName`
 
 - Actor ID: `v0iddo/eventbrite-scraper`
 - Store page: https://apify.com/v0iddo/eventbrite-scraper
-- Price: $2.00 per 1,000 results, nothing per run
+- Price: $2.55 per 1,000 results, nothing per run
 
 Collect public Eventbrite events for any city or online: name, start and end, venue and city, online flag, ticket prices, organizer name, link and image.
 

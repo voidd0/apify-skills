@@ -67,6 +67,24 @@ Example input:
 
 Output fields: `ghsaId`, `summary`, `description`, `severity`, `classification`, `publishedAt`, `updatedAt`, `withdrawnAt`, `url`, `cves`, `references`, `cwes`
 
+## NVD CVE Scraper: Vulnerabilities by Vendor and Severity
+
+- Actor ID: `v0iddo/nvd-cve-tracker`
+- Store page: https://apify.com/v0iddo/nvd-cve-tracker
+- Price: $2.00 per 1,000 results, nothing per run
+
+Pull new/modified CVEs from NIST NVD.
+
+Example input:
+
+```json
+{
+  "maxResultsPerQuery": 20
+}
+```
+
+Output fields: `cveId`, `published`, `lastModified`, `vulnStatus`, `description`, `cvssV3Version`, `cvssV3BaseScore`, `cvssV3Severity`, `cvssV3VectorString`, `exploitabilityScore`, `impactScore`, `cvssV4BaseScore`
+
 ## npm Package Stats Scraper: Metadata and Downloads
 
 - Actor ID: `v0iddo/npm-package-tracker`
@@ -89,21 +107,3 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `name`, `description`, `latestVersion`, `createdAt`, `modifiedAt`, `license`, `homepage`, `repositoryUrl`, `maintainers`, `keywords`, `dependenciesCount`
-
-## NVD CVE Scraper: Vulnerabilities by Vendor and Severity
-
-- Actor ID: `v0iddo/nvd-cve-tracker`
-- Store page: https://apify.com/v0iddo/nvd-cve-tracker
-- Price: $2.00 per 1,000 results, nothing per run
-
-Pull new/modified CVEs from NIST NVD.
-
-Example input:
-
-```json
-{
-  "maxResultsPerQuery": 20
-}
-```
-
-Output fields: `cveId`, `published`, `lastModified`, `vulnStatus`, `description`, `cvssV3Version`, `cvssV3BaseScore`, `cvssV3Severity`, `cvssV3VectorString`, `exploitabilityScore`, `impactScore`, `cvssV4BaseScore`

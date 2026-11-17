@@ -20,24 +20,6 @@ Example input:
 
 Output fields: `awardId`, `internalId`, `detailUrl`, `recipientName`, `recipientUei`, `awardAmount`, `description`, `awardingAgency`, `awardingSubAgency`, `actionDate`, `startDate`, `endDate`
 
-## Federal Register Scraper: Rules, Proposed Rules, Notices
-
-- Actor ID: `v0iddo/federal-register-tracker`
-- Store page: https://apify.com/v0iddo/federal-register-tracker
-- Price: $0.10 per 1,000 results, nothing per run
-
-Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
-
 ## ClinicalTrials.gov Scraper: Trial Updates by Query
 
 - Actor ID: `v0iddo/clinicaltrials-updates-tracker`
@@ -58,6 +40,24 @@ Example input:
 ```
 
 Output fields: `nctId`, `briefTitle`, `officialTitle`, `overallStatus`, `phases`, `studyType`, `leadSponsor`, `collaborators`, `conditions`, `keywords`, `interventions`, `startDate`
+
+## Federal Register Scraper: Rules, Proposed Rules, Notices
+
+- Actor ID: `v0iddo/federal-register-tracker`
+- Store page: https://apify.com/v0iddo/federal-register-tracker
+- Price: $0.10 per 1,000 results, nothing per run
+
+Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
 
 ## Insider Trades Scraper: SEC EDGAR Form 4 by Ticker
 

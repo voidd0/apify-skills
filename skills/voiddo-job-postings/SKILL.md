@@ -63,9 +63,9 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
-| Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR w... | `v0iddo/irishjobs-scraper` | $1.00 |
+| Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR w... | `v0iddo/irishjobs-scraper` | $1.23 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
-| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $1.00 |
+| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $0.85 |
 | Get a salary benchmark for any job title from Computrabajo postings in 18 Latin American countries: monthly... | `v0iddo/computrabajo-salary-benchmark` | $490.00 |
 | Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
@@ -73,8 +73,8 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.95 + $0.004/start |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
-| Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
+| Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
 
 ## Other ways to call them
 
