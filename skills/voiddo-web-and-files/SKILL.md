@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 41 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 43 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -58,12 +58,12 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $1.94 |
 | Scrape Similarweb top websites rankings by category: global rank, domain, category, rank change, average vi... | `v0iddo/similarweb-scraper` | $1.70 |
 | Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT... | `v0iddo/audio-transcription` | $10.00 |
-| Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-... | `v0iddo/internshala-scraper` | $1.36 |
 | Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price... | `v0iddo/coles-scraper` | $0.50 |
+| Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-... | `v0iddo/internshala-scraper` | $1.36 |
 | Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and par... | `v0iddo/pdf-text-extractor` | $2.55 |
 | Scrape Snapchat public creator profiles: name, subscribers, bio, and per-video Spotlight stats: views, like... | `v0iddo/snapchat-scraper` | $1.69 + $0.001/start |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
-| Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $0.22 |
+| Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $0.14 |
 | Download files in bulk from links, web pages, a CSV or Google Sheet, or another actor's dataset: images, vi... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, te... | `v0iddo/hiring-cafe-scraper` | $1.00 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $1.27 |
@@ -71,34 +71,36 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
 | Check if domains are available, in bulk: one row per domain with available or registered, registrar, creati... | `v0iddo/domain-availability-checker` | $1.00 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $0.85 |
-| Extract European company profiles from northdata.com: company name, register number, court, LEI code, addre... | `v0iddo/north-data-scraper` | $3.40 |
+| Extract European company profiles from northdata.com: company name, register number, court, LEI code, addre... | `v0iddo/north-data-scraper` | $3.82 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $1.71 |
 | Scrape Made-in-China.com product search pages by keyword. | `v0iddo/made-in-china-scraper` | $1.44 |
 | Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $2.29 |
 | Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event nam... | `v0iddo/forexfactory-economic-calendar` | $1.70 |
-| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $1.70 |
 | Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.51 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $2.29 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.70 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
-| Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
+| Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividen... | `v0iddo/screener-in-scraper` | $5.92 |
 | Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pr... | `v0iddo/tennis-scores-api` | $3.82 |
+| Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
 | Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply an... | `v0iddo/jobteaser-job-scraper` | $0.79 |
 | Scrape Canadian job listings from eluta.ca by keyword and location. | `v0iddo/eluta-ca-job-scraper` | $0.77 |
 | Scrape freelance job listings from PeoplePerHour category pages: title, description, budget, currency, proj... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
 | Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review c... | `v0iddo/rakuten-japan-listings-scraper` | $1.28 |
 | Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and li... | `v0iddo/validate-json-schema` | $1.70 |
 | Scrape job postings from elempleo.com, Colombia's second largest job board: title, company, city, salary ba... | `v0iddo/elempleo-scraper` | $0.85 |
-| Fetch MLB game scores from the official Stats API: game ID, teams, final score, R-H-E totals, inning-by-inn... | `v0iddo/mlb-daily-scoreboard-scraper` | $2.00 |
+| Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and... | `v0iddo/royal-caribbean-scraper` | $1.00 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |
+| Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $1.70 |
+| Fetch MLB game scores from the official Stats API: game ID, teams, final score, R-H-E totals, inning-by-inn... | `v0iddo/mlb-daily-scoreboard-scraper` | $2.00 |
 | Turn text or a URL into a crisp QR code as PNG or SVG, with size and error-correction control. | `v0iddo/qr-code-generator` | $2.37 |
 | Convert a date and time between IANA time zones with exact daylight-saving handling, inspect a zone's offse... | `v0iddo/time-zone-converter` | $1.00 |
 | Scrape public posts from Truth Social accounts via the public REST API. | `v0iddo/truth-social-scraper` | $1.70 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/google-maps-scraper,v0iddo/website-content-crawler,v0iddo/similarweb-scraper,v0iddo/audio-transcription,v0iddo/internshala-scraper,v0iddo/coles-scraper,v0iddo/pdf-text-extractor,v0iddo/snapchat-scraper,v0iddo/video-frame-extractor,v0iddo/y-combinator-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/google-maps-scraper,v0iddo/website-content-crawler,v0iddo/similarweb-scraper,v0iddo/audio-transcription,v0iddo/coles-scraper,v0iddo/internshala-scraper,v0iddo/pdf-text-extractor,v0iddo/snapchat-scraper,v0iddo/video-frame-extractor,v0iddo/y-combinator-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~google-maps-scraper/run-sync-get-dataset-items" \

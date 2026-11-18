@@ -319,6 +319,29 @@ Example input:
 
 Output fields: `jobTitle`, `country`, `location`, `listingsOnSite`, `salariesUsed`, `salaryP25`, `salaryMedian`, `salaryP75`, `currency`, `salarySharePercent`, `searchUrl`
 
+## Gupy Jobs Scraper: Brazil Job Vacancies
+
+- Actor ID: `v0iddo/gupy-scraper`
+- Store page: https://apify.com/v0iddo/gupy-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, company, city, state, job type, remote or hybrid, posted and deadline dates, requirements, hiring steps and the reason for the opening.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "analista de dados"
+  ],
+  "state": "São Paulo",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
+
 ## Kariyer Scraper: Kariyer.net Turkey Job Listings
 
 - Actor ID: `v0iddo/kariyer-scraper`
@@ -364,29 +387,6 @@ Example input:
 
 Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
 
-## Gupy Jobs Scraper: Brazil Job Vacancies
-
-- Actor ID: `v0iddo/gupy-scraper`
-- Store page: https://apify.com/v0iddo/gupy-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, company, city, state, job type, remote or hybrid, posted and deadline dates, requirements, hiring steps and the reason for the opening.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "analista de dados"
-  ],
-  "state": "São Paulo",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
-
 ## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
 
 - Actor ID: `v0iddo/pracuj-pl-scraper`
@@ -431,6 +431,30 @@ Example input:
 ```
 
 Output fields: `title`, `description`, `avgBid`, `hourly`, `currency`, `bidCount`, `skills`, `paymentVerified`, `daysLeft`, `url`
+
+## Pracuj.pl Salary Benchmark by Job Title and City
+
+- Actor ID: `v0iddo/pracuj-pl-salary-benchmark`
+- Store page: https://apify.com/v0iddo/pracuj-pl-salary-benchmark
+- Price: $490.00 per 1,000 results, nothing per run
+
+Get a salary benchmark for any job title from pracuj.pl postings in Poland: gross monthly median, quartiles and range in PLN, share of postings showing pay, listings, direct employers and agencies, top employers, work modes and contract types.
+
+Example input:
+
+```json
+{
+  "jobTitles": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "listingsPerBenchmark": 100,
+  "detailPages": 10,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobTitle`, `location`, `listingsOnSite`, `salariesUsed`, `salaryMin`, `salaryMedian`, `salaryMax`, `salarySharePercent`, `directEmployerPercent`, `searchUrl`
 
 ## Greenhouse Jobs API and Scraper: Job Postings by Company
 

@@ -93,6 +93,27 @@ Example input:
 
 Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
 
+## Coles Price Scraper: Specials, Unit Prices
+
+- Actor ID: `v0iddo/coles-scraper`
+- Store page: https://apify.com/v0iddo/coles-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price, half price and multibuy offers, stock, purchase limits and aisle.
+
+Example input:
+
+```json
+{
+  "categories": [
+    "dairy-eggs-fridge/yoghurt"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
+
 ## Internshala Scraper
 
 - Actor ID: `v0iddo/internshala-scraper`
@@ -115,28 +136,7 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `workFromHome`, `stipend`, `duration`, `listingType`, `postedOn`, `url`
 
-## Coles Price Scraper: Specials, Unit Prices
-
-- Actor ID: `v0iddo/coles-scraper`
-- Store page: https://apify.com/v0iddo/coles-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price, half price and multibuy offers, stock, purchase limits and aisle.
-
-Example input:
-
-```json
-{
-  "categories": [
-    "dairy-eggs-fridge/yoghurt"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitPrice`, `unitMeasure`, `available`, `url`
-
-## Extract Text from PDF: Markdown & Metadata
+## PDF Text Extractor: Extract Text from PDF
 
 - Actor ID: `v0iddo/pdf-text-extractor`
 - Store page: https://apify.com/v0iddo/pdf-text-extractor
@@ -170,8 +170,8 @@ Example input:
 ```json
 {
   "handles": [
-    "kyliejenner",
-    "daviddobrik"
+    "daviddobrik",
+    "kyliejenner"
   ],
   "includeHighlights": true,
   "maxItems": 20
@@ -207,7 +207,7 @@ Output fields: `imageUrl`, `timecode`, `frameNumber`, `kind`, `videoFile`, `imag
 
 - Actor ID: `v0iddo/y-combinator-scraper`
 - Store page: https://apify.com/v0iddo/y-combinator-scraper
-- Price: $0.22 per 1,000 results, nothing per run
+- Price: $0.14 per 1,000 results, nothing per run
 
 Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
 
@@ -402,7 +402,7 @@ Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalU
 
 - Actor ID: `v0iddo/north-data-scraper`
 - Store page: https://apify.com/v0iddo/north-data-scraper
-- Price: $3.40 per 1,000 results, nothing per run
+- Price: $3.82 per 1,000 results, nothing per run
 
 Extract European company profiles from northdata.com: company name, register number, court, LEI code, address, founding date, corporate purpose, and officer count.
 
@@ -522,26 +522,6 @@ Example input:
 
 Output fields: `eventDate`, `time`, `currency`, `impact`, `event`, `actual`, `forecast`, `previous`, `url`
 
-## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
-
-- Actor ID: `v0iddo/html-to-image`
-- Store page: https://apify.com/v0iddo/html-to-image
-- Price: $1.70 per 1,000 results, nothing per run
-
-Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
-
-Example input:
-
-```json
-{
-  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
-  "width": 600,
-  "height": 200
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
 ## DuckDuckGo Search Scraper
 
 - Actor ID: `v0iddo/duckduckgo-scraper`
@@ -643,6 +623,58 @@ Example input:
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
+## Screener.in Stock Fundamentals Scraper
+
+- Actor ID: `v0iddo/screener-in-scraper`
+- Store page: https://apify.com/v0iddo/screener-in-scraper
+- Price: $5.92 per 1,000 results, nothing per run
+
+Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividend yield, 52-week high/low, and NSE/BSE codes for any ticker symbol.
+
+Example input:
+
+```json
+{
+  "tickers": [
+    "RELIANCE",
+    "TCS",
+    "INFY",
+    "HDFCBANK",
+    "ICICIBANK",
+    "HINDUNILVR",
+    "ITC",
+    "SBIN",
+    "BAJFINANCE",
+    "WIPRO"
+  ],
+  "consolidated": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `ticker`, `name`, `currentPrice`, `marketCapCr`, `stockPE`, `roce`, `roe`, `bookValue`, `dividendYield`, `high52w`, `low52w`, `faceValue`, `nseCode`, `bseCode`, `url`
+
+## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
+
+- Actor ID: `v0iddo/tennis-scores-api`
+- Store page: https://apify.com/v0iddo/tennis-scores-api
+- Price: $3.82 per 1,000 results, nothing per run
+
+Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
+
+Example input:
+
+```json
+{
+  "dataType": "match_results",
+  "matchType": "all",
+  "days": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
+
 ## CarGurus Zipcode Search Scraper
 
 - Actor ID: `v0iddo/cargurus-zipcode-search-scraper`
@@ -666,27 +698,6 @@ Example input:
 ```
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
-
-## Tennis Scores and Results Scraper: ATP, WTA, Odds, Rankings
-
-- Actor ID: `v0iddo/tennis-scores-api`
-- Store page: https://apify.com/v0iddo/tennis-scores-api
-- Price: $3.82 per 1,000 results, nothing per run
-
-Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
-
-Example input:
-
-```json
-{
-  "dataType": "match_results",
-  "matchType": "all",
-  "days": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
 
 ## JobTeaser Job Scraper
 
@@ -829,25 +840,24 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `salaryText`, `salaryMin`, `salaryMax`, `contractType`, `workMode`, `postedText`, `url`
 
-## MLB Daily Scoreboard Scraper
+## Royal Caribbean Ships Scraper
 
-- Actor ID: `v0iddo/mlb-daily-scoreboard-scraper`
-- Store page: https://apify.com/v0iddo/mlb-daily-scoreboard-scraper
-- Price: $2.00 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/royal-caribbean-scraper`
+- Store page: https://apify.com/v0iddo/royal-caribbean-scraper
+- Price: $1.00 per 1,000 results, nothing per run
 
-Fetch MLB game scores from the official Stats API: game ID, teams, final score, R-H-E totals, inning-by-inning linescore, venue, day/night flag, and status for any date or short date range.
+Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
 
 Example input:
 
 ```json
 {
-  "date": "2024-09-15",
-  "gameType": "R",
+  "shipClasses": [],
   "maxItems": 20
 }
 ```
 
-Output fields: `gamePk`, `date`, `status`, `awayTeam`, `homeTeam`, `awayScore`, `homeScore`, `venue`, `dayNight`, `inningScores`, `url`
+Output fields: `shipName`, `shipClass`, `description`, `imageUrl`, `position`, `url`
 
 ## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
 
@@ -871,6 +881,46 @@ Example input:
 ```
 
 Output fields: `domain`, `url`, `lastmod`, `changefreq`, `priority`, `source`
+
+## HTML to Image Converter: Convert HTML to PNG, JPG and WEBP
+
+- Actor ID: `v0iddo/html-to-image`
+- Store page: https://apify.com/v0iddo/html-to-image
+- Price: $1.70 per 1,000 results, nothing per run
+
+Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent background.
+
+Example input:
+
+```json
+{
+  "html": "<div style='font:700 48px sans-serif;padding:40px;background:#1fa37a;color:#fff'>Hello, v&oslash;iddo</div>",
+  "width": 600,
+  "height": 200
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## MLB Daily Scoreboard Scraper
+
+- Actor ID: `v0iddo/mlb-daily-scoreboard-scraper`
+- Store page: https://apify.com/v0iddo/mlb-daily-scoreboard-scraper
+- Price: $2.00 per 1,000 results, nothing per run
+
+Fetch MLB game scores from the official Stats API: game ID, teams, final score, R-H-E totals, inning-by-inning linescore, venue, day/night flag, and status for any date or short date range.
+
+Example input:
+
+```json
+{
+  "date": "2024-09-15",
+  "gameType": "R",
+  "maxItems": 20
+}
+```
+
+Output fields: `gamePk`, `date`, `status`, `awayTeam`, `homeTeam`, `awayScore`, `homeScore`, `venue`, `dayNight`, `inningScores`, `url`
 
 ## QR Code Generator (PNG and SVG)
 

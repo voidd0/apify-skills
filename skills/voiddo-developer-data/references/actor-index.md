@@ -45,6 +45,29 @@ Example input:
 
 Output fields: `snapshotAt`, `name`, `latestVersion`, `summary`, `author`, `license`, `homepage`, `projectUrls`, `requiresPython`, `classifiers`, `keywords`, `releaseCount`
 
+## npm Package Stats Scraper: Metadata and Downloads
+
+- Actor ID: `v0iddo/npm-package-tracker`
+- Store page: https://apify.com/v0iddo/npm-package-tracker
+- Price: $0.20 per 1,000 results, nothing per run
+
+Snapshot npm package stats from the public registry and downloads APIs.
+
+Example input:
+
+```json
+{
+  "packages": [
+    "react",
+    "next",
+    "vue",
+    "svelte"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `name`, `description`, `latestVersion`, `createdAt`, `modifiedAt`, `license`, `homepage`, `repositoryUrl`, `maintainers`, `keywords`, `dependenciesCount`
+
 ## GitHub Security Advisories Scraper by Ecosystem
 
 - Actor ID: `v0iddo/github-security-advisories`
@@ -84,26 +107,3 @@ Example input:
 ```
 
 Output fields: `cveId`, `published`, `lastModified`, `vulnStatus`, `description`, `cvssV3Version`, `cvssV3BaseScore`, `cvssV3Severity`, `cvssV3VectorString`, `exploitabilityScore`, `impactScore`, `cvssV4BaseScore`
-
-## npm Package Stats Scraper: Metadata and Downloads
-
-- Actor ID: `v0iddo/npm-package-tracker`
-- Store page: https://apify.com/v0iddo/npm-package-tracker
-- Price: $0.20 per 1,000 results, nothing per run
-
-Snapshot npm package stats from the public registry and downloads APIs.
-
-Example input:
-
-```json
-{
-  "packages": [
-    "react",
-    "next",
-    "vue",
-    "svelte"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `name`, `description`, `latestVersion`, `createdAt`, `modifiedAt`, `license`, `homepage`, `repositoryUrl`, `maintainers`, `keywords`, `dependenciesCount`
