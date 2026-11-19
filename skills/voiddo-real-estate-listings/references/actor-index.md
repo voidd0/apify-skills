@@ -22,7 +22,7 @@ Example input:
 }
 ```
 
-Output fields: `address`, `priceText`, `beds`, `baths`, `livingArea`, `homeType`, `status`, `daysOnZillow`, `brokerName`, `url`
+Output fields: `address`, `priceText`, `price`, `beds`, `baths`, `livingArea`, `homeType`, `status`, `daysOnZillow`, `brokerName`, `url`
 
 ## Fotocasa Scraper: Spain Homes for Sale and Rent
 
@@ -66,4 +66,4 @@ Example input:
 }
 ```
 
-Output fields: `propertyId`, `displayAddress`, `priceText`, `bedrooms`, `bathrooms`, `propertyType`, `propertySubType`, `agent`, `addedOrReduced`, `image`, `url`
+Output fields: `propertyId`, `displayAddress`, `priceText`, `price`, `currency`, `bedrooms`, `bathrooms`, `propertyType`, `propertySubType`, `agent`, `addedOrReduced`, `image`, `url`

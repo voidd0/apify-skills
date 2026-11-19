@@ -120,7 +120,7 @@ Example input:
 }
 ```
 
-Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
+Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `salaryMin`, `salaryMax`, `salaryPeriod`, `salaryCurrency`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
 
 ## Computrabajo Scraper: LATAM Jobs and Salaries
 
@@ -197,6 +197,31 @@ Example input:
 
 Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
 
+## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
+
+- Actor ID: `v0iddo/ats-jobs-scraper`
+- Store page: https://apify.com/v0iddo/ats-jobs-scraper
+- Price: $0.42 per 1,000 results, nothing per run
+
+Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and BambooHR with one consistent schema.
+
+Example input:
+
+```json
+{
+  "companies": [
+    "https://job-boards.greenhouse.io/discord",
+    "https://jobs.lever.co/spotify",
+    "https://apply.workable.com/huggingface"
+  ],
+  "includeDescription": true,
+  "maxItems": 50,
+  "maxJobsPerCompany": 20
+}
+```
+
+Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+
 ## Hirist Jobs Scraper: India Tech Jobs, Salary
 
 - Actor ID: `v0iddo/hirist-jobs-scraper`
@@ -246,31 +271,6 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
 
-## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
-
-- Actor ID: `v0iddo/ats-jobs-scraper`
-- Store page: https://apify.com/v0iddo/ats-jobs-scraper
-- Price: $0.42 per 1,000 results, nothing per run
-
-Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and BambooHR with one consistent schema.
-
-Example input:
-
-```json
-{
-  "companies": [
-    "https://job-boards.greenhouse.io/discord",
-    "https://jobs.lever.co/spotify",
-    "https://apply.workable.com/huggingface"
-  ],
-  "includeDescription": true,
-  "maxItems": 50,
-  "maxJobsPerCompany": 20
-}
-```
-
-Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
-
 ## Handshake Jobs Scraper
 
 - Actor ID: `v0iddo/handshake-jobs`
@@ -290,7 +290,7 @@ Example input:
 }
 ```
 
-Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `description`, `url`, `applyUrl`
+Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
 
 ## Computrabajo Salary Benchmark by Job Title and Country
 
@@ -364,29 +364,6 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
 
-## Rozee.pk Jobs Scraper
-
-- Actor ID: `v0iddo/rozeepk-jobs-scraper`
-- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
-- Price: $0.79 per 1,000 results, nothing per run
-
-Scrape job listings from Rozee.pk by keyword and optional city.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "developer"
-  ],
-  "city": "",
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `skills`, `postedDate`, `applyBy`, `url`
-
 ## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
 
 - Actor ID: `v0iddo/pracuj-pl-scraper`
@@ -409,6 +386,29 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
+
+## Rozee.pk Jobs Scraper
+
+- Actor ID: `v0iddo/rozeepk-jobs-scraper`
+- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
+- Price: $0.79 per 1,000 results, nothing per run
+
+Scrape job listings from Rozee.pk by keyword and optional city.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "developer"
+  ],
+  "city": "",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `salaryMin`, `salaryMax`, `currency`, `skills`, `postedDate`, `applyBy`, `url`
 
 ## Freelancer.com Jobs and Projects Scraper
 

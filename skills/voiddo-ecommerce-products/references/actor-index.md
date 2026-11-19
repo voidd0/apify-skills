@@ -48,7 +48,7 @@ Example input:
 }
 ```
 
-Output fields: `productId`, `title`, `price`, `discountPercent`, `rating`, `sold`, `choice`, `url`
+Output fields: `productId`, `image`, `title`, `price`, `currency`, `discountPercent`, `rating`, `sold`, `choice`, `url`
 
 ## Amazon Search Scraper: Monthly Sales, Badges, Prices
 
@@ -120,7 +120,7 @@ Example input:
 }
 ```
 
-Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `status`, `mainImage`, `url`
+Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `soldCount`, `rating`, `reviewCount`, `shopName`, `shopRating`, `status`, `mainImage`, `scrapedAt`, `url`
 
 ## Alibaba Scraper: Prices, MOQ, Verified Suppliers
 
@@ -142,7 +142,7 @@ Example input:
 }
 ```
 
-Output fields: `productId`, `title`, `priceMin`, `priceMax`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `url`
+Output fields: `productId`, `image`, `title`, `priceMin`, `priceMax`, `currency`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `verifiedSupplier`, `tradeAssurance`, `supplierReviews`, `url`
 
 ## Shopify Scraper: Products, Prices, Stock
 

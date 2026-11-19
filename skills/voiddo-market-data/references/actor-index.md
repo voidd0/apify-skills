@@ -32,7 +32,7 @@ Example input:
 }
 ```
 
-Output fields: `symbol`, `name`, `quoteType`, `price`, `currency`, `changePercent`, `volume`, `marketCap`, `trailingPE`, `dividendYield`, `fiftyTwoWeekLow`, `fiftyTwoWeekHigh`, `regularMarketTime`, `url`
+Output fields: `symbol`, `name`, `quoteType`, `price`, `currency`, `changePercent`, `dayLow`, `dayHigh`, `volume`, `marketCap`, `trailingPE`, `fiftyTwoWeekLow`, `fiftyTwoWeekHigh`, `regularMarketTime`, `url`
 
 ## Currency Exchange Rates (ECB)
 
