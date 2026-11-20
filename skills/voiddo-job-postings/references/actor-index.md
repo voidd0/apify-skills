@@ -247,6 +247,28 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
+## No Fluff Jobs Scraper: Polish IT Jobs and Salaries
+
+- Actor ID: `v0iddo/nofluffjobs`
+- Store page: https://apify.com/v0iddo/nofluffjobs
+- Price: $0.75 per 1,000 results, nothing per run
+
+Scrape IT job offers from No Fluff Jobs (nofluffjobs.com) in Poland: title, company, category, seniority, must have skills, work mode, city, salary from and to with currency and period, B2B or employment contract, date and link.
+
+Example input:
+
+```json
+{
+  "technologies": [
+    "Python"
+  ],
+  "salaryOnly": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `companyName`, `category`, `seniority`, `workMode`, `city`, `skills`, `salaryFrom`, `salaryTo`, `currency`, `salaryInterval`, `salaryType`, `contractType`, `postedAt`, `url`
+
 ## IrishJobs.ie and Jobs.ie Scraper: Ireland Jobs and Salaries
 
 - Actor ID: `v0iddo/irishjobs-scraper`
@@ -270,27 +292,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
-
-## Handshake Jobs Scraper
-
-- Actor ID: `v0iddo/handshake-jobs`
-- Store page: https://apify.com/v0iddo/handshake-jobs
-- Price: $0.85 per 1,000 results, nothing per run
-
-Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
-
-Example input:
-
-```json
-{
-  "keyword": "",
-  "employmentType": "",
-  "workplaceType": "",
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
 
 ## Computrabajo Salary Benchmark by Job Title and Country
 
@@ -319,6 +320,50 @@ Example input:
 
 Output fields: `jobTitle`, `country`, `location`, `listingsOnSite`, `salariesUsed`, `salaryP25`, `salaryMedian`, `salaryP75`, `currency`, `salarySharePercent`, `searchUrl`
 
+## Handshake Jobs Scraper
+
+- Actor ID: `v0iddo/handshake-jobs`
+- Store page: https://apify.com/v0iddo/handshake-jobs
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
+
+Example input:
+
+```json
+{
+  "keyword": "",
+  "employmentType": "",
+  "workplaceType": "",
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
+
+## Pracuj.pl Job Alerts: New Offers to Slack, Telegram, Webhook
+
+- Actor ID: `v0iddo/pracuj-pl-job-alerts`
+- Store page: https://apify.com/v0iddo/pracuj-pl-job-alerts
+- Price: $2.00 per 1,000 results, nothing per run
+
+Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one alert per run to Slack, Telegram or a webhook.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `changeType`, `title`, `company`, `location`, `salaryText`, `workModes`, `changedFields`, `firstSeenAt`, `url`
+
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 
 - Actor ID: `v0iddo/gupy-scraper`
@@ -341,28 +386,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
-
-## Kariyer Scraper: Kariyer.net Turkey Job Listings
-
-- Actor ID: `v0iddo/kariyer-scraper`
-- Store page: https://apify.com/v0iddo/kariyer-scraper
-- Price: $0.84 per 1,000 results, nothing per run
-
-Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link.
-
-Example input:
-
-```json
-{
-  "locations": [
-    "istanbul"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `workModel`, `employmentType`, `sector`, `age`, `dateStatus`, `sponsored`, `search`, `url`
 
 ## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
 

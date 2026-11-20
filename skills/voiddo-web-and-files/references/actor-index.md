@@ -29,7 +29,7 @@ Output fields: `name`, `category`, `address`, `city`, `rating`, `reviewsCount`, 
 
 - Actor ID: `v0iddo/website-content-crawler`
 - Store page: https://apify.com/v0iddo/website-content-crawler
-- Price: $1.94 per 1,000 results, nothing per run
+- Price: $2.29 per 1,000 results, nothing per run
 
 Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, breadcrumbs, clean text body, and word count.
 
@@ -207,7 +207,7 @@ Output fields: `imageUrl`, `timecode`, `frameNumber`, `kind`, `videoFile`, `imag
 
 - Actor ID: `v0iddo/y-combinator-scraper`
 - Store page: https://apify.com/v0iddo/y-combinator-scraper
-- Price: $0.14 per 1,000 results, nothing per run
+- Price: $0.13 per 1,000 results, nothing per run
 
 Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
 
@@ -572,6 +572,28 @@ Example input:
 
 Output fields: `eventDate`, `time`, `currency`, `impact`, `event`, `actual`, `forecast`, `previous`, `url`
 
+## Myntra Product Scraper
+
+- Actor ID: `v0iddo/myntra-product-scraper`
+- Store page: https://apify.com/v0iddo/myntra-product-scraper
+- Price: $2.29 per 1,000 results, nothing per run
+
+Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.myntra.com/men-tshirts"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
+
 ## DuckDuckGo Search Scraper
 
 - Actor ID: `v0iddo/duckduckgo-scraper`
@@ -596,28 +618,6 @@ Example input:
 ```
 
 Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
-
-## Myntra Product Scraper
-
-- Actor ID: `v0iddo/myntra-product-scraper`
-- Store page: https://apify.com/v0iddo/myntra-product-scraper
-- Price: $2.29 per 1,000 results, nothing per run
-
-Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, discount percent, rating, sizes, category, image, and product URL.
-
-Example input:
-
-```json
-{
-  "categoryUrls": [
-    "https://www.myntra.com/men-tshirts"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
 
 ## Website Screenshot Generator: URL to PNG, JPEG or WEBP
 
@@ -749,6 +749,25 @@ Example input:
 
 Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, `winner`, `odds1`, `odds2`, `rank`, `playerName`, `rankingPoints`, `tour`, `url`
 
+## JobTeaser Job Scraper
+
+- Actor ID: `v0iddo/jobteaser-job-scraper`
+- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
+- Price: $0.79 per 1,000 results, nothing per run
+
+Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
+
+Example input:
+
+```json
+{
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
+
 ## PeoplePerHour Job Scraper
 
 - Actor ID: `v0iddo/peopleperhour-job-scraper`
@@ -771,30 +790,11 @@ Example input:
 
 Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`, `subCategory`, `proposalCount`, `postedAt`, `expiresAt`, `description`, `url`
 
-## JobTeaser Job Scraper
-
-- Actor ID: `v0iddo/jobteaser-job-scraper`
-- Store page: https://apify.com/v0iddo/jobteaser-job-scraper
-- Price: $0.79 per 1,000 results, nothing per run
-
-Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply and featured flags, company logo, and direct apply link.
-
-Example input:
-
-```json
-{
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `company`, `location`, `contractType`, `postedAt`, `easyApply`, `featured`, `companyLogoUrl`, `url`
-
 ## PriceCharting Scraper: Game, Card and Collectible Prices
 
 - Actor ID: `v0iddo/pricecharting-product-scraper`
 - Store page: https://apify.com/v0iddo/pricecharting-product-scraper
-- Price: $4.25 per 1,000 results, nothing per run
+- Price: $2.13 per 1,000 results, nothing per run
 
 Scrape PriceCharting prices for video games, Pokemon and other trading cards, comics, coins, Funko Pops and LEGO: loose, complete and new prices of every product in a console or set, or of a search.
 
@@ -933,25 +933,6 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `salaryText`, `salaryMin`, `salaryMax`, `contractType`, `workMode`, `postedText`, `url`
 
-## Royal Caribbean Ships Scraper
-
-- Actor ID: `v0iddo/royal-caribbean-scraper`
-- Store page: https://apify.com/v0iddo/royal-caribbean-scraper
-- Price: $1.19 per 1,000 results, nothing per run
-
-Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
-
-Example input:
-
-```json
-{
-  "shipClasses": [],
-  "maxItems": 20
-}
-```
-
-Output fields: `shipName`, `shipClass`, `description`, `imageUrl`, `position`, `url`
-
 ## meinestadt.de Jobs Scraper
 
 - Actor ID: `v0iddo/meinestadt-de-job-scraper`
@@ -974,6 +955,25 @@ Example input:
 ```
 
 Output fields: `jobId`, `title`, `company`, `city`, `industry`, `employmentType`, `datePosted`, `validThrough`, `salaryMin`, `salaryMax`, `url`
+
+## Royal Caribbean Ships Scraper
+
+- Actor ID: `v0iddo/royal-caribbean-scraper`
+- Store page: https://apify.com/v0iddo/royal-caribbean-scraper
+- Price: $1.19 per 1,000 results, nothing per run
+
+Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
+
+Example input:
+
+```json
+{
+  "shipClasses": [],
+  "maxItems": 20
+}
+```
+
+Output fields: `shipName`, `shipClass`, `description`, `imageUrl`, `position`, `url`
 
 ## Sitemap URL Extractor: Robots.txt and Sitemap Index to URLs
 
@@ -1078,6 +1078,72 @@ Example input:
 ```
 
 Output fields: `index`, `input`, `from_tz`, `output`, `offset_from`, `offset_to`, `dst_to`, `day_offset`
+
+## Sortlist Agency Scraper
+
+- Actor ID: `v0iddo/sortlist-company-agency-scraper`
+- Store page: https://apify.com/v0iddo/sortlist-company-agency-scraper
+- Price: $1.27 per 1,000 results, nothing per run
+
+Scrape agency listings from sortlist.com service-category pages.
+
+Example input:
+
+```json
+{
+  "categorySlugs": [
+    "software-development",
+    "web-design"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `url`, `country`, `city`, `foundingYear`, `teamSize`, `avgRating`, `reviewCount`, `budgetMinEur`, `services`, `languages`, `verified`
+
+## StubHub Event and Ticket Scraper
+
+- Actor ID: `v0iddo/stubhub`
+- Store page: https://apify.com/v0iddo/stubhub
+- Price: $2.55 per 1,000 results, nothing per run
+
+Scrape StubHub performer and category pages into event rows: event name, date, time, venue, city, location, ticket price display, active listings flag, and direct event link.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://www.stubhub.com/new-york-yankees-tickets/performer/5650",
+    "https://www.stubhub.com/concert-tickets/category/1"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `eventId`, `eventName`, `startDate`, `startTime`, `venueName`, `venueCity`, `venueLocation`, `minPriceDisplay`, `hasActiveListings`, `url`
+
+## Talabat Scraper
+
+- Actor ID: `v0iddo/talabat-scraper`
+- Store page: https://apify.com/v0iddo/talabat-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Talabat restaurant listings by country: restaurant ID, name, cuisines, category, logo and direct URL.
+
+Example input:
+
+```json
+{
+  "listingUrls": [
+    "https://www.talabat.com/uae/restaurants"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `restaurantId`, `name`, `slug`, `country`, `cuisines`, `logoUrl`, `url`
 
 ## Truth Social Scraper
 

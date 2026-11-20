@@ -6,7 +6,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 
 - Actor ID: `v0iddo/amazon-product-scraper`
 - Store page: https://apify.com/v0iddo/amazon-product-scraper
-- Price: $1.50 per 1,000 results, nothing per run
+- Price: $4.99 + $0.003/start per 1,000 results
 
 Scrape Amazon.com product pages from ASINs or links: title, brand, price, list price, rating, ratings count, stock status, features, description, images, categories, best sellers rank, variations and product details.
 
@@ -49,28 +49,6 @@ Example input:
 ```
 
 Output fields: `productId`, `image`, `title`, `price`, `currency`, `discountPercent`, `rating`, `sold`, `choice`, `url`
-
-## Amazon Search Scraper: Monthly Sales, Badges, Prices
-
-- Actor ID: `v0iddo/amazon-search-scraper`
-- Store page: https://apify.com/v0iddo/amazon-search-scraper
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape Amazon.com search results into clean product rows: ASIN, title, price, list price, star rating, ratings count, monthly sales badge, Best Seller and Overall Pick badges, sponsored flag, image and link.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "wireless earbuds"
-  ],
-  "maxPages": 1,
-  "maxItems": 20
-}
-```
-
-Output fields: `asin`, `title`, `price`, `rating`, `ratingsCount`, `badge`, `sponsored`, `url`
 
 ## Amazon Bestsellers Scraper: New Releases
 

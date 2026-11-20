@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 22 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 23 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -64,11 +64,12 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
 | Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs wh... | `v0iddo/hirist-jobs-scraper` | $0.50 |
+| Scrape IT job offers from No Fluff Jobs (nofluffjobs.com) in Poland: title, company, category, seniority, m... | `v0iddo/nofluffjobs` | $0.75 |
 | Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR w... | `v0iddo/irishjobs-scraper` | $1.23 |
-| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $0.85 |
 | Get a salary benchmark for any job title from Computrabajo postings in 18 Latin American countries: monthly... | `v0iddo/computrabajo-salary-benchmark` | $490.00 |
+| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $0.85 |
+| Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one aler... | `v0iddo/pracuj-pl-job-alerts` | $2.00 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
-| Scrape job listings from Kariyer.net, the largest job board in Turkey, by city, keyword or listing link. | `v0iddo/kariyer-scraper` | $0.84 |
 | Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.95 + $0.004/start |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |

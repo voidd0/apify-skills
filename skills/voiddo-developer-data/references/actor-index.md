@@ -45,6 +45,28 @@ Example input:
 
 Output fields: `snapshotAt`, `name`, `latestVersion`, `summary`, `author`, `license`, `homepage`, `projectUrls`, `requiresPython`, `classifiers`, `keywords`, `releaseCount`
 
+## GitHub Security Advisories Scraper by Ecosystem
+
+- Actor ID: `v0iddo/github-security-advisories`
+- Store page: https://apify.com/v0iddo/github-security-advisories
+- Price: $0.50 per 1,000 results, nothing per run
+
+For each ecosystem (NPM, PIP, MAVEN, NUGET, RUBYGEMS, RUST, GO, ACTIONS, SWIFT and more), pull recent GitHub Security Advisories.
+
+Example input:
+
+```json
+{
+  "ecosystems": [
+    "NPM",
+    "PIP"
+  ],
+  "maxResults": 20
+}
+```
+
+Output fields: `ghsaId`, `summary`, `description`, `severity`, `classification`, `publishedAt`, `updatedAt`, `withdrawnAt`, `url`, `cves`, `references`, `cwes`
+
 ## npm Package Stats Scraper: Metadata and Downloads
 
 - Actor ID: `v0iddo/npm-package-tracker`
@@ -67,28 +89,6 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `name`, `description`, `latestVersion`, `createdAt`, `modifiedAt`, `license`, `homepage`, `repositoryUrl`, `maintainers`, `keywords`, `dependenciesCount`
-
-## GitHub Security Advisories Scraper by Ecosystem
-
-- Actor ID: `v0iddo/github-security-advisories`
-- Store page: https://apify.com/v0iddo/github-security-advisories
-- Price: $0.50 per 1,000 results, nothing per run
-
-For each ecosystem (NPM, PIP, MAVEN, NUGET, RUBYGEMS, RUST, GO, ACTIONS, SWIFT and more), pull recent GitHub Security Advisories.
-
-Example input:
-
-```json
-{
-  "ecosystems": [
-    "NPM",
-    "PIP"
-  ],
-  "maxResults": 20
-}
-```
-
-Output fields: `ghsaId`, `summary`, `description`, `severity`, `classification`, `publishedAt`, `updatedAt`, `withdrawnAt`, `url`, `cves`, `references`, `cwes`
 
 ## NVD CVE Scraper: Vulnerabilities by Vendor and Severity
 
