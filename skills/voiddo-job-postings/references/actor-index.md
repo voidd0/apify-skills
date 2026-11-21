@@ -122,6 +122,32 @@ Example input:
 
 Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `salaryMin`, `salaryMax`, `salaryPeriod`, `salaryCurrency`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
 
+## Computrabajo Job Alerts: New Jobs to Slack or Webhook
+
+- Actor ID: `v0iddo/computrabajo-job-alerts`
+- Store page: https://apify.com/v0iddo/computrabajo-job-alerts
+- Price: $2.00 per 1,000 results, nothing per run
+
+For recruiters and HR analysts: only new, changed or expired Computrabajo job offers in 18 LATAM countries, sent to Slack, Telegram or a webhook each run.
+
+Example input:
+
+```json
+{
+  "countries": [
+    "mx"
+  ],
+  "keywords": [
+    "contador"
+  ],
+  "location": "Monterrey",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `changeType`, `title`, `company`, `city`, `country`, `salaryText`, `workMode`, `changedFields`, `firstSeenAt`, `url`
+
 ## Computrabajo Scraper: LATAM Jobs and Salaries
 
 - Actor ID: `v0iddo/computrabajo-scraper`
@@ -341,29 +367,6 @@ Example input:
 
 Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
 
-## Pracuj.pl Job Alerts: New Offers to Slack, Telegram, Webhook
-
-- Actor ID: `v0iddo/pracuj-pl-job-alerts`
-- Store page: https://apify.com/v0iddo/pracuj-pl-job-alerts
-- Price: $2.00 per 1,000 results, nothing per run
-
-Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one alert per run to Slack, Telegram or a webhook.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `changeType`, `title`, `company`, `location`, `salaryText`, `workModes`, `changedFields`, `firstSeenAt`, `url`
-
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 
 - Actor ID: `v0iddo/gupy-scraper`
@@ -386,6 +389,29 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `city`, `state`, `jobTypeLabel`, `workplaceType`, `hiringReason`, `publishedAt`, `applicationDeadline`, `url`
+
+## Pracuj.pl Job Alerts: New Offers to Slack, Telegram, Webhook
+
+- Actor ID: `v0iddo/pracuj-pl-job-alerts`
+- Store page: https://apify.com/v0iddo/pracuj-pl-job-alerts
+- Price: $2.00 per 1,000 results, nothing per run
+
+Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one alert per run to Slack, Telegram or a webhook.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `changeType`, `title`, `company`, `location`, `salaryText`, `workModes`, `changedFields`, `firstSeenAt`, `url`
 
 ## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
 
