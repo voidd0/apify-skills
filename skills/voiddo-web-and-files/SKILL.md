@@ -1,6 +1,6 @@
 ---
 name: voiddo-web-and-files
-description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 51 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
+description: "Turn web pages and files into data: crawl a site to clean text, screenshot or render pages to PDF or images, extract PDF text, convert images, transcribe audio, extract video frames, download files in bulk, read sitemaps, audit SEO and detect a site's technology. Routes to 53 pay-per-result Apify Actors by vøiddo. Use when the user asks to crawl a website for its text, take website screenshots, convert HTML to PDF, extract text from PDFs, transcribe a podcast episode, list a site's URLs from its sitemap, run an SEO audit."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -54,18 +54,18 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Scrape Google Maps business listings by search and place: name, category, address, coordinates, rating, rev... | `v0iddo/google-maps-scraper` | $1.50 |
+| Google Maps scraper for business listings by search and place: name, category, address, coordinates, rating... | `v0iddo/google-maps-scraper` | $1.50 |
 | Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $2.29 |
 | Scrape Similarweb top websites rankings by category: global rank, domain, category, rank change, average vi... | `v0iddo/similarweb-scraper` | $1.70 |
 | Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price... | `v0iddo/coles-scraper` | $0.50 |
 | Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT... | `v0iddo/audio-transcription` | $10.00 |
 | Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-... | `v0iddo/internshala-scraper` | $1.36 |
 | Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and par... | `v0iddo/pdf-text-extractor` | $2.55 |
-| Scrape Snapchat public creator profiles: name, subscribers, bio, and per-video Spotlight stats: views, like... | `v0iddo/snapchat-scraper` | $1.69 + $0.001/start |
+| Snapchat scraper for public creator profiles: name, subscribers, bio, and the Spotlight stats of each video... | `v0iddo/snapchat-scraper` | $1.69 + $0.001/start |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
 | Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $0.13 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $0.85 |
-| Download files in bulk from links, web pages, a CSV or Google Sheet, or another actor's dataset: images, vi... | `v0iddo/bulk-file-downloader` | $2.00 |
+| Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's datase... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, te... | `v0iddo/hiring-cafe-scraper` | $1.00 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $1.27 |
 | Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
@@ -79,7 +79,7 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $2.29 |
 | Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event nam... | `v0iddo/forexfactory-economic-calendar` | $1.70 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $2.29 |
-| Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.51 |
+| Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.26 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.70 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
@@ -101,6 +101,8 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $1.70 |
 | Turn text or a URL into a crisp QR code as PNG or SVG, with size and error-correction control. | `v0iddo/qr-code-generator` | $2.37 |
 | Convert a date and time between IANA time zones with exact daylight-saving handling, inspect a zone's offse... | `v0iddo/time-zone-converter` | $1.00 |
+| Scrape djinni.co tech job listings: title, company, category, salary range, experience, employment type, lo... | `v0iddo/djinni-co-job-scraper` | $0.81 |
+| Scrape Canada jobbank listings from jobbank.gc.ca by keyword and location: job title, employer, city and pr... | `v0iddo/jobbank` | $1.00 |
 | Scrape agency listings from sortlist.com service-category pages. | `v0iddo/sortlist-company-agency-scraper` | $1.27 |
 | Scrape StubHub performer and category pages into event rows: event name, date, time, venue, city, location,... | `v0iddo/stubhub` | $2.55 |
 | Scrape Talabat restaurant listings by country: restaurant ID, name, cuisines, category, logo and direct URL. | `v0iddo/talabat-scraper` | $1.00 |

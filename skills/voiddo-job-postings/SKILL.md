@@ -1,6 +1,6 @@
 ---
 name: voiddo-job-postings
-description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 24 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
+description: "Collect open job postings from company careers pages (Greenhouse, Lever, Ashby, Workday, Workable and more) and national job boards into one table: title, company, location, remote flag, posting date, salary where the employer publishes it, and the link. Routes to 25 pay-per-result Apify Actors by vøiddo. Use when the user asks to find jobs, scrape job postings, export a company's careers page, monitor new roles, collect salary data, build a job board feed, track hiring at competitors."
 author: vøiddo
 author_url: https://voiddo.com
 license: MIT
@@ -60,7 +60,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Collect every open job from any Workday careers site (myworkdayjobs.com): title, location, country, remote... | `v0iddo/workday-jobs-scraper` | $0.90 |
 | Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
 | For recruiters and HR analysts: only new, changed or expired Computrabajo job offers in 18 LATAM countries,... | `v0iddo/computrabajo-job-alerts` | $2.00 |
-| Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, reg... | `v0iddo/computrabajo-scraper` | $1.39 + $0.000/start |
+| Computrabajo scraper for jobs in 18 Latin American countries: title, company with rating, city, region, sal... | `v0iddo/computrabajo-scraper` | $1.39 + $0.000/start |
 | Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, exper... | `v0iddo/iimjobs-scraper` | $0.50 |
 | Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
@@ -78,6 +78,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
 | Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
+| Scrape remote job listings from weworkremotely.com by category or keyword. | `v0iddo/weworkremotely-jobs-scraper` | $0.85 |
 
 ## Other ways to call them
 

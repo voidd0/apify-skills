@@ -8,7 +8,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 - Store page: https://apify.com/v0iddo/yahoo-finance-scraper
 - Price: $0.85 per 1,000 results, nothing per run
 
-Scrape Yahoo Finance for stocks, ETFs, indexes, crypto and currencies: quotes and key statistics (price, market cap, P/E, dividend, earnings date), price history with adjusted close and dividends, or options chains with bid, ask, open interest, implied volatility, greeks and max pain.
+Yahoo Finance scraper for stocks, ETFs, indexes, crypto and currencies: quotes and key statistics (price, market cap, P/E, dividend, earnings date), price history with adjusted close and dividends, or options chains with bid, ask, open interest, implied volatility, greeks and max pain.
 
 Example input:
 

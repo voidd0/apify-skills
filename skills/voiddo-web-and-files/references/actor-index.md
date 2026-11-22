@@ -8,7 +8,7 @@ Every Actor below is public on the Apify Store. The example input is the one on 
 - Store page: https://apify.com/v0iddo/google-maps-scraper
 - Price: $1.50 per 1,000 results, nothing per run
 
-Scrape Google Maps business listings by search and place: name, category, address, coordinates, rating, review count, phone, website, opening hours, place ID and Maps link.
+Google Maps scraper for business listings by search and place: name, category, address, coordinates, rating, review count, phone, website, opening hours, closed status, place ID and Maps link.
 
 Example input:
 
@@ -23,7 +23,7 @@ Example input:
 }
 ```
 
-Output fields: `name`, `category`, `address`, `city`, `rating`, `reviewsCount`, `phone`, `website`, `latitude`, `longitude`, `placeId`, `url`
+Output fields: `name`, `category`, `address`, `city`, `rating`, `reviewsCount`, `phone`, `website`, `latitude`, `longitude`, `permanentlyClosed`, `placeId`, `url`
 
 ## Website Content Crawler: Pages to Clean Text
 
@@ -163,7 +163,7 @@ Output fields: `index`, `page_count`, `chars`, `pages`, `metadata`
 - Store page: https://apify.com/v0iddo/snapchat-scraper
 - Price: $1.69 + $0.001/start per 1,000 results
 
-Scrape Snapchat public creator profiles: name, subscribers, bio, and per-video Spotlight stats: views, likes, comments, shares, upload date, duration, thumbnail.
+Snapchat scraper for public creator profiles: name, subscribers, bio, and the Spotlight stats of each video: views, likes, comments, shares, upload date, duration, thumbnail.
 
 Example input:
 
@@ -261,7 +261,7 @@ Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalU
 - Store page: https://apify.com/v0iddo/bulk-file-downloader
 - Price: $2.00 per 1,000 results, nothing per run
 
-Download files in bulk from links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
+Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
 
 Example input:
 
@@ -598,7 +598,7 @@ Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, 
 
 - Actor ID: `v0iddo/duckduckgo-scraper`
 - Store page: https://apify.com/v0iddo/duckduckgo-scraper
-- Price: $0.51 per 1,000 results, nothing per run
+- Price: $0.26 per 1,000 results, nothing per run
 
 Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query.
 
@@ -1078,6 +1078,50 @@ Example input:
 ```
 
 Output fields: `index`, `input`, `from_tz`, `output`, `offset_from`, `offset_to`, `dst_to`, `day_offset`
+
+## Djinni.co Job Scraper: Tech Jobs with Salary
+
+- Actor ID: `v0iddo/djinni-co-job-scraper`
+- Store page: https://apify.com/v0iddo/djinni-co-job-scraper
+- Price: $0.81 per 1,000 results, nothing per run
+
+Scrape djinni.co tech job listings: title, company, category, salary range, experience, employment type, location, date posted, and direct link.
+
+Example input:
+
+```json
+{
+  "primaryKeyword": "Python",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `companyName`, `category`, `employmentType`, `salaryMin`, `salaryMax`, `experienceMonths`, `location`, `datePosted`, `jobUrl`, `description`
+
+## Canada Job Bank Scraper: Jobs, Salaries and NOC Codes
+
+- Actor ID: `v0iddo/jobbank`
+- Store page: https://apify.com/v0iddo/jobbank
+- Price: $1.00 per 1,000 results, nothing per run
+
+Scrape Canada jobbank listings from jobbank.gc.ca by keyword and location: job title, employer, city and province, salary range, posting date, remote status, direct apply flag, and posting source.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "software developer",
+    "nurse"
+  ],
+  "location": "",
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `employer`, `location`, `salaryMin`, `salaryMax`, `salaryUnit`, `postingDate`, `remote`, `directApply`, `source`, `jobUrl`
 
 ## Sortlist Agency Scraper
 

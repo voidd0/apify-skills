@@ -34,7 +34,7 @@ Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `rating
 - Store page: https://apify.com/v0iddo/aliexpress-scraper
 - Price: $1.50 per 1,000 results, nothing per run
 
-Scrape AliExpress search results into product rows: product ID, title, sale price, original price, discount, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
+AliExpress scraper for search results as product rows: product ID, title, sale price, original price, discount, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
 
 Example input:
 
@@ -78,7 +78,7 @@ Output fields: `rank`, `asin`, `title`, `price`, `rating`, `ratingsCount`, `cate
 - Store page: https://apify.com/v0iddo/tiktok-shop-product-scraper
 - Price: $2.29 per 1,000 results, nothing per run
 
-Scrape TikTok Shop product pages in the United States from product links or IDs: title, price, original price, discount, units sold, rating, review count, stock, variants, images, category, shipping and shop details.
+TikTok Shop product scraper for product pages in the United States from product links or IDs: title, price, original price, discount, units sold, rating, review count, stock, variants, images, category, shipping and shop details.
 
 Example input:
 
@@ -106,7 +106,7 @@ Output fields: `productId`, `title`, `price`, `originalPrice`, `currency`, `sold
 - Store page: https://apify.com/v0iddo/alibaba-scraper
 - Price: $0.75 per 1,000 results, nothing per run
 
-Scrape Alibaba.com product offers by keyword: price range and quantity price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, verified badge and response rate.
+Alibaba scraper for Alibaba.com product offers by keyword: price range and price tiers, minimum order, units sold, ratings, certifications, and the supplier's name, country, years, verified badge and response rate.
 
 Example input:
 

@@ -154,7 +154,7 @@ Output fields: `changeType`, `title`, `company`, `city`, `country`, `salaryText`
 - Store page: https://apify.com/v0iddo/computrabajo-scraper
 - Price: $1.39 + $0.000/start per 1,000 results
 
-Scrape job postings from Computrabajo in 18 Latin American countries: title, company with rating, city, region, salary with currency and period, contract, schedule, remote or hybrid, education, experience, skills, industry and dates.
+Computrabajo scraper for jobs in 18 Latin American countries: title, company with rating, city, region, salary with currency and period, contract, schedule, remote or hybrid, education, experience, skills, industry and dates.
 
 Example input:
 
@@ -571,3 +571,25 @@ Example input:
 ```
 
 Output fields: `company`, `jobId`, `title`, `team`, `department`, `location`, `allLocations`, `country`, `workplaceType`, `commitment`, `createdAtMs`, `createdAt`
+
+## We Work Remotely Jobs Scraper
+
+- Actor ID: `v0iddo/weworkremotely-jobs-scraper`
+- Store page: https://apify.com/v0iddo/weworkremotely-jobs-scraper
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape remote job listings from weworkremotely.com by category or keyword.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs",
+    "https://weworkremotely.com/categories/remote-customer-support-jobs"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `company`, `category`, `jobType`, `region`, `salary`, `postedDate`, `url`
