@@ -56,7 +56,7 @@ Output fields: `title`, `company`, `location`, `salaryMin`, `salaryMax`, `salary
 - Store page: https://apify.com/v0iddo/instahyre-jobs-scraper
 - Price: $0.50 per 1,000 results, nothing per run
 
-Scrape India jobs from Instahyre: title, company, locations, skills, experience in years, posting date, employment type, the description, and the employer's size, founding year, tagline and website.
+Instahyre jobs scraper for India: title, company, locations, skills, experience in years, posting date, employment type, the description, and the employer's size, founding year, tagline and website.
 
 Example input:
 
@@ -174,31 +174,6 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractType`, `schedule`, `workMode`, `postedDate`, `url`
 
-## IIMJobs Scraper: India Finance and MBA Jobs
-
-- Actor ID: `v0iddo/iimjobs-scraper`
-- Store page: https://apify.com/v0iddo/iimjobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, experience in years, salary in lakhs when shown, skills, category, posting time, the employer's AmbitionBox rating and profile, and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "finance manager"
-  ],
-  "locations": [
-    "Mumbai"
-  ],
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
-
 ## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
 
 - Actor ID: `v0iddo/jobs-ch-scraper`
@@ -222,6 +197,56 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
+
+## IIMJobs Scraper: India Finance and MBA Jobs
+
+- Actor ID: `v0iddo/iimjobs-scraper`
+- Store page: https://apify.com/v0iddo/iimjobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+iimjobs scraper for India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, locations, experience, salary in lakhs when shown, skills, category, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "finance manager"
+  ],
+  "locations": [
+    "Mumbai"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+
+## Hirist Jobs Scraper: India Tech Jobs, Salary
+
+- Actor ID: `v0iddo/hirist-jobs-scraper`
+- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "locations": [
+    "Bangalore"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
@@ -248,31 +273,6 @@ Example input:
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
-## Hirist Jobs Scraper: India Tech Jobs, Salary
-
-- Actor ID: `v0iddo/hirist-jobs-scraper`
-- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "python"
-  ],
-  "locations": [
-    "Bangalore"
-  ],
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
-
 ## No Fluff Jobs Scraper: Polish IT Jobs and Salaries
 
 - Actor ID: `v0iddo/nofluffjobs`
@@ -294,30 +294,6 @@ Example input:
 ```
 
 Output fields: `title`, `companyName`, `category`, `seniority`, `workMode`, `city`, `skills`, `salaryFrom`, `salaryTo`, `currency`, `salaryInterval`, `salaryType`, `contractType`, `postedAt`, `url`
-
-## IrishJobs.ie and Jobs.ie Scraper: Ireland Jobs and Salaries
-
-- Actor ID: `v0iddo/irishjobs-scraper`
-- Store page: https://apify.com/v0iddo/irishjobs-scraper
-- Price: $1.23 per 1,000 results, nothing per run
-
-Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR with min, max and period, date posted, closing date and snippet; with details, contract, work mode, province, map point and full text.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "accountant"
-  ],
-  "location": "Dublin",
-  "site": "irishjobs.ie",
-  "includeDetails": false,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
 
 ## Computrabajo Salary Benchmark by Job Title and Country
 
@@ -412,6 +388,30 @@ Example input:
 ```
 
 Output fields: `changeType`, `title`, `company`, `location`, `salaryText`, `workModes`, `changedFields`, `firstSeenAt`, `url`
+
+## IrishJobs.ie and Jobs.ie Scraper: Ireland Jobs and Salaries
+
+- Actor ID: `v0iddo/irishjobs-scraper`
+- Store page: https://apify.com/v0iddo/irishjobs-scraper
+- Price: $1.23 per 1,000 results, nothing per run
+
+Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR with min, max and period, date posted, closing date and snippet; with details, contract, work mode, province, map point and full text.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "accountant"
+  ],
+  "location": "Dublin",
+  "site": "irishjobs.ie",
+  "includeDetails": false,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
 
 ## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
 

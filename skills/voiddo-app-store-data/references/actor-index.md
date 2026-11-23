@@ -130,31 +130,6 @@ Example input:
 
 Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
 
-## App Store Top Charts Scraper: Ranks by Country
-
-- Actor ID: `v0iddo/app-store-top-charts`
-- Store page: https://apify.com/v0iddo/app-store-top-charts
-- Price: $0.10 per 1,000 results, nothing per run
-
-Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100 apps per chart.
-
-Example input:
-
-```json
-{
-  "chartTypes": [
-    "topfreeapplications",
-    "toppaidapplications"
-  ],
-  "countries": [
-    "us",
-    "gb"
-  ]
-}
-```
-
-Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
-
 ## Android App Metadata Scraper: Google Play Details, Ratings
 
 - Actor ID: `v0iddo/google-play-app-metadata`
@@ -197,6 +172,31 @@ Example input:
 ```
 
 Output fields: `extension_id`, `namespace`, `name`, `version`, `display_name`, `description`, `published_by`, `download_count`, `average_rating`, `review_count`, `published_at`, `license`
+
+## App Store Top Charts Scraper: Ranks by Country
+
+- Actor ID: `v0iddo/app-store-top-charts`
+- Store page: https://apify.com/v0iddo/app-store-top-charts
+- Price: $0.10 per 1,000 results, nothing per run
+
+Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100 apps per chart.
+
+Example input:
+
+```json
+{
+  "chartTypes": [
+    "topfreeapplications",
+    "toppaidapplications"
+  ],
+  "countries": [
+    "us",
+    "gb"
+  ]
+}
+```
+
+Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
 
 ## JetBrains Marketplace Plugin Scraper
 
