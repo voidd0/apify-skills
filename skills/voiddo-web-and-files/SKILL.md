@@ -67,34 +67,34 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's datase... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $0.85 |
 | Scrape job listings from Hiring.Cafe: title, company, location, workplace type, seniority, job category, te... | `v0iddo/hiring-cafe-scraper` | $1.00 |
-| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $1.27 |
 | Scrape job listings from Apna.co in India: title, company, city and area, monthly salary range in INR, offi... | `v0iddo/apna-co-scraper` | $0.78 |
-| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $6.80 |
+| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
+| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.25 |
 | Scrape France Travail (ex Pole Emploi) job offers by town or department, ROME domain and contract type: tit... | `v0iddo/francetravail` | $1.00 |
 | Extract European company profiles from northdata.com: company name, register number, court, LEI code, addre... | `v0iddo/north-data-scraper` | $3.82 |
 | Domain availability checker for domains in bulk: one row per domain with available or registered, registrar... | `v0iddo/domain-availability-checker` | $1.00 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $1.71 |
-| Scrape Made-in-China.com product search pages by keyword. | `v0iddo/made-in-china-scraper` | $1.44 |
+| Made in China scraper for Made-in-China.com product search pages by keyword. | `v0iddo/made-in-china-scraper` | $1.44 |
 | Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $2.29 |
-| Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event nam... | `v0iddo/forexfactory-economic-calendar` | $1.41 |
 | Scrape Canada jobbank listings from jobbank.gc.ca by keyword and location: job title, employer, city and pr... | `v0iddo/jobbank` | $0.70 |
+| Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event nam... | `v0iddo/forexfactory-economic-calendar` | $1.41 |
 | Capture a public web page as a PNG, JPEG or WEBP image: any viewport size, full page, retina scaling, optio... | `v0iddo/url-screenshot` | $3.40 |
 | Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.26 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $2.29 |
 | WHOIS lookup for any domain: registrar, creation and expiry dates, domain age, days to expiry, name servers... | `v0iddo/whois-domain-lookup` | $1.70 |
-| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
 | Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply an... | `v0iddo/jobteaser-job-scraper` | $0.79 |
+| Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
 | Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
 | PeoplePerHour job scraper for freelance job listings from category pages: title, description, budget, curre... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
-| Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividen... | `v0iddo/screener-in-scraper` | $8.50 |
 | Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pr... | `v0iddo/tennis-scores-api` | $4.59 |
+| Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividen... | `v0iddo/screener-in-scraper` | $8.50 |
 | Scrape PriceCharting prices for video games, Pokemon and other trading cards, comics, coins, Funko Pops and... | `v0iddo/pricecharting-product-scraper` | $2.13 |
-| Scrape djinni.co tech job listings: title, company, category, salary range, experience, employment type, lo... | `v0iddo/djinni-co-job-scraper` | $0.81 |
 | Scrape IT job offers from JustJoin.it in Poland: title, company, city, work mode, seniority, tech stack, sa... | `v0iddo/justjoin-it` | $0.50 |
 | Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and li... | `v0iddo/validate-json-schema` | $1.70 |
 | Scrape Canadian job listings from eluta.ca by keyword and location. | `v0iddo/eluta-ca-job-scraper` | $0.77 |
 | Scrape job postings from elempleo.com, Colombia's second largest job board: title, company, city, salary ba... | `v0iddo/elempleo-scraper` | $0.85 |
+| Scrape djinni.co tech job listings: title, company, category, salary range, experience, employment type, lo... | `v0iddo/djinni-co-job-scraper` | $0.81 |
 | Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review c... | `v0iddo/rakuten-japan-listings-scraper` | $1.28 |
 | Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and... | `v0iddo/royal-caribbean-scraper` | $1.19 |
 | Sitemap URL extractor and sitemap index crawler. | `v0iddo/sitemap-url-extractor` | $1.00 |

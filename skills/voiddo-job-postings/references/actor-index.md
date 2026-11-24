@@ -174,30 +174,6 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `country`, `salaryText`, `contractType`, `schedule`, `workMode`, `postedDate`, `url`
 
-## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
-
-- Actor ID: `v0iddo/jobs-ch-scraper`
-- Store page: https://apify.com/v0iddo/jobs-ch-scraper
-- Price: $0.90 per 1,000 results, nothing per run
-
-Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, employment type, position, posting dates, weekly hours, industry, category, skills, benefits, the employer's website and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "data analyst"
-  ],
-  "location": "Zürich",
-  "site": "jobs.ch",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
-
 ## IIMJobs Scraper: India Finance and MBA Jobs
 
 - Actor ID: `v0iddo/iimjobs-scraper`
@@ -223,30 +199,29 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
-## Hirist Jobs Scraper: India Tech Jobs, Salary
+## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
 
-- Actor ID: `v0iddo/hirist-jobs-scraper`
-- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/jobs-ch-scraper`
+- Store page: https://apify.com/v0iddo/jobs-ch-scraper
+- Price: $0.90 per 1,000 results, nothing per run
 
-Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, employment type, position, posting dates, weekly hours, industry, category, skills, benefits, the employer's website and the description.
 
 Example input:
 
 ```json
 {
   "keywords": [
-    "python"
+    "data analyst"
   ],
-  "locations": [
-    "Bangalore"
-  ],
+  "location": "Zürich",
+  "site": "jobs.ch",
   "includeDetails": true,
   "maxItems": 20
 }
 ```
 
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
 
 ## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
@@ -272,6 +247,31 @@ Example input:
 ```
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
+
+## Hirist Jobs Scraper: India Tech Jobs, Salary
+
+- Actor ID: `v0iddo/hirist-jobs-scraper`
+- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "locations": [
+    "Bangalore"
+  ],
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## No Fluff Jobs Scraper: Polish IT Jobs and Salaries
 
@@ -322,27 +322,6 @@ Example input:
 
 Output fields: `jobTitle`, `country`, `location`, `listingsOnSite`, `salariesUsed`, `salaryP25`, `salaryMedian`, `salaryP75`, `currency`, `salarySharePercent`, `searchUrl`
 
-## Handshake Jobs Scraper
-
-- Actor ID: `v0iddo/handshake-jobs`
-- Store page: https://apify.com/v0iddo/handshake-jobs
-- Price: $0.85 per 1,000 results, nothing per run
-
-Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
-
-Example input:
-
-```json
-{
-  "keyword": "",
-  "employmentType": "",
-  "workplaceType": "",
-  "maxItems": 20
-}
-```
-
-Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
-
 ## Gupy Jobs Scraper: Brazil Job Vacancies
 
 - Actor ID: `v0iddo/gupy-scraper`
@@ -388,6 +367,27 @@ Example input:
 ```
 
 Output fields: `changeType`, `title`, `company`, `location`, `salaryText`, `workModes`, `changedFields`, `firstSeenAt`, `url`
+
+## Handshake Jobs Scraper
+
+- Actor ID: `v0iddo/handshake-jobs`
+- Store page: https://apify.com/v0iddo/handshake-jobs
+- Price: $0.85 per 1,000 results, nothing per run
+
+Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, location, workplace type, compensation, published date, description, and application link.
+
+Example input:
+
+```json
+{
+  "keyword": "",
+  "employmentType": "",
+  "workplaceType": "",
+  "maxItems": 20
+}
+```
+
+Output fields: `jobId`, `title`, `department`, `employmentType`, `workplaceType`, `location`, `isRemote`, `publishedAt`, `compensationSummary`, `compensationMin`, `compensationMax`, `compensationCurrency`, `description`, `url`, `applyUrl`
 
 ## IrishJobs.ie and Jobs.ie Scraper: Ireland Jobs and Salaries
 
@@ -528,28 +528,6 @@ Example input:
 
 Output fields: `company`, `companyName`, `jobId`, `internalJobId`, `title`, `location`, `departments`, `offices`, `language`, `requisitionId`, `firstPublished`, `updatedAt`
 
-## Ashby Jobs API and Scraper: Job Postings by Company
-
-- Actor ID: `v0iddo/ashby-public-jobs`
-- Store page: https://apify.com/v0iddo/ashby-public-jobs
-- Price: $1.70 per 1,000 results, nothing per run
-
-Ashby jobs API and scraper.
-
-Example input:
-
-```json
-{
-  "companies": [
-    "linear",
-    "posthog",
-    "notion"
-  ]
-}
-```
-
-Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
-
 ## Lever Jobs API and Scraper: Job Postings by Company
 
 - Actor ID: `v0iddo/lever-public-jobs`
@@ -571,6 +549,28 @@ Example input:
 ```
 
 Output fields: `company`, `jobId`, `title`, `team`, `department`, `location`, `allLocations`, `country`, `workplaceType`, `commitment`, `createdAtMs`, `createdAt`
+
+## Ashby Jobs API and Scraper: Job Postings by Company
+
+- Actor ID: `v0iddo/ashby-public-jobs`
+- Store page: https://apify.com/v0iddo/ashby-public-jobs
+- Price: $1.70 per 1,000 results, nothing per run
+
+Ashby jobs API and scraper.
+
+Example input:
+
+```json
+{
+  "companies": [
+    "linear",
+    "posthog",
+    "notion"
+  ]
+}
+```
+
+Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
 
 ## We Work Remotely Jobs Scraper
 

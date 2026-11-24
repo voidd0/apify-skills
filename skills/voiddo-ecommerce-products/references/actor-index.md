@@ -151,7 +151,7 @@ Output fields: `storeDomain`, `title`, `url`, `vendor`, `productType`, `minPrice
 - Store page: https://apify.com/v0iddo/vinted-scraper
 - Price: $0.85 per 1,000 results, nothing per run
 
-Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
+Vinted scraper for public listings by search word or catalog link: title, brand, size, condition, price with currency, total with the buyer fee, favourites, photo and link.
 
 Example input:
 

@@ -60,7 +60,7 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | TikTok Shop product scraper for product pages in the United States from product links or IDs: title, price,... | `v0iddo/tiktok-shop-product-scraper` | $2.29 |
 | Alibaba scraper for Alibaba.com product offers by keyword: price range and price tiers, minimum order, unit... | `v0iddo/alibaba-scraper` | $0.75 |
 | Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
-| Collect public Vinted listings by search word or catalog link: title, brand, size, condition, price with cu... | `v0iddo/vinted-scraper` | $0.85 |
+| Vinted scraper for public listings by search word or catalog link: title, brand, size, condition, price wit... | `v0iddo/vinted-scraper` | $0.85 |
 | Get a ranked shortlist of Alibaba.com suppliers for each product you name: each supplier scored on price ag... | `v0iddo/alibaba-supplier-shortlist` | $490.00 |
 
 ## Other ways to call them

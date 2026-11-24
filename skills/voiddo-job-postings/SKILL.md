@@ -61,28 +61,28 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode... | `v0iddo/reed-jobs-scraper` | $0.45 |
 | For recruiters and HR analysts: only new, changed or expired Computrabajo job offers in 18 LATAM countries,... | `v0iddo/computrabajo-job-alerts` | $2.00 |
 | Computrabajo scraper for jobs in 18 Latin American countries: title, company with rating, city, region, sal... | `v0iddo/computrabajo-scraper` | $1.39 + $0.000/start |
-| Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | iimjobs scraper for India finance, sales, consulting, HR and operations jobs from iimjobs.com: company, loc... | `v0iddo/iimjobs-scraper` | $0.50 |
-| Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, s... | `v0iddo/hirist-jobs-scraper` | $0.50 |
+| Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, emp... | `v0iddo/jobs-ch-scraper` | $0.90 |
 | Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and Bambo... | `v0iddo/ats-jobs-scraper` | $0.42 |
+| Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, s... | `v0iddo/hirist-jobs-scraper` | $0.50 |
 | Scrape IT job offers from No Fluff Jobs (nofluffjobs.com) in Poland: title, company, category, seniority, m... | `v0iddo/nofluffjobs` | $0.75 |
 | Get a salary benchmark for any job title from Computrabajo postings in 18 Latin American countries: monthly... | `v0iddo/computrabajo-salary-benchmark` | $490.00 |
-| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $0.85 |
 | Scrape Brazilian job postings from Gupy, the hiring system of most large employers in Brazil: title, compan... | `v0iddo/gupy-scraper` | $0.50 |
 | Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one aler... | `v0iddo/pracuj-pl-job-alerts` | $2.00 |
+| Scrape open job postings from joinhandshake.com into structured rows: title, department, employment type, l... | `v0iddo/handshake-jobs` | $0.85 |
 | Scrape job postings from IrishJobs.ie and Jobs.ie in Ireland: title, company, town, county, salary in EUR w... | `v0iddo/irishjobs-scraper` | $1.23 |
 | Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type... | `v0iddo/pracuj-pl-scraper` | $0.95 + $0.004/start |
 | Scrape job listings from Rozee.pk by keyword and optional city. | `v0iddo/rozeepk-jobs-scraper` | $0.79 |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |
 | Get a salary benchmark for any job title from pracuj.pl postings in Poland: gross monthly median, quartiles... | `v0iddo/pracuj-pl-salary-benchmark` | $490.00 |
 | Greenhouse jobs API and scraper. | `v0iddo/greenhouse-public-jobs` | $0.20 |
-| Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Lever jobs API and scraper. | `v0iddo/lever-public-jobs` | $0.20 |
+| Ashby jobs API and scraper. | `v0iddo/ashby-public-jobs` | $1.70 |
 | Scrape remote job listings from weworkremotely.com by category or keyword. | `v0iddo/weworkremotely-jobs-scraper` | $0.85 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/computrabajo-job-alerts,v0iddo/computrabajo-scraper,v0iddo/jobs-ch-scraper,v0iddo/iimjobs-scraper,v0iddo/hirist-jobs-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/wellfound-jobs-scraper,v0iddo/remote-jobs-scraper,v0iddo/instahyre-jobs-scraper,v0iddo/workday-jobs-scraper,v0iddo/reed-jobs-scraper,v0iddo/computrabajo-job-alerts,v0iddo/computrabajo-scraper,v0iddo/iimjobs-scraper,v0iddo/jobs-ch-scraper,v0iddo/ats-jobs-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~wellfound-jobs-scraper/run-sync-get-dataset-items" \
