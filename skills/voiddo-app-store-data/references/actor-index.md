@@ -2,26 +2,48 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## App Store Scraper: App Details, Ratings, Prices
+## JetBrains Marketplace Plugin Scraper
 
-- Actor ID: `v0iddo/app-store-app-metadata`
-- Store page: https://apify.com/v0iddo/app-store-app-metadata
-- Price: $0.50 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/jetbrains-marketplace-plugins`
+- Store page: https://apify.com/v0iddo/jetbrains-marketplace-plugins
+- Price: $1.00 per 1,000 results, nothing per run
 
-Snapshot Apple App Store app metadata via the public iTunes Lookup API.
+Scrape JetBrains Marketplace plugins by numeric ID: name, vendor, rating, downloads, description, link, preview, family.
 
 Example input:
 
 ```json
 {
-  "appIds": [
-    "389801252",
-    "6448311069"
+  "plugin_id": [
+    "164",
+    "6610",
+    "7973"
   ]
 }
 ```
 
-Output fields: `snapshotAt`, `appId`, `country`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `sellerUrl`, `trackViewUrl`, `price`, `formattedPrice`
+Output fields: `plugin_id`, `name`, `xml_id`, `link`, `description`, `vendor_name`, `rating`, `rating_votes`, `downloads`, `preview`, `family`
+
+## App Store Search Scraper: Apps by Keyword
+
+- Actor ID: `v0iddo/app-store-search`
+- Store page: https://apify.com/v0iddo/app-store-search
+- Price: $0.20 per 1,000 results, nothing per run
+
+Search the Apple App Store by keyword and country.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "meditation",
+    "habit tracker"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
 
 ## App Store Reviews Scraper: Ratings and Reviews by Country
 
@@ -43,6 +65,93 @@ Example input:
 ```
 
 Output fields: `appName`, `country`, `rating`, `title`, `body`, `date`, `storefrontRating`, `storefrontRatingCount`, `stars5`, `stars1`, `url`
+
+## App Store Scraper: App Details, Ratings, Prices
+
+- Actor ID: `v0iddo/app-store-app-metadata`
+- Store page: https://apify.com/v0iddo/app-store-app-metadata
+- Price: $0.50 per 1,000 results, nothing per run
+
+Snapshot Apple App Store app metadata via the public iTunes Lookup API.
+
+Example input:
+
+```json
+{
+  "appIds": [
+    "389801252",
+    "6448311069"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `appId`, `country`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `sellerUrl`, `trackViewUrl`, `price`, `formattedPrice`
+
+## App Store Top Charts Scraper: Ranks by Country
+
+- Actor ID: `v0iddo/app-store-top-charts`
+- Store page: https://apify.com/v0iddo/app-store-top-charts
+- Price: $0.10 per 1,000 results, nothing per run
+
+Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100 apps per chart.
+
+Example input:
+
+```json
+{
+  "chartTypes": [
+    "topfreeapplications",
+    "toppaidapplications"
+  ],
+  "countries": [
+    "us",
+    "gb"
+  ]
+}
+```
+
+Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
+
+## App Store Developer Scraper: All Apps by Developer
+
+- Actor ID: `v0iddo/itunes-developer-portfolio`
+- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
+- Price: $2.38 per 1,000 results, nothing per run
+
+Pull every app under an Apple App Store developer identifier (artistId).
+
+Example input:
+
+```json
+{
+  "artistIds": [
+    "284882218"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`
+
+## Android App Metadata Scraper: Google Play Details, Ratings
+
+- Actor ID: `v0iddo/google-play-app-metadata`
+- Store page: https://apify.com/v0iddo/google-play-app-metadata
+- Price: $0.50 per 1,000 results, nothing per run
+
+Snapshot Android app metadata from Google Play for any package name, in any country.
+
+Example input:
+
+```json
+{
+  "packageNames": [
+    "com.instagram.android",
+    "com.openai.chatgpt"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
 
 ## Chrome Web Store Scraper: Extension Details and Ratings
 
@@ -109,48 +218,6 @@ Example input:
 
 Output fields: `appid`, `app_name`, `recommendationid`, `voted_up`, `review_text`, `date_posted`, `hours_on_record`, `votes_up`, `votes_funny`, `awards`, `comment_count`, `author_num_games_owned`
 
-## App Store Search Scraper: Apps by Keyword
-
-- Actor ID: `v0iddo/app-store-search`
-- Store page: https://apify.com/v0iddo/app-store-search
-- Price: $0.20 per 1,000 results, nothing per run
-
-Search the Apple App Store by keyword and country.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "meditation",
-    "habit tracker"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
-
-## Android App Metadata Scraper: Google Play Details, Ratings
-
-- Actor ID: `v0iddo/google-play-app-metadata`
-- Store page: https://apify.com/v0iddo/google-play-app-metadata
-- Price: $0.50 per 1,000 results, nothing per run
-
-Snapshot Android app metadata from Google Play for any package name, in any country.
-
-Example input:
-
-```json
-{
-  "packageNames": [
-    "com.instagram.android",
-    "com.openai.chatgpt"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
-
 ## VS Code Extension Scraper: Open VSX Registry Metadata
 
 - Actor ID: `v0iddo/vscode-marketplace-extensions`
@@ -172,70 +239,3 @@ Example input:
 ```
 
 Output fields: `extension_id`, `namespace`, `name`, `version`, `display_name`, `description`, `published_by`, `download_count`, `average_rating`, `review_count`, `published_at`, `license`
-
-## App Store Top Charts Scraper: Ranks by Country
-
-- Actor ID: `v0iddo/app-store-top-charts`
-- Store page: https://apify.com/v0iddo/app-store-top-charts
-- Price: $0.10 per 1,000 results, nothing per run
-
-Pull the Apple App Store top charts of paid apps and apps at no cost for any storefront country, up to 100 apps per chart.
-
-Example input:
-
-```json
-{
-  "chartTypes": [
-    "topfreeapplications",
-    "toppaidapplications"
-  ],
-  "countries": [
-    "us",
-    "gb"
-  ]
-}
-```
-
-Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
-
-## JetBrains Marketplace Plugin Scraper
-
-- Actor ID: `v0iddo/jetbrains-marketplace-plugins`
-- Store page: https://apify.com/v0iddo/jetbrains-marketplace-plugins
-- Price: $1.00 per 1,000 results, nothing per run
-
-Scrape JetBrains Marketplace plugins by numeric ID: name, vendor, rating, downloads, description, link, preview, family.
-
-Example input:
-
-```json
-{
-  "plugin_id": [
-    "164",
-    "6610",
-    "7973"
-  ]
-}
-```
-
-Output fields: `plugin_id`, `name`, `xml_id`, `link`, `description`, `vendor_name`, `rating`, `rating_votes`, `downloads`, `preview`, `family`
-
-## App Store Developer Scraper: All Apps by Developer
-
-- Actor ID: `v0iddo/itunes-developer-portfolio`
-- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
-- Price: $2.38 per 1,000 results, nothing per run
-
-Pull every app under an Apple App Store developer identifier (artistId).
-
-Example input:
-
-```json
-{
-  "artistIds": [
-    "284882218"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`

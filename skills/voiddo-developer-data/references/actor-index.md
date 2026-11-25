@@ -2,27 +2,6 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
-## Hacker News Scraper: Stories and Comments by Query
-
-- Actor ID: `v0iddo/hn-algolia-search`
-- Store page: https://apify.com/v0iddo/hn-algolia-search
-- Price: $0.10 per 1,000 results, nothing per run
-
-Search Hacker News via the public Algolia API.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "Show HN: open source"
-  ],
-  "maxResultsPerQuery": 20
-}
-```
-
-Output fields: `objectID`, `storyId`, `title`, `author`, `url`, `points`, `numComments`, `createdAt`, `createdAtUnix`, `tags`, `commentText`, `permalink`
-
 ## PyPI Scraper: Python Package Details and Stats
 
 - Actor ID: `v0iddo/pypi-package-tracker`
@@ -44,6 +23,27 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `name`, `latestVersion`, `summary`, `author`, `license`, `homepage`, `projectUrls`, `requiresPython`, `classifiers`, `keywords`, `releaseCount`
+
+## Hacker News Scraper: Stories and Comments by Query
+
+- Actor ID: `v0iddo/hn-algolia-search`
+- Store page: https://apify.com/v0iddo/hn-algolia-search
+- Price: $0.10 per 1,000 results, nothing per run
+
+Search Hacker News via the public Algolia API.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "Show HN: open source"
+  ],
+  "maxResultsPerQuery": 20
+}
+```
+
+Output fields: `objectID`, `storyId`, `title`, `author`, `url`, `points`, `numComments`, `createdAt`, `createdAtUnix`, `tags`, `commentText`, `permalink`
 
 ## GitHub Security Advisories Scraper by Ecosystem
 

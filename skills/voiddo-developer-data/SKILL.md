@@ -38,13 +38,13 @@ Out of scope (the boundary): Scanning private code: out of scope.
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/hn-algolia-search" --input --json --user-agent voiddo-skills/voiddo-developer-data 2>/dev/null
+       apify actors info "v0iddo/pypi-package-tracker" --input --json --user-agent voiddo-skills/voiddo-developer-data 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/hn-algolia-search" -i '{"queries": ["Show HN: open source"], "maxResultsPerQuery": 20}' --json --user-agent voiddo-skills/voiddo-developer-data 2>/dev/null
+       apify actors call "v0iddo/pypi-package-tracker" -i '{"packages": ["requests", "numpy", "pandas"]}' --json --user-agent voiddo-skills/voiddo-developer-data 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,19 +54,19 @@ Out of scope (the boundary): Scanning private code: out of scope.
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
-| Search Hacker News via the public Algolia API. | `v0iddo/hn-algolia-search` | $0.10 |
 | Snapshot PyPI package metadata using the public pypi.org/pypi/<pkg>/json endpoint. | `v0iddo/pypi-package-tracker` | $0.20 |
+| Search Hacker News via the public Algolia API. | `v0iddo/hn-algolia-search` | $0.10 |
 | For each ecosystem (NPM, PIP, MAVEN, NUGET, RUBYGEMS, RUST, GO, ACTIONS, SWIFT and more), pull recent GitHu... | `v0iddo/github-security-advisories` | $0.50 |
 | Snapshot npm package stats from the public registry and downloads APIs. | `v0iddo/npm-package-tracker` | $0.20 |
 | Pull new/modified CVEs from NIST NVD. | `v0iddo/nvd-cve-tracker` | $2.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/hn-algolia-search,v0iddo/pypi-package-tracker,v0iddo/github-security-advisories,v0iddo/npm-package-tracker,v0iddo/nvd-cve-tracker`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/pypi-package-tracker,v0iddo/hn-algolia-search,v0iddo/github-security-advisories,v0iddo/npm-package-tracker,v0iddo/nvd-cve-tracker`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~hn-algolia-search/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"queries": ["Show HN: open source"], "maxResultsPerQuery": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~pypi-package-tracker/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"packages": ["requests", "numpy", "pandas"]}'
 
 ## Troubleshooting
 

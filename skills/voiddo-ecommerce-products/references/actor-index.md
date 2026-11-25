@@ -122,6 +122,31 @@ Example input:
 
 Output fields: `productId`, `image`, `title`, `priceMin`, `priceMax`, `currency`, `minOrder`, `minOrderUnit`, `sold`, `supplierName`, `supplierCountry`, `verifiedSupplier`, `tradeAssurance`, `supplierReviews`, `url`
 
+## Alibaba Supplier Shortlist by Price, MOQ and Trust
+
+- Actor ID: `v0iddo/alibaba-supplier-shortlist`
+- Store page: https://apify.com/v0iddo/alibaba-supplier-shortlist
+- Price: $490.00 per 1,000 results, nothing per run
+
+Alibaba supplier shortlist for each product you name: Alibaba.com suppliers ranked and scored on price against the market median, fit to your minimum order, Verified, Trade Assurance, years, rating and units sold, with each one's best offer and the reasons.
+
+Example input:
+
+```json
+{
+  "searchTerms": [
+    "led strip lights"
+  ],
+  "targetPrice": 5,
+  "targetMOQ": 50,
+  "maxPages": 2,
+  "shortlistSize": 10,
+  "maxItems": 20
+}
+```
+
+Output fields: `rank`, `score`, `supplierName`, `supplierCountry`, `bestPrice`, `bestMinOrder`, `fitsTargets`, `verifiedSupplier`, `supplierYears`, `why`, `bestOfferUrl`
+
 ## Shopify Scraper: Products, Prices, Stock
 
 - Actor ID: `v0iddo/shopify-store-intelligence`
@@ -165,28 +190,3 @@ Example input:
 ```
 
 Output fields: `title`, `brand`, `size`, `condition`, `price`, `currency`, `totalPrice`, `favourites`, `photo`, `url`
-
-## Alibaba Supplier Shortlist by Price, MOQ and Trust
-
-- Actor ID: `v0iddo/alibaba-supplier-shortlist`
-- Store page: https://apify.com/v0iddo/alibaba-supplier-shortlist
-- Price: $490.00 per 1,000 results, nothing per run
-
-Get a ranked shortlist of Alibaba.com suppliers for each product you name: each supplier scored on price against the market median, fit to your minimum order, Verified, Trade Assurance, years, rating and units sold, with its best offer and the reasons.
-
-Example input:
-
-```json
-{
-  "searchTerms": [
-    "led strip lights"
-  ],
-  "targetPrice": 5,
-  "targetMOQ": 50,
-  "maxPages": 2,
-  "shortlistSize": 10,
-  "maxItems": 20
-}
-```
-
-Output fields: `rank`, `score`, `supplierName`, `supplierCountry`, `bestPrice`, `bestMinOrder`, `fitsTargets`, `verifiedSupplier`, `supplierYears`, `why`, `bestOfferUrl`

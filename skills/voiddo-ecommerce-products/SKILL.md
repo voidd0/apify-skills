@@ -59,13 +59,13 @@ Out of scope (the boundary): Placing orders or logging in to a seller account: o
 | Scrape Amazon.com Best Sellers and New Releases lists by category link: rank, ASIN, title, price, star rati... | `v0iddo/amazon-bestsellers-scraper` | $1.00 |
 | TikTok Shop product scraper for product pages in the United States from product links or IDs: title, price,... | `v0iddo/tiktok-shop-product-scraper` | $2.29 |
 | Alibaba scraper for Alibaba.com product offers by keyword: price range and price tiers, minimum order, unit... | `v0iddo/alibaba-scraper` | $0.75 |
+| Alibaba supplier shortlist for each product you name: Alibaba.com suppliers ranked and scored on price agai... | `v0iddo/alibaba-supplier-shortlist` | $490.00 |
 | Scrape products from any Shopify store: prices, compare-at price and discount, stock per variant, SKU, barc... | `v0iddo/shopify-store-intelligence` | $0.50 |
 | Vinted scraper for public listings by search word or catalog link: title, brand, size, condition, price wit... | `v0iddo/vinted-scraper` | $0.85 |
-| Get a ranked shortlist of Alibaba.com suppliers for each product you name: each supplier scored on price ag... | `v0iddo/alibaba-supplier-shortlist` | $490.00 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/alibaba-scraper,v0iddo/shopify-store-intelligence,v0iddo/vinted-scraper,v0iddo/alibaba-supplier-shortlist`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/amazon-product-scraper,v0iddo/aliexpress-scraper,v0iddo/amazon-bestsellers-scraper,v0iddo/tiktok-shop-product-scraper,v0iddo/alibaba-scraper,v0iddo/alibaba-supplier-shortlist,v0iddo/shopify-store-intelligence,v0iddo/vinted-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~amazon-product-scraper/run-sync-get-dataset-items" \

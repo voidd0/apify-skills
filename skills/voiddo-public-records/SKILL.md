@@ -38,13 +38,13 @@ Out of scope (the boundary): Legal advice or a compliance verdict: the skill ret
    output fields and price are in [references/actor-index.md](references/actor-index.md).
 2. Fetch the live input schema and build the input from the example, changing only what the user asked for:
 
-       apify actors info "v0iddo/usaspending-federal-awards" --input --json --user-agent voiddo-skills/voiddo-public-records 2>/dev/null
+       apify actors info "v0iddo/sec-13d-13g-beneficial-ownership" --input --json --user-agent voiddo-skills/voiddo-public-records 2>/dev/null
 
 3. Size the run before it starts: cost is about rows x price per 1,000 / 1,000. Set the row cap
    (`maxItems` on most of these Actors) and tell the user the estimate when it is over $1.
 4. Run the Actor and read the rows:
 
-       apify actors call "v0iddo/usaspending-federal-awards" -i '{"maxResults": 20}' --json --user-agent voiddo-skills/voiddo-public-records 2>/dev/null
+       apify actors call "v0iddo/sec-13d-13g-beneficial-ownership" -i '{"cik": ["0000320193", "0001318605", "0001067983"]}' --json --user-agent voiddo-skills/voiddo-public-records 2>/dev/null
 
 5. Check before you deliver: the row count, empty columns, and rows whose fields say an item failed (several
    Actors return one row per input that could not be read, with the reason). Report what was asked, what came back
@@ -54,24 +54,24 @@ Out of scope (the boundary): Legal advice or a compliance verdict: the skill ret
 
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
+| Scrape SEC EDGAR 13D and 13G beneficial ownership filings by company CIK. | `v0iddo/sec-13d-13g-beneficial-ownership` | $4.89 |
+| Scrapes FCC ECFS (Electronic Comment Filing System) filings and public notices by docket/proceeding number. | `v0iddo/fcc-public-notices` | $2.55 |
+| Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or ful... | `v0iddo/federal-register-tracker` | $0.10 |
+| Pull SEC Form 13F quarterly holdings for any institutional manager by CIK. | `v0iddo/sec-13f-institutional-holdings` | $0.34 |
 | Pull recent federal contract and grant awards from USAspending.gov. | `v0iddo/usaspending-federal-awards` | $1.61 |
 | Pull recently-updated ClinicalTrials.gov studies matching a query. | `v0iddo/clinicaltrials-updates-tracker` | $1.91 |
-| Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or ful... | `v0iddo/federal-register-tracker` | $0.10 |
 | Pull clean, parsed Form 4 insider trades from SEC EDGAR by ticker. | `v0iddo/sec-form4-insider-trades` | $1.70 |
-| Scrape SEC EDGAR 13D and 13G beneficial ownership filings by company CIK. | `v0iddo/sec-13d-13g-beneficial-ownership` | $4.89 |
-| Pull recent SEC 8-K filings (Current Reports) by stock ticker. | `v0iddo/sec-8k-material-events-tracker` | $10.00 |
 | Pull recent NIH research grants from RePORTER. | `v0iddo/nih-reporter-grants` | $3.00 |
+| Pull recent SEC 8-K filings (Current Reports) by stock ticker. | `v0iddo/sec-8k-material-events-tracker` | $10.00 |
 | Pull recent FDA drug recall actions. | `v0iddo/openfda-drug-recalls` | $5.00 |
-| Pull SEC Form 13F quarterly holdings for any institutional manager by CIK. | `v0iddo/sec-13f-institutional-holdings` | $0.34 |
-| Scrapes FCC ECFS (Electronic Comment Filing System) filings and public notices by docket/proceeding number. | `v0iddo/fcc-public-notices` | $2.55 |
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/usaspending-federal-awards,v0iddo/clinicaltrials-updates-tracker,v0iddo/federal-register-tracker,v0iddo/sec-form4-insider-trades,v0iddo/sec-13d-13g-beneficial-ownership,v0iddo/sec-8k-material-events-tracker,v0iddo/nih-reporter-grants,v0iddo/openfda-drug-recalls,v0iddo/sec-13f-institutional-holdings,v0iddo/fcc-public-notices`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/sec-13d-13g-beneficial-ownership,v0iddo/fcc-public-notices,v0iddo/federal-register-tracker,v0iddo/sec-13f-institutional-holdings,v0iddo/usaspending-federal-awards,v0iddo/clinicaltrials-updates-tracker,v0iddo/sec-form4-insider-trades,v0iddo/nih-reporter-grants,v0iddo/sec-8k-material-events-tracker,v0iddo/openfda-drug-recalls`
 - One HTTP request, any language (returns the JSON rows):
 
-      curl -X POST "https://api.apify.com/v2/acts/v0iddo~usaspending-federal-awards/run-sync-get-dataset-items" \
-        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"maxResults": 20}'
+      curl -X POST "https://api.apify.com/v2/acts/v0iddo~sec-13d-13g-beneficial-ownership/run-sync-get-dataset-items" \
+        -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' -d '{"cik": ["0000320193", "0001318605", "0001067983"]}'
 
 ## Troubleshooting
 

@@ -2,6 +2,28 @@
 
 Every Actor below is public on the Apify Store. The example input is the one on its Store page, run every day by Apify's own test; output fields are the Actor's overview columns.
 
+## Crossref Scraper: Recent Publications by Query
+
+- Actor ID: `v0iddo/crossref-recent-publications`
+- Store page: https://apify.com/v0iddo/crossref-recent-publications
+- Price: $0.20 per 1,000 results, nothing per run
+
+For each query, pull recent works from Crossref's public REST API with a server-side date filter.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "climate change adaptation",
+    "battery recycling"
+  ],
+  "maxResultsPerQuery": 20
+}
+```
+
+Output fields: `doi`, `title`, `type`, `subtype`, `publisher`, `container`, `shortContainer`, `issn`, `isbn`, `authors`, `authorCount`, `published`
+
 ## News Article Extractor: Full Text from Links and RSS
 
 - Actor ID: `v0iddo/news-scraper`
@@ -23,29 +45,6 @@ Example input:
 ```
 
 Output fields: `title`, `publishedAt`, `siteName`, `section`, `language`, `wordCount`, `paywalled`, `url`, `topImage`
-
-## Medium Scraper: Articles by User, Tag or Publication
-
-- Actor ID: `v0iddo/medium-rss-tracker`
-- Store page: https://apify.com/v0iddo/medium-rss-tracker
-- Price: $0.20 per 1,000 results, nothing per run
-
-Pull Medium articles via the public RSS feed endpoints: /feed/@user, /feed/tag/{tag}, /feed/{publication-slug}.
-
-Example input:
-
-```json
-{
-  "feeds": [
-    "@medium",
-    "tag/programming",
-    "tag/data-science"
-  ],
-  "maxArticlesPerFeed": 20
-}
-```
-
-Output fields: `id`, `title`, `link`, `author`, `pubDate`, `summary`, `categories`
 
 ## Substack Scraper: Newsletter Posts by Publication
 
@@ -90,6 +89,29 @@ Example input:
 
 Output fields: `title`, `subtitle`, `date`, `audience`, `reactions`, `comments`, `wordCount`, `section`, `url`
 
+## Medium Scraper: Articles by User, Tag or Publication
+
+- Actor ID: `v0iddo/medium-rss-tracker`
+- Store page: https://apify.com/v0iddo/medium-rss-tracker
+- Price: $0.20 per 1,000 results, nothing per run
+
+Pull Medium articles via the public RSS feed endpoints: /feed/@user, /feed/tag/{tag}, /feed/{publication-slug}.
+
+Example input:
+
+```json
+{
+  "feeds": [
+    "@medium",
+    "tag/programming",
+    "tag/data-science"
+  ],
+  "maxArticlesPerFeed": 20
+}
+```
+
+Output fields: `id`, `title`, `link`, `author`, `pubDate`, `summary`, `categories`
+
 ## PubMed Scraper: New Citations by Query
 
 - Actor ID: `v0iddo/pubmed-daily-citations-tracker`
@@ -110,25 +132,3 @@ Example input:
 ```
 
 Output fields: `pmid`, `title`, `authors`, `journal`, `year`, `publicationDate`, `entrezDate`, `doi`, `issn`, `volume`, `issue`, `pages`
-
-## Crossref Scraper: Recent Publications by Query
-
-- Actor ID: `v0iddo/crossref-recent-publications`
-- Store page: https://apify.com/v0iddo/crossref-recent-publications
-- Price: $0.20 per 1,000 results, nothing per run
-
-For each query, pull recent works from Crossref's public REST API with a server-side date filter.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "climate change adaptation",
-    "battery recycling"
-  ],
-  "maxResultsPerQuery": 20
-}
-```
-
-Output fields: `doi`, `title`, `type`, `subtype`, `publisher`, `container`, `shortContainer`, `issn`, `isbn`, `authors`, `authorCount`, `published`
