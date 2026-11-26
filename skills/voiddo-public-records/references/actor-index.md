@@ -24,6 +24,24 @@ Example input:
 
 Output fields: `cik`, `company_name`, `accession_number`, `form`, `filing_date`, `report_date`, `primary_document`, `primary_doc_description`
 
+## Federal Register Scraper: Rules, Proposed Rules, Notices
+
+- Actor ID: `v0iddo/federal-register-tracker`
+- Store page: https://apify.com/v0iddo/federal-register-tracker
+- Price: $0.10 per 1,000 results, nothing per run
+
+Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
+
 ## FCC ECFS Public Notices & Filings Scraper
 
 - Actor ID: `v0iddo/fcc-public-notices`
@@ -45,24 +63,6 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `filing_id`, `date_received`, `submission_type`, `filer_name`, `proceeding`, `allProceedings`, `document_filename`, `document_url`, `city`, `state`, `text_snippet`
-
-## Federal Register Scraper: Rules, Proposed Rules, Notices
-
-- Actor ID: `v0iddo/federal-register-tracker`
-- Store page: https://apify.com/v0iddo/federal-register-tracker
-- Price: $0.10 per 1,000 results, nothing per run
-
-Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
 
 ## SEC 13F Scraper: Institutional Holdings by Filer
 

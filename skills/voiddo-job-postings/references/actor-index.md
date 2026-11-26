@@ -600,7 +600,7 @@ Output fields: `title`, `companyName`, `category`, `seniority`, `workMode`, `cit
 - Store page: https://apify.com/v0iddo/weworkremotely-jobs-scraper
 - Price: $0.85 per 1,000 results, nothing per run
 
-Scrape remote job listings from weworkremotely.com by category or keyword.
+WeWorkRemotely jobs scraper for remote job listings from weworkremotely.com by category or keyword.
 
 Example input:
 

@@ -66,6 +66,26 @@ Example input:
 
 Output fields: `appName`, `country`, `rating`, `title`, `body`, `date`, `storefrontRating`, `storefrontRatingCount`, `stars5`, `stars1`, `url`
 
+## App Store Developer Scraper: All Apps by Developer
+
+- Actor ID: `v0iddo/itunes-developer-portfolio`
+- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
+- Price: $2.38 per 1,000 results, nothing per run
+
+Pull every app under an Apple App Store developer identifier (artistId).
+
+Example input:
+
+```json
+{
+  "artistIds": [
+    "284882218"
+  ]
+}
+```
+
+Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`
+
 ## App Store Scraper: App Details, Ratings, Prices
 
 - Actor ID: `v0iddo/app-store-app-metadata`
@@ -111,26 +131,6 @@ Example input:
 ```
 
 Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
-
-## App Store Developer Scraper: All Apps by Developer
-
-- Actor ID: `v0iddo/itunes-developer-portfolio`
-- Store page: https://apify.com/v0iddo/itunes-developer-portfolio
-- Price: $2.38 per 1,000 results, nothing per run
-
-Pull every app under an Apple App Store developer identifier (artistId).
-
-Example input:
-
-```json
-{
-  "artistIds": [
-    "284882218"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `country`, `appId`, `appName`, `artistId`, `developerName`, `price`, `ratingValue`, `ratingCount`, `version`, `lastVersionReleaseAt`, `primaryGenre`
 
 ## Android App Metadata Scraper: Google Play Details, Ratings
 

@@ -79,7 +79,7 @@ Out of scope (the boundary): LinkedIn Jobs or Google Jobs: this skill does not c
 | Watch pracuj.pl searches and get only new, changed or expired job offers, with salary and link, in one aler... | `v0iddo/pracuj-pl-job-alerts` | $2.00 |
 | Scrape Freelancer.com job listings by skill: project title, description, average bid and whether it is hour... | `v0iddo/freelancer-jobs-projects-scraper` | $0.09 |
 | Scrape IT job offers from No Fluff Jobs (nofluffjobs.com) in Poland: title, company, category, seniority, m... | `v0iddo/nofluffjobs` | $0.75 |
-| Scrape remote job listings from weworkremotely.com by category or keyword. | `v0iddo/weworkremotely-jobs-scraper` | $0.85 |
+| WeWorkRemotely jobs scraper for remote job listings from weworkremotely.com by category or keyword. | `v0iddo/weworkremotely-jobs-scraper` | $0.85 |
 
 ## Other ways to call them
 
