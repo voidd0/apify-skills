@@ -53,7 +53,7 @@ Output fields: `title`, `companyName`, `city`, `location`, `salaryMin`, `salaryM
 
 - Actor ID: `v0iddo/screener-in-scraper`
 - Store page: https://apify.com/v0iddo/screener-in-scraper
-- Price: $8.50 per 1,000 results, nothing per run
+- Price: $5.97 per 1,000 results, nothing per run
 
 Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividend yield, 52-week high/low, and NSE/BSE codes for any ticker symbol.
 
@@ -80,11 +80,33 @@ Example input:
 
 Output fields: `ticker`, `name`, `currentPrice`, `marketCapCr`, `stockPE`, `roce`, `roe`, `bookValue`, `dividendYield`, `high52w`, `low52w`, `faceValue`, `nseCode`, `bseCode`, `url`
 
+## Nykaa Scraper: Beauty Products, Prices, Ratings
+
+- Actor ID: `v0iddo/nykaa-scraper`
+- Store page: https://apify.com/v0iddo/nykaa-scraper
+- Price: $4.01 per 1,000 results, nothing per run
+
+Nykaa scraper for beauty products on nykaa.com.
+
+Example input:
+
+```json
+{
+  "categoryUrls": [
+    "https://www.nykaa.com/makeup/eyes/c/14"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `productId`, `name`, `brand`, `category`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `inStock`, `imageUrl`, `productUrl`
+
 ## Royal Caribbean Ships Scraper
 
 - Actor ID: `v0iddo/royal-caribbean-scraper`
 - Store page: https://apify.com/v0iddo/royal-caribbean-scraper
-- Price: $1.19 per 1,000 results, nothing per run
+- Price: $1.02 per 1,000 results, nothing per run
 
 Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
 
@@ -147,7 +169,7 @@ Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitP
 
 - Actor ID: `v0iddo/moz-scraper`
 - Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $1.70 per 1,000 results, nothing per run
+- Price: $3.40 per 1,000 results, nothing per run
 
 Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
 
@@ -228,6 +250,31 @@ Example input:
 ```
 
 Output fields: `url`, `title`, `h1`, `breadcrumbs`, `description`, `textContent`, `wordCount`, `depth`
+
+## Bulk File Downloader and Image Downloader: Web Pages, PDFs
+
+- Actor ID: `v0iddo/bulk-file-downloader`
+- Store page: https://apify.com/v0iddo/bulk-file-downloader
+- Price: $2.00 per 1,000 results, nothing per run
+
+Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://en.wikipedia.org/wiki/Hummingbird"
+  ],
+  "fileTypes": [
+    "image"
+  ],
+  "maxFilesPerPage": 20,
+  "maxItems": 20
+}
+```
+
+Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
 ## PriceCharting Scraper: Game, Card and Collectible Prices
 
@@ -428,13 +475,13 @@ Example input:
 
 Output fields: `jobId`, `title`, `company`, `city`, `industry`, `employmentType`, `datePosted`, `validThrough`, `salaryMin`, `salaryMax`, `url`
 
-## Audio Transcription: Audio to Text Converter, Podcast, Video
+## Audio Transcription: Speech to Text, Audio to Text, Whisper
 
 - Actor ID: `v0iddo/audio-transcription`
 - Store page: https://apify.com/v0iddo/audio-transcription
-- Price: $10.00 per 1,000 results, nothing per run
+- Price: $6.00 per 1,000 results, nothing per run
 
-Speech to text with Whisper: transcribe audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
+Audio transcription with Whisper: speech to text from audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
 
 Example input:
 
@@ -473,31 +520,6 @@ Example input:
 ```
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
-
-## Bulk File Downloader and Image Downloader: Web Pages, PDFs
-
-- Actor ID: `v0iddo/bulk-file-downloader`
-- Store page: https://apify.com/v0iddo/bulk-file-downloader
-- Price: $2.00 per 1,000 results, nothing per run
-
-Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://en.wikipedia.org/wiki/Hummingbird"
-  ],
-  "fileTypes": [
-    "image"
-  ],
-  "maxFilesPerPage": 20,
-  "maxItems": 20
-}
-```
-
-Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
 ## Myntra Product Scraper
 
@@ -614,6 +636,28 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## Google Autocomplete Scraper: Keyword Suggestions
+
+- Actor ID: `v0iddo/google-autocomplete-scraper`
+- Store page: https://apify.com/v0iddo/google-autocomplete-scraper
+- Price: $0.60 per 1,000 results, nothing per run
+
+Collect Google search suggestions for any keyword list, with position and relevance score.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "running shoes"
+  ],
+  "expand": "alphabet",
+  "maxItems": 20
+}
+```
+
+Output fields: `seed`, `query`, `suggestion`, `position`, `relevance`, `type`, `language`, `country`
 
 ## PDF Text Extractor: Extract Text from PDF
 
@@ -786,6 +830,28 @@ Example input:
 
 Output fields: `domain`, `available`, `status`, `registrar`, `expirationDate`, `daysToExpiry`, `registrationDate`, `note`
 
+## CapCut Trending Templates Scraper
+
+- Actor ID: `v0iddo/capcut-trending-templates-scraper`
+- Store page: https://apify.com/v0iddo/capcut-trending-templates-scraper
+- Price: $1.61 per 1,000 results, nothing per run
+
+Capcut trending templates scraper for category pages on capcut.com.
+
+Example input:
+
+```json
+{
+  "categories": [
+    "editors-pick"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `templateId`, `title`, `category`, `useCount`, `likeCount`, `durationMs`, `description`, `coverImageUrl`, `previewVideoUrl`, `templateUrl`, `createdAt`
+
 ## Made-in-China.com Product Scraper
 
 - Actor ID: `v0iddo/made-in-china-scraper`
@@ -855,26 +921,6 @@ Example input:
 
 Output fields: `title`, `companyName`, `city`, `workMode`, `seniority`, `skills`, `salaryFrom`, `salaryTo`, `currency`, `salaryInterval`, `salaryType`, `contractType`, `publishedAt`, `url`
 
-## ForexFactory Economic Calendar Scraper
-
-- Actor ID: `v0iddo/forexfactory-economic-calendar`
-- Store page: https://apify.com/v0iddo/forexfactory-economic-calendar
-- Price: $1.41 per 1,000 results, nothing per run
-
-Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event name, actual, forecast, and previous values.
-
-Example input:
-
-```json
-{
-  "dateFrom": "2026-11-10",
-  "dateTo": "2026-11-16",
-  "maxItems": 20
-}
-```
-
-Output fields: `eventDate`, `time`, `currency`, `impact`, `event`, `actual`, `forecast`, `previous`, `url`
-
 ## Image Converter: WEBP to PNG, PNG to JPG, JPG to WEBP, GIF
 
 - Actor ID: `v0iddo/image-converter`
@@ -895,6 +941,26 @@ Example input:
 ```
 
 Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## ForexFactory Economic Calendar Scraper
+
+- Actor ID: `v0iddo/forexfactory-economic-calendar`
+- Store page: https://apify.com/v0iddo/forexfactory-economic-calendar
+- Price: $1.41 per 1,000 results, nothing per run
+
+Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event name, actual, forecast, and previous values.
+
+Example input:
+
+```json
+{
+  "dateFrom": "2026-11-10",
+  "dateTo": "2026-11-16",
+  "maxItems": 20
+}
+```
+
+Output fields: `eventDate`, `time`, `currency`, `impact`, `event`, `actual`, `forecast`, `previous`, `url`
 
 ## France Travail Scraper: Pole Emploi Jobs and Salaries
 
@@ -1049,7 +1115,7 @@ Output fields: `index`, `query`, `ldhName`, `registrar`, `events`, `age_days`, `
 
 - Actor ID: `v0iddo/tennis-scores-api`
 - Store page: https://apify.com/v0iddo/tennis-scores-api
-- Price: $4.59 per 1,000 results, nothing per run
+- Price: $3.82 per 1,000 results, nothing per run
 
 Scrape tennis scores: ATP and WTA match results of any day with set by set scores, tiebreaks, winner and pre-match odds, the day's schedule, current WTA singles or doubles rankings, or the WTA season calendar.
 
@@ -1070,7 +1136,7 @@ Output fields: `date`, `time`, `tournamentName`, `player1`, `player2`, `score`, 
 
 - Actor ID: `v0iddo/validate-json-schema`
 - Store page: https://apify.com/v0iddo/validate-json-schema
-- Price: $1.53 per 1,000 results, nothing per run
+- Price: $1.07 per 1,000 results, nothing per run
 
 Validate a JSON document, or up to 1000 of them, against a JSON Schema (draft 7, 2019-09 or 2020-12) and list every error with its path.
 

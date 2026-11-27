@@ -24,24 +24,6 @@ Example input:
 
 Output fields: `cik`, `company_name`, `accession_number`, `form`, `filing_date`, `report_date`, `primary_document`, `primary_doc_description`
 
-## Federal Register Scraper: Rules, Proposed Rules, Notices
-
-- Actor ID: `v0iddo/federal-register-tracker`
-- Store page: https://apify.com/v0iddo/federal-register-tracker
-- Price: $0.10 per 1,000 results, nothing per run
-
-Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
-
-Example input:
-
-```json
-{
-  "maxResults": 20
-}
-```
-
-Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
-
 ## FCC ECFS Public Notices & Filings Scraper
 
 - Actor ID: `v0iddo/fcc-public-notices`
@@ -63,6 +45,24 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `filing_id`, `date_received`, `submission_type`, `filer_name`, `proceeding`, `allProceedings`, `document_filename`, `document_url`, `city`, `state`, `text_snippet`
+
+## Federal Register Scraper: Rules, Proposed Rules, Notices
+
+- Actor ID: `v0iddo/federal-register-tracker`
+- Store page: https://apify.com/v0iddo/federal-register-tracker
+- Price: $0.10 per 1,000 results, nothing per run
+
+Pull Federal Register articles filtered by agency, document type, date range, significant-rule flag, or full-text query.
+
+Example input:
+
+```json
+{
+  "maxResults": 20
+}
+```
+
+Output fields: `snapshotAt`, `documentNumber`, `title`, `type`, `subtype`, `action`, `abstract`, `publicationDate`, `signingDate`, `effectiveOn`, `commentsCloseOn`, `agencies`
 
 ## SEC 13F Scraper: Institutional Holdings by Filer
 
@@ -144,25 +144,6 @@ Example input:
 
 Output fields: `ticker`, `companyCik`, `companyName`, `insiderName`, `insiderCik`, `insiderRoles`, `officerTitle`, `accessionNumber`, `filingDate`, `periodOfReport`, `filingUrl`, `xmlUrl`
 
-## NIH RePORTER Scraper: Research Grants by Query
-
-- Actor ID: `v0iddo/nih-reporter-grants`
-- Store page: https://apify.com/v0iddo/nih-reporter-grants
-- Price: $3.00 per 1,000 results, nothing per run
-
-Pull recent NIH research grants from RePORTER.
-
-Example input:
-
-```json
-{
-  "sinceProjectStartDays": 90,
-  "maxResults": 20
-}
-```
-
-Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
-
 ## SEC 8-K Scraper: Material Events by Ticker
 
 - Actor ID: `v0iddo/sec-8k-material-events-tracker`
@@ -183,6 +164,25 @@ Example input:
 ```
 
 Output fields: `ticker`, `companyCik`, `companyName`, `filingDate`, `reportDate`, `accessionNumber`, `items`, `itemSummaries`, `primaryDocument`, `filingUrl`, `indexUrl`
+
+## NIH RePORTER Scraper: Research Grants by Query
+
+- Actor ID: `v0iddo/nih-reporter-grants`
+- Store page: https://apify.com/v0iddo/nih-reporter-grants
+- Price: $3.00 per 1,000 results, nothing per run
+
+Pull recent NIH research grants from RePORTER.
+
+Example input:
+
+```json
+{
+  "sinceProjectStartDays": 90,
+  "maxResults": 20
+}
+```
+
+Output fields: `applId`, `projectNum`, `projectTitle`, `fiscalYear`, `activityCode`, `awardType`, `awardAmount`, `isActive`, `projectStartDate`, `projectEndDate`, `organizationName`, `organizationCity`
 
 ## openFDA Drug Recalls Scraper: Enforcement Reports
 

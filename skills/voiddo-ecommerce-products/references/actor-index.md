@@ -34,7 +34,7 @@ Output fields: `asin`, `title`, `brand`, `price`, `listPrice`, `rating`, `rating
 - Store page: https://apify.com/v0iddo/aliexpress-scraper
 - Price: $1.50 per 1,000 results, nothing per run
 
-AliExpress scraper for search results as product rows: product ID, title, sale price, original price, discount, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
+AliExpress scraper for search results as product rows: product ID, title, sale price, discount, original price where the page shows one, star rating, units sold, Choice and shipping flags, delivery estimate, image and link.
 
 Example input:
 

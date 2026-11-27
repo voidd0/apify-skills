@@ -71,6 +71,28 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMin`, `salaryMax`, `salaryInterval`, `datePosted`, `site`, `url`
 
+## RocketJobs.pl Scraper: Jobs, Salaries, Locations
+
+- Actor ID: `v0iddo/rocketjobs-pl-scraper`
+- Store page: https://apify.com/v0iddo/rocketjobs-pl-scraper
+- Price: $1.00 per 1,000 results, nothing per run
+
+rocketjobs.pl scraper that collects Polish job offers: title, company, salary range, city, contract type, category, posting date, expiry date, and a direct link to each offer.
+
+Example input:
+
+```json
+{
+  "startUrls": [
+    "https://rocketjobs.pl/oferty-pracy/wszystkie-lokalizacje/sales"
+  ],
+  "maxPages": 1,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `companyName`, `category`, `locationCity`, `workMode`, `contractTypes`, `salaryMin`, `salaryMax`, `publishedAt`, `expiresAt`, `url`
+
 ## IIMJobs Scraper: India Finance and MBA Jobs
 
 - Actor ID: `v0iddo/iimjobs-scraper`
@@ -143,6 +165,29 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
+## Remote Jobs Scraper: RemoteOK, WWR, Jobicy
+
+- Actor ID: `v0iddo/remote-jobs-scraper`
+- Store page: https://apify.com/v0iddo/remote-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: title, company, location, eligible countries, salary, job type, level, tags, posted date and description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "engineer",
+    "developer"
+  ],
+  "maxItems": 20,
+  "maxJobsPerBoard": 6
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryMin`, `salaryMax`, `salaryCurrency`, `sourceName`, `publishedAt`, `url`
+
 ## Instahyre Jobs Scraper: India Jobs, Skills
 
 - Actor ID: `v0iddo/instahyre-jobs-scraper`
@@ -191,30 +236,28 @@ Example input:
 
 Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `salaryMin`, `salaryMax`, `salaryPeriod`, `salaryCurrency`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
 
-## Hirist Jobs Scraper: India Tech Jobs, Salary
+## Rozee.pk Jobs Scraper
 
-- Actor ID: `v0iddo/hirist-jobs-scraper`
-- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/rozeepk-jobs-scraper`
+- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
+- Price: $0.79 per 1,000 results, nothing per run
 
-Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
+Scrape job listings from Rozee.pk by keyword and optional city.
 
 Example input:
 
 ```json
 {
   "keywords": [
-    "python"
+    "developer"
   ],
-  "locations": [
-    "Bangalore"
-  ],
-  "includeDetails": true,
+  "city": "",
+  "maxPages": 1,
   "maxItems": 20
 }
 ```
 
-Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `salaryMin`, `salaryMax`, `currency`, `skills`, `postedDate`, `applyBy`, `url`
 
 ## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
@@ -241,51 +284,30 @@ Example input:
 
 Output fields: `ats`, `company`, `title`, `department`, `location`, `remote`, `workplaceType`, `employmentType`, `postedAt`, `salaryMin`, `salaryMax`, `salaryCurrency`, `url`
 
-## Rozee.pk Jobs Scraper
+## Hirist Jobs Scraper: India Tech Jobs, Salary
 
-- Actor ID: `v0iddo/rozeepk-jobs-scraper`
-- Store page: https://apify.com/v0iddo/rozeepk-jobs-scraper
-- Price: $0.79 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/hirist-jobs-scraper`
+- Store page: https://apify.com/v0iddo/hirist-jobs-scraper
+- Price: $0.50 per 1,000 results, nothing per run
 
-Scrape job listings from Rozee.pk by keyword and optional city.
+Hirist jobs scraper for India tech jobs from hirist.tech: title, company, locations, experience in years, salary in lakhs when shown, skills, category, remote flag, posting time, the employer's AmbitionBox rating and profile, and the description.
 
 Example input:
 
 ```json
 {
   "keywords": [
-    "developer"
+    "python"
   ],
-  "city": "",
-  "maxPages": 1,
+  "locations": [
+    "Bangalore"
+  ],
+  "includeDetails": true,
   "maxItems": 20
 }
 ```
 
-Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `salaryMin`, `salaryMax`, `currency`, `skills`, `postedDate`, `applyBy`, `url`
-
-## Remote Jobs Scraper: RemoteOK, WWR, Jobicy
-
-- Actor ID: `v0iddo/remote-jobs-scraper`
-- Store page: https://apify.com/v0iddo/remote-jobs-scraper
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape remote jobs from Remote OK, We Work Remotely, Jobicy, Working Nomads and Arbeitnow in one feed: title, company, location, eligible countries, salary, job type, level, tags, posted date and description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "engineer",
-    "developer"
-  ],
-  "maxItems": 20,
-  "maxJobsPerBoard": 6
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryMin`, `salaryMax`, `salaryCurrency`, `sourceName`, `publishedAt`, `url`
+Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
 
 ## Handshake Jobs Scraper
 
@@ -352,6 +374,27 @@ Example input:
 
 Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
 
+## Poland Jobs Feed: Pracuj, JustJoin, No Fluff, RocketJobs
+
+- Actor ID: `v0iddo/poland-jobs-feed`
+- Store page: https://apify.com/v0iddo/poland-jobs-feed
+- Price: $2.00 + $0.010/start per 1,000 results
+
+Poland jobs feed: one scraper run over Pracuj.pl, JustJoin.it, No Fluff Jobs and RocketJobs.pl.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `source`, `salaryMin`, `salaryMax`, `salaryCurrency`, `salaryInterval`, `contractTypes`, `seniority`, `workModes`, `postedAt`, `url`
+
 ## Wellfound Jobs Scraper: Salary, Equity, Stage
 
 - Actor ID: `v0iddo/wellfound-jobs-scraper`
@@ -376,30 +419,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `locations`, `workplace`, `salaryMin`, `salaryMax`, `salaryCurrency`, `equityMin`, `companyStage`, `postedAt`, `url`
-
-## Pracuj.pl Salary Benchmark by Job Title and City
-
-- Actor ID: `v0iddo/pracuj-pl-salary-benchmark`
-- Store page: https://apify.com/v0iddo/pracuj-pl-salary-benchmark
-- Price: $490.00 per 1,000 results, nothing per run
-
-Get a salary benchmark for any job title from pracuj.pl postings in Poland: gross monthly median, quartiles and range in PLN, share of postings showing pay, listings, direct employers and agencies, top employers, work modes and contract types.
-
-Example input:
-
-```json
-{
-  "jobTitles": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "listingsPerBenchmark": 100,
-  "detailPages": 10,
-  "maxItems": 20
-}
-```
-
-Output fields: `jobTitle`, `location`, `listingsOnSite`, `salariesUsed`, `salaryMin`, `salaryMedian`, `salaryMax`, `salarySharePercent`, `directEmployerPercent`, `searchUrl`
 
 ## Computrabajo Salary Benchmark by Job Title and Country
 
@@ -450,6 +469,30 @@ Example input:
 ```
 
 Output fields: `company`, `companyName`, `jobId`, `internalJobId`, `title`, `location`, `departments`, `offices`, `language`, `requisitionId`, `firstPublished`, `updatedAt`
+
+## Pracuj.pl Salary Benchmark by Job Title and City
+
+- Actor ID: `v0iddo/pracuj-pl-salary-benchmark`
+- Store page: https://apify.com/v0iddo/pracuj-pl-salary-benchmark
+- Price: $490.00 per 1,000 results, nothing per run
+
+Get a salary benchmark for any job title from pracuj.pl postings in Poland: gross monthly median, quartiles and range in PLN, share of postings showing pay, listings, direct employers and agencies, top employers, work modes and contract types.
+
+Example input:
+
+```json
+{
+  "jobTitles": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "listingsPerBenchmark": 100,
+  "detailPages": 10,
+  "maxItems": 20
+}
+```
+
+Output fields: `jobTitle`, `location`, `listingsOnSite`, `salariesUsed`, `salaryMin`, `salaryMedian`, `salaryMax`, `salarySharePercent`, `directEmployerPercent`, `searchUrl`
 
 ## Workday Jobs Scraper: Salary, Dates, Remote
 

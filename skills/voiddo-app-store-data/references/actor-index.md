@@ -132,6 +132,26 @@ Example input:
 
 Output fields: `rank`, `trackName`, `artistName`, `price`, `currency`, `rating`, `ratingCount`, `chart`, `country`, `appUrl`, `chartUpdatedAt`, `snapshotAt`
 
+## Chrome Web Store Scraper: Extension Details and Ratings
+
+- Actor ID: `v0iddo/chrome-webstore-extensions`
+- Store page: https://apify.com/v0iddo/chrome-webstore-extensions
+- Price: $0.50 per 1,000 results, nothing per run
+
+Snapshot Chrome Web Store extension metadata via the public listing page.
+
+Example input:
+
+```json
+{
+  "extensionIds": [
+    "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
+  ]
+}
+```
+
+Output fields: `extensionId`, `snapshotAt`, `name`, `description`, `ratingValue`, `ratingCount`, `developerName`, `imageUrl`, `userCount`, `version`, `updatedAt`, `storeUrl`
+
 ## Android App Metadata Scraper: Google Play Details, Ratings
 
 - Actor ID: `v0iddo/google-play-app-metadata`
@@ -152,26 +172,6 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
-
-## Chrome Web Store Scraper: Extension Details and Ratings
-
-- Actor ID: `v0iddo/chrome-webstore-extensions`
-- Store page: https://apify.com/v0iddo/chrome-webstore-extensions
-- Price: $0.50 per 1,000 results, nothing per run
-
-Snapshot Chrome Web Store extension metadata via the public listing page.
-
-Example input:
-
-```json
-{
-  "extensionIds": [
-    "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
-  ]
-}
-```
-
-Output fields: `extensionId`, `snapshotAt`, `name`, `description`, `ratingValue`, `ratingCount`, `developerName`, `imageUrl`, `userCount`, `version`, `updatedAt`, `storeUrl`
 
 ## Apple Podcasts Scraper: Podcasts by Keyword and Country
 
