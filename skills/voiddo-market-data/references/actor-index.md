@@ -76,28 +76,6 @@ Example input:
 
 Output fields: `symbol`, `name`, `quoteType`, `price`, `currency`, `changePercent`, `dayLow`, `dayHigh`, `volume`, `marketCap`, `trailingPE`, `fiftyTwoWeekLow`, `fiftyTwoWeekHigh`, `regularMarketTime`, `url`
 
-## CoinGecko Tokens Scraper: Token List by Category
-
-- Actor ID: `v0iddo/coingecko-tokens-by-category`
-- Store page: https://apify.com/v0iddo/coingecko-tokens-by-category
-- Price: $1.00 per 1,000 results, nothing per run
-
-Pulls the top 100 tokens by market cap in each CoinGecko category (DeFi, meme, L1, ecosystem tags) with current price, market cap, 24h volume, rank, and price change.
-
-Example input:
-
-```json
-{
-  "category": [
-    "layer-1",
-    "meme-token",
-    "gaming"
-  ]
-}
-```
-
-Output fields: `category`, `coin_id`, `symbol`, `name`, `price_usd`, `market_cap_usd`, `rank`, `volume_24h_usd`, `change_pct_24h`, `circulating_supply`, `all_time_high_usd`, `logo_url`
-
 ## Currency Exchange Rates (ECB)
 
 - Actor ID: `v0iddo/currency-exchange-rates`
@@ -119,3 +97,25 @@ Example input:
 ```
 
 Output fields: `index`, `amount`, `from`, `to`, `rate`, `result`, `date_used`, `source`
+
+## CoinGecko Tokens Scraper: Token List by Category
+
+- Actor ID: `v0iddo/coingecko-tokens-by-category`
+- Store page: https://apify.com/v0iddo/coingecko-tokens-by-category
+- Price: $1.00 per 1,000 results, nothing per run
+
+Pulls the top 100 tokens by market cap in each CoinGecko category (DeFi, meme, L1, ecosystem tags) with current price, market cap, 24h volume, rank, and price change.
+
+Example input:
+
+```json
+{
+  "category": [
+    "layer-1",
+    "meme-token",
+    "gaming"
+  ]
+}
+```
+
+Output fields: `category`, `coin_id`, `symbol`, `name`, `price_usd`, `market_cap_usd`, `rank`, `volume_24h_usd`, `change_pct_24h`, `circulating_supply`, `all_time_high_usd`, `logo_url`

@@ -75,7 +75,7 @@ Output fields: `title`, `company`, `location`, `county`, `salaryText`, `salaryMi
 
 - Actor ID: `v0iddo/rocketjobs-pl-scraper`
 - Store page: https://apify.com/v0iddo/rocketjobs-pl-scraper
-- Price: $1.00 per 1,000 results, nothing per run
+- Price: $0.85 per 1,000 results, nothing per run
 
 rocketjobs.pl scraper that collects Polish job offers: title, company, salary range, city, contract type, category, posting date, expiry date, and a direct link to each offer.
 
@@ -117,53 +117,6 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
-
-## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
-
-- Actor ID: `v0iddo/jobs-ch-scraper`
-- Store page: https://apify.com/v0iddo/jobs-ch-scraper
-- Price: $0.90 per 1,000 results, nothing per run
-
-Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, employment type, position, posting dates, weekly hours, industry, category, skills, benefits, the employer's website and the description.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "data analyst"
-  ],
-  "location": "Zürich",
-  "site": "jobs.ch",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
-
-## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
-
-- Actor ID: `v0iddo/pracuj-pl-scraper`
-- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
-- Price: $0.95 + $0.004/start per 1,000 results
-
-Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "księgowa"
-  ],
-  "location": "Warszawa",
-  "includeDetails": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Remote Jobs Scraper: RemoteOK, WWR, Jobicy
 
@@ -213,13 +166,13 @@ Example input:
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `skills`, `companyEmployees`, `postedDate`, `url`
 
-## Reed Jobs Scraper: UK Jobs and Salaries
+## Jobs.ch & Jobup.ch Scraper: Swiss Jobs
 
-- Actor ID: `v0iddo/reed-jobs-scraper`
-- Store page: https://apify.com/v0iddo/reed-jobs-scraper
-- Price: $0.45 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/jobs-ch-scraper`
+- Store page: https://apify.com/v0iddo/jobs-ch-scraper
+- Price: $0.90 per 1,000 results, nothing per run
 
-Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode, salary range with the period, job type, full or part time, remote or hybrid, posting and expiry dates, sector, skills and the description.
+Scrape Swiss job postings from jobs.ch and jobup.ch: title, company, address, canton, workload percent, employment type, position, posting dates, weekly hours, industry, category, skills, benefits, the employer's website and the description.
 
 Example input:
 
@@ -228,13 +181,14 @@ Example input:
   "keywords": [
     "data analyst"
   ],
-  "location": "London",
+  "location": "Zürich",
+  "site": "jobs.ch",
   "includeDetails": true,
   "maxItems": 20
 }
 ```
 
-Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `salaryMin`, `salaryMax`, `salaryPeriod`, `salaryCurrency`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
+Output fields: `title`, `company`, `place`, `canton`, `workload`, `employmentType`, `position`, `postedAt`, `weeklyHours`, `industry`, `site`, `url`
 
 ## Rozee.pk Jobs Scraper
 
@@ -259,11 +213,34 @@ Example input:
 
 Output fields: `jobId`, `title`, `company`, `city`, `jobType`, `experience`, `salaryMin`, `salaryMax`, `currency`, `skills`, `postedDate`, `applyBy`, `url`
 
+## Reed Jobs Scraper: UK Jobs and Salaries
+
+- Actor ID: `v0iddo/reed-jobs-scraper`
+- Store page: https://apify.com/v0iddo/reed-jobs-scraper
+- Price: $0.45 per 1,000 results, nothing per run
+
+Scrape UK job postings from reed.co.uk: title, company, agency or employer, place, county, region, postcode, salary range with the period, job type, full or part time, remote or hybrid, posting and expiry dates, sector, skills and the description.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "data analyst"
+  ],
+  "location": "London",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `advertiser`, `location`, `salaryText`, `salaryMin`, `salaryMax`, `salaryPeriod`, `salaryCurrency`, `jobType`, `workingOption`, `postedAt`, `expiresAt`, `url`
+
 ## ATS Jobs Scraper: Greenhouse, Lever, Workday, Ashby
 
 - Actor ID: `v0iddo/ats-jobs-scraper`
 - Store page: https://apify.com/v0iddo/ats-jobs-scraper
-- Price: $0.42 per 1,000 results, nothing per run
+- Price: $0.84 per 1,000 results, nothing per run
 
 Collect public job postings from Greenhouse, Lever, Workday, Workable, Ashby, Recruitee, Personio and BambooHR with one consistent schema.
 
@@ -308,6 +285,29 @@ Example input:
 ```
 
 Output fields: `title`, `company`, `location`, `experienceMin`, `experienceMax`, `salaryMinLakhs`, `salaryMaxLakhs`, `skills`, `companyRating`, `postedAt`, `url`
+
+## Pracuj.pl Scraper: Poland Jobs, Salaries, Contract Type
+
+- Actor ID: `v0iddo/pracuj-pl-scraper`
+- Store page: https://apify.com/v0iddo/pracuj-pl-scraper
+- Price: $0.95 + $0.004/start per 1,000 results
+
+Scrape Polish job postings from pracuj.pl: title, company, workplaces and address, salary per contract type, gross or net, position level, contract, schedule, remote or hybrid, category, technologies, requirements, benefits and dates.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "księgowa"
+  ],
+  "location": "Warszawa",
+  "includeDetails": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `location`, `salaryText`, `positionLevels`, `contractTypes`, `workModes`, `postedAt`, `expiresAt`, `url`
 
 ## Handshake Jobs Scraper
 
@@ -373,6 +373,27 @@ Example input:
 ```
 
 Output fields: `company`, `jobId`, `title`, `location`, `employmentType`, `team`, `department`, `applyUrl`, `publishedAt`, `updatedAt`, `isRemote`, `descriptionPlain`
+
+## India Jobs Feed: Instahyre, Apna, Hirist, IIMJobs
+
+- Actor ID: `v0iddo/india-jobs-feed`
+- Store page: https://apify.com/v0iddo/india-jobs-feed
+- Price: $1.50 per 1,000 results, nothing per run
+
+India jobs feed: one scraper run over Instahyre, Apna.co, Hirist, IIMJobs and Internshala.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "python"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `company`, `city`, `source`, `salaryMin`, `salaryMax`, `salaryCurrency`, `salaryPeriod`, `experienceMin`, `experienceMax`, `remote`, `postedAt`, `url`
 
 ## Poland Jobs Feed: Pracuj, JustJoin, No Fluff, RocketJobs
 

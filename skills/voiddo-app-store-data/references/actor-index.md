@@ -24,26 +24,30 @@ Example input:
 
 Output fields: `plugin_id`, `name`, `xml_id`, `link`, `description`, `vendor_name`, `rating`, `rating_votes`, `downloads`, `preview`, `family`
 
-## App Store Search Scraper: Apps by Keyword
+## Google Play App Details Scraper: Installs, Ratings
 
-- Actor ID: `v0iddo/app-store-search`
-- Store page: https://apify.com/v0iddo/app-store-search
-- Price: $0.20 per 1,000 results, nothing per run
+- Actor ID: `v0iddo/google-play-scraper`
+- Store page: https://apify.com/v0iddo/google-play-scraper
+- Price: $1.50 per 1,000 results, nothing per run
 
-Search the Apple App Store by keyword and country.
+Google Play scraper for app details: title, developer, rating, ratings count, installs, price, genre, content rating, last update, version and icon for any list of package names or Play Store links.
 
 Example input:
 
 ```json
 {
-  "queries": [
-    "meditation",
-    "habit tracker"
-  ]
+  "apps": [
+    "com.whatsapp",
+    "com.spotify.music",
+    "com.duolingo",
+    "com.budget.tracker_app",
+    "com.google.android.apps.maps"
+  ],
+  "maxItems": 20
 }
 ```
 
-Output fields: `snapshotAt`, `query`, `country`, `rank`, `appId`, `bundleId`, `trackName`, `artistName`, `artistId`, `sellerName`, `primaryGenreName`, `genres`
+Output fields: `appId`, `title`, `developer`, `rating`, `ratingsCount`, `installs`, `price`, `free`, `genre`, `contentRating`, `updated`, `version`, `url`, `icon`
 
 ## App Store Reviews Scraper: Ratings and Reviews by Country
 
@@ -172,28 +176,6 @@ Example input:
 ```
 
 Output fields: `snapshotAt`, `packageName`, `country`, `language`, `name`, `description`, `applicationCategory`, `operatingSystem`, `contentRating`, `developerName`, `developerUrl`, `imageUrl`
-
-## Apple Podcasts Scraper: Podcasts by Keyword and Country
-
-- Actor ID: `v0iddo/itunes-podcast-search`
-- Store page: https://apify.com/v0iddo/itunes-podcast-search
-- Price: $0.20 per 1,000 results, nothing per run
-
-Search the Apple Podcasts catalog via the public iTunes Search API.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "crypto",
-    "startup",
-    "business"
-  ]
-}
-```
-
-Output fields: `snapshotAt`, `query`, `country`, `collectionId`, `trackId`, `artistName`, `collectionName`, `trackName`, `showUrl`, `feedUrl`, `artworkUrl`, `genre`
 
 ## Steam Game Reviews Scraper
 

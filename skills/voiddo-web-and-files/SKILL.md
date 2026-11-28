@@ -55,17 +55,16 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | User need | Actor ID | Per 1,000 results |
 | --- | --- | --- |
 | Google Maps scraper for business listings by search and place: name, category, address, coordinates, rating... | `v0iddo/google-maps-scraper` | $2.50 |
-| Scrape job listings from Apna.co in India: title, company, city and area, monthly salary range in INR, offi... | `v0iddo/apna-co-scraper` | $0.78 |
 | Scrape Indian listed company fundamentals from screener.in: market cap, P/E, ROCE, ROE, book value, dividen... | `v0iddo/screener-in-scraper` | $5.97 |
-| Nykaa scraper for beauty products on nykaa.com. | `v0iddo/nykaa-scraper` | $4.01 |
-| Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and... | `v0iddo/royal-caribbean-scraper` | $1.02 |
-| Scrape job postings from elempleo.com, Colombia's second largest job board: title, company, city, salary ba... | `v0iddo/elempleo-scraper` | $0.85 |
-| Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price... | `v0iddo/coles-scraper` | $0.50 |
-| Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $3.40 |
 | Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header... | `v0iddo/html-to-pdf` | $3.40 |
-| Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.26 |
+| Scrape job listings from Apna.co in India: title, company, city and area, monthly salary range in INR, offi... | `v0iddo/apna-co-scraper` | $0.78 |
+| Nykaa scraper for beauty products on nykaa.com. | `v0iddo/nykaa-scraper` | $2.07 |
+| Scrape job postings from elempleo.com, Colombia's second largest job board: title, company, city, salary ba... | `v0iddo/elempleo-scraper` | $0.85 |
+| Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and... | `v0iddo/royal-caribbean-scraper` | $1.02 |
+| DuckDuckGo scraper for web search results as structured rows: title, URL, snippet, position, and query. | `v0iddo/duckduckgo-scraper` | $0.26 |
+| Coles scraper for Coles Australia products by department, category or the specials pages: price, was price,... | `v0iddo/coles-scraper` | $0.50 |
+| Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count. | `v0iddo/moz-scraper` | $4.59 |
 | Crawls any public website from a start URL, follows internal links up to a set depth, and extracts title, b... | `v0iddo/website-content-crawler` | $2.29 |
-| Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's datase... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape PriceCharting prices for video games, Pokemon and other trading cards, comics, coins, Funko Pops and... | `v0iddo/pricecharting-product-scraper` | $2.13 |
 | Djinni.co job scraper for tech job listings: title, company, category, salary range, experience, employment... | `v0iddo/djinni-co-job-scraper` | $0.81 |
 | Scrape Canadian job listings from eluta.ca by keyword and location. | `v0iddo/eluta-ca-job-scraper` | $0.77 |
@@ -74,29 +73,30 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 | Scrape Substack newsletter profiles by creator handle: publication name, URL, description, paid tier status... | `v0iddo/creator-leads-scraper` | $2.29 |
 | Scrape job listings from jobteaser.com: title, company, location, contract type, posted time, easy-apply an... | `v0iddo/jobteaser-job-scraper` | $0.79 |
 | PeoplePerHour job scraper for freelance job listings from category pages: title, description, budget, curre... | `v0iddo/peopleperhour-job-scraper` | $0.85 |
-| Scrape job listings from jobs.meinestadt.de: title, company, city, industry, employment type, salary range,... | `v0iddo/meinestadt-de-job-scraper` | $1.70 |
-| Audio transcription with Whisper: speech to text from audio and video files and podcast episodes, with time... | `v0iddo/audio-transcription` | $6.00 |
+| Meinestadt.de job scraper for listings from jobs.meinestadt.de: title, company, city, industry, employment... | `v0iddo/meinestadt-de-job-scraper` | $1.70 |
 | Scrape CarGurus vehicle search pages by ZIP code: VIN, make, model, year, trim, price, MSRP, mileage, fuel... | `v0iddo/cargurus-zipcode-search-scraper` | $0.85 |
+| Audio transcription with Whisper: speech to text from audio and video files and podcast episodes, with time... | `v0iddo/audio-transcription` | $6.00 |
 | Scrape Myntra category and search listing pages into product rows: product ID, name, brand, price, MRP, dis... | `v0iddo/myntra-product-scraper` | $2.29 |
+| Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's datase... | `v0iddo/bulk-file-downloader` | $2.00 |
 | Scrape internshala.com for internships and fresher jobs: title, company, location, stipend, duration, work-... | `v0iddo/internshala-scraper` | $1.00 |
 | Extract European company profiles from northdata.com: company name, register number, court, LEI code, addre... | `v0iddo/north-data-scraper` | $3.40 |
 | Scrape Rakuten Ichiba search results into product rows: title, JPY price, shop name, review score, review c... | `v0iddo/rakuten-japan-listings-scraper` | $1.28 |
 | Render an HTML snippet to a PNG, JPEG or WEBP image at any width, with retina scaling and transparent backg... | `v0iddo/html-to-image` | $3.40 |
-| Collect Google search suggestions for any keyword list, with position and relevance score. | `v0iddo/google-autocomplete-scraper` | $0.60 |
+| Collect Google search suggestions for any keyword list, with position and relevance score. | `v0iddo/google-autocomplete-scraper` | $0.77 |
 | Extract the text of PDF files page by page, as plain text or as Markdown with headings, bold, lists and par... | `v0iddo/pdf-text-extractor` | $3.82 |
 | Hiring Cafe scraper for job listings from Hiring.Cafe: title, company, location, workplace type, seniority,... | `v0iddo/hiring-cafe-scraper` | $1.00 |
 | Snapchat scraper for public creator profiles: name, subscribers, bio, and the Spotlight stats of each video... | `v0iddo/snapchat-scraper` | $1.69 + $0.001/start |
 | Extract still frames from video files as JPEG, PNG or WebP images with timecodes: one every N seconds, a nu... | `v0iddo/video-frame-extractor` | $1.50 |
-| Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $0.13 |
-| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
+| Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-l... | `v0iddo/y-combinator-scraper` | $0.26 |
 | Domain availability checker for domains in bulk: one row per domain with available or registered, registrar... | `v0iddo/domain-availability-checker` | $1.00 |
+| Scrape public event listings from luma.com city and calendar pages. | `v0iddo/luma-event-scraper` | $2.38 |
 | Capcut trending templates scraper for category pages on capcut.com. | `v0iddo/capcut-trending-templates-scraper` | $1.61 |
 | Made in China scraper for Made-in-China.com product search pages by keyword. | `v0iddo/made-in-china-scraper` | $1.44 |
-| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.25 |
 | Scrape IT job offers from JustJoin.it in Poland: title, company, city, work mode, seniority, tech stack, sa... | `v0iddo/justjoin-it` | $0.50 |
+| Audit the on-page SEO of any public web pages: title, meta description, headings, canonical, indexability,... | `v0iddo/seo-audit` | $4.25 |
 | Convert and resize images between PNG, JPEG, WEBP, GIF, BMP, TIFF and ICO, with quality, fit modes, transpa... | `v0iddo/image-converter` | $1.61 |
 | Scrape the ForexFactory economic calendar into rows with date, time (ET), currency, impact level, event nam... | `v0iddo/forexfactory-economic-calendar` | $1.41 |
-| Scrape France Travail (ex Pole Emploi) job offers by town or department, ROME domain and contract type: tit... | `v0iddo/francetravail` | $1.00 |
+| France Travail scraper for francetravail.fr (ex Pole Emploi) job offers by town or department, ROME domain... | `v0iddo/francetravail` | $1.00 |
 | Fetch MLB game scores from the official Stats API: game ID, teams, final score, R-H-E totals, inning-by-inn... | `v0iddo/mlb-daily-scoreboard-scraper` | $2.00 |
 | Scrape Canada jobbank listings from jobbank.gc.ca by keyword and location: job title, employer, city and pr... | `v0iddo/jobbank` | $0.70 |
 | Scrape public Bluesky accounts: posts with text, like count, repost count, reply count, language, media fla... | `v0iddo/bluesky-scraper` | $1.27 |
@@ -115,7 +115,7 @@ Out of scope (the boundary): Pages behind a login: out of scope.
 
 ## Other ways to call them
 
-- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/google-maps-scraper,v0iddo/apna-co-scraper,v0iddo/screener-in-scraper,v0iddo/nykaa-scraper,v0iddo/royal-caribbean-scraper,v0iddo/elempleo-scraper,v0iddo/coles-scraper,v0iddo/moz-scraper,v0iddo/html-to-pdf,v0iddo/duckduckgo-scraper`
+- Apify MCP server, only these Actors as tools: `https://mcp.apify.com/?actors=v0iddo/google-maps-scraper,v0iddo/screener-in-scraper,v0iddo/html-to-pdf,v0iddo/apna-co-scraper,v0iddo/nykaa-scraper,v0iddo/elempleo-scraper,v0iddo/royal-caribbean-scraper,v0iddo/duckduckgo-scraper,v0iddo/coles-scraper,v0iddo/moz-scraper`
 - One HTTP request, any language (returns the JSON rows):
 
       curl -X POST "https://api.apify.com/v2/acts/v0iddo~google-maps-scraper/run-sync-get-dataset-items" \

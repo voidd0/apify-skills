@@ -25,30 +25,6 @@ Example input:
 
 Output fields: `name`, `category`, `address`, `city`, `rating`, `reviewsCount`, `phone`, `website`, `latitude`, `longitude`, `permanentlyClosed`, `placeId`, `url`
 
-## Apna.co Scraper: India Jobs and Monthly Salaries
-
-- Actor ID: `v0iddo/apna-co-scraper`
-- Store page: https://apify.com/v0iddo/apna-co-scraper
-- Price: $0.78 per 1,000 results, nothing per run
-
-Scrape job listings from Apna.co in India: title, company, city and area, monthly salary range in INR, office, field or work from home, full or part time, experience and link.
-
-Example input:
-
-```json
-{
-  "keywords": [
-    "delivery boy"
-  ],
-  "cities": [
-    "Mumbai"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `companyName`, `city`, `location`, `salaryMin`, `salaryMax`, `workMode`, `workType`, `experience`, `englishLevel`, `url`
-
 ## Screener.in Stock Fundamentals Scraper
 
 - Actor ID: `v0iddo/screener-in-scraper`
@@ -80,11 +56,53 @@ Example input:
 
 Output fields: `ticker`, `name`, `currentPrice`, `marketCapCr`, `stockPE`, `roce`, `roe`, `bookValue`, `dividendYield`, `high52w`, `low52w`, `faceValue`, `nseCode`, `bseCode`, `url`
 
+## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
+
+- Actor ID: `v0iddo/html-to-pdf`
+- Store page: https://apify.com/v0iddo/html-to-pdf
+- Price: $3.40 per 1,000 results, nothing per run
+
+Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
+
+Example input:
+
+```json
+{
+  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
+}
+```
+
+Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
+
+## Apna.co Scraper: India Jobs and Monthly Salaries
+
+- Actor ID: `v0iddo/apna-co-scraper`
+- Store page: https://apify.com/v0iddo/apna-co-scraper
+- Price: $0.78 per 1,000 results, nothing per run
+
+Scrape job listings from Apna.co in India: title, company, city and area, monthly salary range in INR, office, field or work from home, full or part time, experience and link.
+
+Example input:
+
+```json
+{
+  "keywords": [
+    "delivery boy"
+  ],
+  "cities": [
+    "Mumbai"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `companyName`, `city`, `location`, `salaryMin`, `salaryMax`, `workMode`, `workType`, `experience`, `englishLevel`, `url`
+
 ## Nykaa Scraper: Beauty Products, Prices, Ratings
 
 - Actor ID: `v0iddo/nykaa-scraper`
 - Store page: https://apify.com/v0iddo/nykaa-scraper
-- Price: $4.01 per 1,000 results, nothing per run
+- Price: $2.07 per 1,000 results, nothing per run
 
 Nykaa scraper for beauty products on nykaa.com.
 
@@ -101,25 +119,6 @@ Example input:
 ```
 
 Output fields: `productId`, `name`, `brand`, `category`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `inStock`, `imageUrl`, `productUrl`
-
-## Royal Caribbean Ships Scraper
-
-- Actor ID: `v0iddo/royal-caribbean-scraper`
-- Store page: https://apify.com/v0iddo/royal-caribbean-scraper
-- Price: $1.02 per 1,000 results, nothing per run
-
-Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
-
-Example input:
-
-```json
-{
-  "shipClasses": [],
-  "maxItems": 20
-}
-```
-
-Output fields: `shipName`, `shipClass`, `description`, `imageUrl`, `position`, `url`
 
 ## elempleo Scraper: Colombia Jobs and Salaries
 
@@ -144,13 +143,57 @@ Example input:
 
 Output fields: `title`, `company`, `city`, `salaryText`, `salaryMin`, `salaryMax`, `contractType`, `workMode`, `postedText`, `url`
 
-## Coles Price Scraper: Specials, Unit Prices
+## Royal Caribbean Ships Scraper
+
+- Actor ID: `v0iddo/royal-caribbean-scraper`
+- Store page: https://apify.com/v0iddo/royal-caribbean-scraper
+- Price: $1.02 per 1,000 results, nothing per run
+
+Scrape the Royal Caribbean fleet directory: every cruise ship with its class, name, description, image, and direct link.
+
+Example input:
+
+```json
+{
+  "shipClasses": [],
+  "maxItems": 20
+}
+```
+
+Output fields: `shipName`, `shipClass`, `description`, `imageUrl`, `position`, `url`
+
+## DuckDuckGo Search Scraper
+
+- Actor ID: `v0iddo/duckduckgo-scraper`
+- Store page: https://apify.com/v0iddo/duckduckgo-scraper
+- Price: $0.26 per 1,000 results, nothing per run
+
+DuckDuckGo scraper for web search results as structured rows: title, URL, snippet, position, and query.
+
+Example input:
+
+```json
+{
+  "queries": [
+    "web scraping tools",
+    "python tutorial"
+  ],
+  "region": "us-en",
+  "maxPages": 1,
+  "safeSearch": "moderate",
+  "maxItems": 20
+}
+```
+
+Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
+
+## Coles Scraper: Specials and Unit Prices
 
 - Actor ID: `v0iddo/coles-scraper`
 - Store page: https://apify.com/v0iddo/coles-scraper
 - Price: $0.50 per 1,000 results, nothing per run
 
-Scrape Coles Australia products by department, category or the specials pages: price, was price, unit price, half price and multibuy offers, stock, purchase limits and aisle.
+Coles scraper for Coles Australia products by department, category or the specials pages: price, was price, unit price, half price and multibuy offers, stock, purchase limits and aisle.
 
 Example input:
 
@@ -169,7 +212,7 @@ Output fields: `productId`, `name`, `brand`, `size`, `price`, `wasPrice`, `unitP
 
 - Actor ID: `v0iddo/moz-scraper`
 - Store page: https://apify.com/v0iddo/moz-scraper
-- Price: $3.40 per 1,000 results, nothing per run
+- Price: $4.59 per 1,000 results, nothing per run
 
 Scrape Moz's Top 500 Websites list: rank, root domain, DA score, and linking root domain count.
 
@@ -184,49 +227,6 @@ Example input:
 ```
 
 Output fields: `rank`, `rootDomain`, `daScore`, `linkingRootDomains`, `externalUrl`, `url`
-
-## Convert HTML to PDF (A4, Letter, Legal, A3 and more)
-
-- Actor ID: `v0iddo/html-to-pdf`
-- Store page: https://apify.com/v0iddo/html-to-pdf
-- Price: $3.40 per 1,000 results, nothing per run
-
-Turn an HTML document into a print-ready PDF with page size, margins, orientation and page-numbered header and footer.
-
-Example input:
-
-```json
-{
-  "html": "<h1>Invoice #1042</h1><p>Total due: 120.00 USD, payable within 14 days.</p>"
-}
-```
-
-Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
-
-## DuckDuckGo Search Scraper
-
-- Actor ID: `v0iddo/duckduckgo-scraper`
-- Store page: https://apify.com/v0iddo/duckduckgo-scraper
-- Price: $0.26 per 1,000 results, nothing per run
-
-Scrape DuckDuckGo web search results into structured rows: title, URL, snippet, position, and query.
-
-Example input:
-
-```json
-{
-  "queries": [
-    "web scraping tools",
-    "python tutorial"
-  ],
-  "region": "us-en",
-  "maxPages": 1,
-  "safeSearch": "moderate",
-  "maxItems": 20
-}
-```
-
-Output fields: `query`, `position`, `title`, `url`, `displayUrl`, `snippet`, `page`
 
 ## Website Content Crawler: Pages to Clean Text
 
@@ -250,31 +250,6 @@ Example input:
 ```
 
 Output fields: `url`, `title`, `h1`, `breadcrumbs`, `description`, `textContent`, `wordCount`, `depth`
-
-## Bulk File Downloader and Image Downloader: Web Pages, PDFs
-
-- Actor ID: `v0iddo/bulk-file-downloader`
-- Store page: https://apify.com/v0iddo/bulk-file-downloader
-- Price: $2.00 per 1,000 results, nothing per run
-
-Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://en.wikipedia.org/wiki/Hummingbird"
-  ],
-  "fileTypes": [
-    "image"
-  ],
-  "maxFilesPerPage": 20,
-  "maxItems": 20
-}
-```
-
-Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
 ## PriceCharting Scraper: Game, Card and Collectible Prices
 
@@ -458,7 +433,7 @@ Output fields: `jobId`, `title`, `budget`, `currency`, `projectType`, `category`
 - Store page: https://apify.com/v0iddo/meinestadt-de-job-scraper
 - Price: $1.70 per 1,000 results, nothing per run
 
-Scrape job listings from jobs.meinestadt.de: title, company, city, industry, employment type, salary range, posting date and expiry date.
+Meinestadt.de job scraper for listings from jobs.meinestadt.de: title, company, city, industry, employment type, salary range, posting date and expiry date.
 
 Example input:
 
@@ -474,28 +449,6 @@ Example input:
 ```
 
 Output fields: `jobId`, `title`, `company`, `city`, `industry`, `employmentType`, `datePosted`, `validThrough`, `salaryMin`, `salaryMax`, `url`
-
-## Audio Transcription: Speech to Text, Audio to Text, Whisper
-
-- Actor ID: `v0iddo/audio-transcription`
-- Store page: https://apify.com/v0iddo/audio-transcription
-- Price: $6.00 per 1,000 results, nothing per run
-
-Audio transcription with Whisper: speech to text from audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
-
-Example input:
-
-```json
-{
-  "mediaUrls": [
-    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
-  ],
-  "maxMinutesPerFile": 8,
-  "maxItems": 1
-}
-```
-
-Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
 
 ## CarGurus Zipcode Search Scraper
 
@@ -521,6 +474,28 @@ Example input:
 
 Output fields: `listingId`, `vin`, `year`, `make`, `model`, `trim`, `price`, `msrp`, `mileage`, `dealerName`, `dealerState`, `url`
 
+## Audio Transcription: Speech to Text, Audio to Text, Whisper
+
+- Actor ID: `v0iddo/audio-transcription`
+- Store page: https://apify.com/v0iddo/audio-transcription
+- Price: $6.00 per 1,000 results, nothing per run
+
+Audio transcription with Whisper: speech to text from audio and video files and podcast episodes, with timestamps and SRT or VTT subtitles.
+
+Example input:
+
+```json
+{
+  "mediaUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg"
+  ],
+  "maxMinutesPerFile": 8,
+  "maxItems": 1
+}
+```
+
+Output fields: `fileName`, `episodeTitle`, `language`, `durationSeconds`, `billedMinutes`, `wordCount`, `text`, `mediaUrl`
+
 ## Myntra Product Scraper
 
 - Actor ID: `v0iddo/myntra-product-scraper`
@@ -542,6 +517,31 @@ Example input:
 ```
 
 Output fields: `productId`, `name`, `brand`, `price`, `mrp`, `discountPercent`, `rating`, `ratingCount`, `sizes`, `category`, `image`, `url`
+
+## Bulk File Downloader and Image Downloader: Web Pages, PDFs
+
+- Actor ID: `v0iddo/bulk-file-downloader`
+- Store page: https://apify.com/v0iddo/bulk-file-downloader
+- Price: $2.00 per 1,000 results, nothing per run
+
+Bulk file downloader: saves the files of links, web pages, a CSV or Google Sheet, or another actor's dataset: images, video, audio, PDFs, documents, archives.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://en.wikipedia.org/wiki/Hummingbird"
+  ],
+  "fileTypes": [
+    "image"
+  ],
+  "maxFilesPerPage": 20,
+  "maxItems": 20
+}
+```
+
+Output fields: `fileUrl`, `fileName`, `fileType`, `fileBytes`, `imageWidth`, `imageHeight`, `altText`, `url`, `error`
 
 ## Internshala Scraper
 
@@ -641,7 +641,7 @@ Output fields: `index`, `file_url`, `filename`, `mime`, `bytes`, `credits`, `ms`
 
 - Actor ID: `v0iddo/google-autocomplete-scraper`
 - Store page: https://apify.com/v0iddo/google-autocomplete-scraper
-- Price: $0.60 per 1,000 results, nothing per run
+- Price: $0.77 per 1,000 results, nothing per run
 
 Collect Google search suggestions for any keyword list, with position and relevance score.
 
@@ -749,7 +749,7 @@ Output fields: `imageUrl`, `timecode`, `frameNumber`, `kind`, `videoFile`, `imag
 
 - Actor ID: `v0iddo/y-combinator-scraper`
 - Store page: https://apify.com/v0iddo/y-combinator-scraper
-- Price: $0.13 per 1,000 results, nothing per run
+- Price: $0.26 per 1,000 results, nothing per run
 
 Scrape the Y Combinator public company directory: name, batch, status, industries, location, website, one-liner, team size, open job count, and YC profile link.
 
@@ -776,28 +776,6 @@ Example input:
 ```
 
 Output fields: `name`, `batch`, `status`, `industries`, `location`, `website`, `oneLiner`, `teamSize`, `jobCount`, `url`
-
-## Luma Event Scraper
-
-- Actor ID: `v0iddo/luma-event-scraper`
-- Store page: https://apify.com/v0iddo/luma-event-scraper
-- Price: $2.38 per 1,000 results, nothing per run
-
-Scrape public event listings from luma.com city and calendar pages.
-
-Example input:
-
-```json
-{
-  "pageUrls": [
-    "https://luma.com/nyc",
-    "https://luma.com/sf"
-  ],
-  "maxItems": 20
-}
-```
-
-Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`, `pageUrl`
 
 ## Domain Availability Checker: Bulk RDAP
 
@@ -829,6 +807,28 @@ Example input:
 ```
 
 Output fields: `domain`, `available`, `status`, `registrar`, `expirationDate`, `daysToExpiry`, `registrationDate`, `note`
+
+## Luma Event Scraper
+
+- Actor ID: `v0iddo/luma-event-scraper`
+- Store page: https://apify.com/v0iddo/luma-event-scraper
+- Price: $2.38 per 1,000 results, nothing per run
+
+Scrape public event listings from luma.com city and calendar pages.
+
+Example input:
+
+```json
+{
+  "pageUrls": [
+    "https://luma.com/nyc",
+    "https://luma.com/sf"
+  ],
+  "maxItems": 20
+}
+```
+
+Output fields: `name`, `startDate`, `endDate`, `locationType`, `city`, `fullAddress`, `latitude`, `longitude`, `price`, `priceCurrency`, `soldOut`, `url`, `pageUrl`
 
 ## CapCut Trending Templates Scraper
 
@@ -875,6 +875,28 @@ Example input:
 
 Output fields: `keyword`, `page`, `position`, `name`, `category`, `lowPriceUsd`, `highPriceUsd`, `supplierName`, `inStock`, `image`, `url`
 
+## JustJoin.it Scraper: Poland IT Jobs and Salaries
+
+- Actor ID: `v0iddo/justjoin-it`
+- Store page: https://apify.com/v0iddo/justjoin-it
+- Price: $0.50 per 1,000 results, nothing per run
+
+Scrape IT job offers from JustJoin.it in Poland: title, company, city, work mode, seniority, tech stack, salary from and to with currency, period and gross or net, B2B or employment contract, date and link.
+
+Example input:
+
+```json
+{
+  "categories": [
+    "python"
+  ],
+  "salaryOnly": true,
+  "maxItems": 20
+}
+```
+
+Output fields: `title`, `companyName`, `city`, `workMode`, `seniority`, `skills`, `salaryFrom`, `salaryTo`, `currency`, `salaryInterval`, `salaryType`, `contractType`, `publishedAt`, `url`
+
 ## SEO Audit Tool (On-Page Checker, Canonical, Alt Text)
 
 - Actor ID: `v0iddo/seo-audit`
@@ -898,28 +920,6 @@ Example input:
 ```
 
 Output fields: `url`, `statusCode`, `score`, `indexable`, `title`, `titleLength`, `metaDescriptionLength`, `h1Count`, `wordCount`, `imagesMissingAlt`, `internalLinks`, `externalLinks`, `canonicalIsSelf`, `issues`
-
-## JustJoin.it Scraper: Polish IT Jobs and Salaries
-
-- Actor ID: `v0iddo/justjoin-it`
-- Store page: https://apify.com/v0iddo/justjoin-it
-- Price: $0.50 per 1,000 results, nothing per run
-
-Scrape IT job offers from JustJoin.it in Poland: title, company, city, work mode, seniority, tech stack, salary from and to with currency, period and gross or net, B2B or employment contract, date and link.
-
-Example input:
-
-```json
-{
-  "categories": [
-    "python"
-  ],
-  "salaryOnly": true,
-  "maxItems": 20
-}
-```
-
-Output fields: `title`, `companyName`, `city`, `workMode`, `seniority`, `skills`, `salaryFrom`, `salaryTo`, `currency`, `salaryInterval`, `salaryType`, `contractType`, `publishedAt`, `url`
 
 ## Image Converter: WEBP to PNG, PNG to JPG, JPG to WEBP, GIF
 
@@ -968,7 +968,7 @@ Output fields: `eventDate`, `time`, `currency`, `impact`, `event`, `actual`, `fo
 - Store page: https://apify.com/v0iddo/francetravail
 - Price: $1.00 per 1,000 results, nothing per run
 
-Scrape France Travail (ex Pole Emploi) job offers by town or department, ROME domain and contract type: title, company, town, contract and its length, weekly hours, schedule, salary with its period and minimum and maximum in euros, benefits, posting age, source and offer link.
+France Travail scraper for francetravail.fr (ex Pole Emploi) job offers by town or department, ROME domain and contract type: title, company, town, contract and its length, weekly hours, schedule, salary with its period and minimum and maximum in euros, benefits, posting age, source and offer link.
 
 Example input:
 
